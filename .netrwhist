@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =8
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/drew/rust_projects/lights'
+let g:netrw_dirhist_9='/home/drew/Documents'
 let g:netrw_dirhist_8='ftp://drewh@drewh.net@drewh.net/public_html/'
 let g:netrw_dirhist_7='ftp://drewh@drewh.net@drewh.net/'
 let g:netrw_dirhist_6='/home/drew/Programs/convo/.git'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_4='ftp://drewh@drewh.net@drewh.net/public_html/static/'
 let g:netrw_dirhist_3='ftp://drewh@drewh.net@drewh.net/public_html/styles/'
 let g:netrw_dirhist_2='ftp://drewh@drewh.net@drewh.net/public_html/'
 let g:netrw_dirhist_1='ftp://drewh@drewh.net@drewh.net/'
-let g:netrw_dirhist_0='ftp://drewh@drewh.net@drewh.net/public_html/'
-let g:netrw_dirhist_9='ftp://drewh@drewh.net@drewh.net/public_html/styles/'

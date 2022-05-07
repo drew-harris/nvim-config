@@ -22,6 +22,10 @@ Plug 'honza/vim-snippets'
 
 Plug 'inkarkat/vim-AdvancedSorters'
 
+Plug 'voldikss/vim-floaterm'
+
+Plug 'rust-lang/rust.vim'
+
 "git
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
@@ -43,6 +47,15 @@ map <C-T>u <Plug>(wintabs_undo)
 map <C-T>o <Plug>(wintabs_only)
 map <C-W>c <Plug>(wintabs_close_window)
 map <C-W>o <Plug>(wintabs_only_window)
+
+nnoremap   <C-K>  :FloatermToggle<CR>
+tnoremap  <C-K>  <C-\><C-n>:FloatermToggle<CR>
+
+nnoremap <C-R> :FloatermSend cargo run<CR>:FloatermShow<CR>
+
+
+nnoremap <silent> K :call CocAction('doHover')<CR>
+
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
@@ -78,7 +91,6 @@ set number
 set wildmenu
 set path+=**
 set incsearch
-set colorcolumn=80
 set hidden
 set noswapfile
 set ignorecase
@@ -93,12 +105,52 @@ set softtabstop=2
 set tabstop=2
 
 syntax enable
-filetype plugin on
+filetype plugin indent on
 syntax on
 
 " For vim git signs
 set updatetime=100
 
-colo OceanicNext
+" Floatterm width and height
+let g:floaterm_width=0.8
+let g:floaterm_height=0.8
+let g:floaterm_positon='bottom'
+
+
+
+" for transparent background
+function! AdaptColorscheme()
+   highlight clear CursorLine
+   highlight Normal ctermbg=none
+   highlight LineNr ctermbg=none
+   highlight Folded ctermbg=none
+   highlight NonText ctermbg=none
+   highlight SpecialKey ctermbg=none
+   highlight VertSplit ctermbg=none
+   highlight SignColumn ctermbg=none
+endfunction
+autocmd ColorScheme * call AdaptColorscheme()
+
+highlight Normal guibg=NONE ctermbg=NONE
+highlight CursorColumn cterm=NONE ctermbg=NONE ctermfg=NONE
+highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE
+highlight CursorLineNr cterm=NONE ctermbg=NONE ctermfg=NONE
+highlight clear LineNr
+highlight clear SignColumn
+highlight clear StatusLine
+
+
+" Change Color when entering Insert Mode
+autocmd InsertEnter * set nocursorline
+
+" Revert Color to default when leaving Insert Mode
+autocmd InsertLeave * set nocursorline
+
+"" extra settings, uncomment them if necessary :) 
+"set cursorline
+"set noshowmode
+"set nocursorline
+
+" trasparent end
 
 command Bd bp\|bd \#
