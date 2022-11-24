@@ -10,11 +10,11 @@ end
 local diagnostics = {
 	"diagnostics",
 	sources = { "nvim_diagnostic" },
-	sections = { "error", "warn" },
+	sections = { "error", "warn", "info" },
 	symbols = { error = " ", warn = " " },
 	colored = false,
 	update_in_insert = false,
-	always_visible = true,
+	always_visible = false,
 }
 
 local diff = {
@@ -61,11 +61,12 @@ lualine.setup({
 	options = {
 		icons_enabled = true,
 		theme = auto_theme,
-		-- component_separators = { left = "", right = "" },
-		component_separators = { left = "", right = "" },
-		section_separators = { left = "", right = "" },
+		component_separators = { left = "", right = "" },
+		section_separators = { left = "", right = "" },
 
-		-- section_separators = { left = "", right = "" },
+		-- component_separators = { left = "", right = "" },
+		-- section_separators = { left = "", right = "" },
+
 		disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
 		always_divide_middle = true,
 	},
