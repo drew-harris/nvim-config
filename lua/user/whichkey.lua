@@ -159,7 +159,7 @@ local mappings = {
 			"Workspace Symbols",
 		},
 		o = { "<cmd>OrganizeImports<CR>", "Organize Imports" },
-		p = { "<cmd>lua vim.diagnostic.open_float()<cr>", "View Issues" },
+		p = { "<cmd>lua vim.diagnostic.open_float({focusable = false})<cr>", "View Issues" },
 	},
 	s = {
 		name = "Search",

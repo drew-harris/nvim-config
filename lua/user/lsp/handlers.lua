@@ -24,10 +24,10 @@ M.setup = function()
 
 	local config = {
 		underline = {
-			severity = { max = vim.diagnostic.severity.INFO },
+			severity = { min = vim.diagnostic.severity.WARN },
 		},
 		virtual_text = {
-			severity = { min = vim.diagnostic.severity.INFO },
+			severity = { min = vim.diagnostic.severity.ERROR },
 		},
 		signs = {
 			active = signs, -- show signs
@@ -35,7 +35,7 @@ M.setup = function()
 		update_in_insert = true,
 		severity_sort = true,
 		float = {
-			focusable = true,
+			focusable = false,
 			style = "minimal",
 			border = "rounded",
 			source = "always",
@@ -53,6 +53,10 @@ M.setup = function()
 	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
 		border = "rounded",
 	})
+
+	vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+		underline = true,
+	})
 end
 
 local function lsp_keymaps(bufnr)
@@ -63,7 +67,7 @@ local function lsp_keymaps(bufnr)
 	keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 	keymap(bufnr, "n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-	keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+	keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float({focusable = false})<CR>", opts)
 	keymap(bufnr, "n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
 	keymap(bufnr, "n", "<leader>li", "<cmd>LspInfo<cr>", opts)
 	keymap(bufnr, "n", "<leader>lI", "<cmd>LspInstallInfo<cr>", opts)
