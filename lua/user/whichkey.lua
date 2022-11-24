@@ -158,8 +158,8 @@ local mappings = {
 			"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
 			"Workspace Symbols",
 		},
-		o = "<cmd>OrganizeImports<CR>",
-		"Organize Imports",
+		o = { "<cmd>OrganizeImports<CR>", "Organize Imports" },
+		p = { "<cmd>lua vim.diagnostic.open_float()<cr>", "View Issues" },
 	},
 	s = {
 		name = "Search",

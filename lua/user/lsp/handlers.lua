@@ -27,7 +27,7 @@ M.setup = function()
 			severity = { max = vim.diagnostic.severity.INFO },
 		},
 		virtual_text = {
-			severity = { min = vim.diagnostic.severity.WARN },
+			severity = { min = vim.diagnostic.severity.INFO },
 		},
 		signs = {
 			active = signs, -- show signs
