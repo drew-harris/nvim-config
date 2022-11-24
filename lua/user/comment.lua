@@ -4,6 +4,12 @@ if not status_ok then
 end
 
 comment.setup {
+  toggler = {
+    ---Line-comment toggle keymap
+    line = '<leader>cc',
+    ---Block-comment toggle keymap
+    block = '<leader>cb',
+  },
   pre_hook = function(ctx)
     local U = require "Comment.utils"
 
@@ -19,6 +25,7 @@ comment.setup {
       location = utils.get_visual_start_location()
     end
 
+    -- Enables jsx, tsx commenting
     local status_internals_ok, internals = pcall(require, "ts_context_commentstring.internals")
     if not status_internals_ok then
       return
