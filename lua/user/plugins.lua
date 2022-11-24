@@ -93,7 +93,6 @@ return packer.startup(function(use)
 	use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" }
 
   -- Drew's Colorschemes
-  use {'flazz/vim-colorschemes'}
   use {'projekt0n/github-nvim-theme'}
 
 	-- Automatically set up your configuration after cloning packer.nvim

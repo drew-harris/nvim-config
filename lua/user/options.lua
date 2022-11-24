@@ -42,3 +42,12 @@ end
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+
+vim.cmd "hi Normal guibg=none ctermbg=none"
+vim.cmd "hi LineNr guibg=none ctermbg=none"
+vim.cmd "hi Folded guibg=none ctermbg=none"
+vim.cmd "hi NonText guibg=none ctermbg=none"
+vim.cmd "hi SpecialKey guibg=none ctermbg=none"
+vim.cmd "hi VertSplit guibg=none ctermbg=none"
+vim.cmd "hi SignColumn guibg=none ctermbg=none"
+vim.cmd "hi EndOfBuffer guibg=none ctermbg=none"
