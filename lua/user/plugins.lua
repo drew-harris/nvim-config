@@ -95,6 +95,9 @@ return packer.startup(function(use)
   -- Drew's Colorschemes
   use {'projekt0n/github-nvim-theme'}
 
+  -- Drew's Motions
+  use {"ggandor/leap.nvim"}
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
