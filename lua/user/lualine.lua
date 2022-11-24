@@ -47,10 +47,19 @@ local spaces = function()
 	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
 
+-- Make bottom bar transparent in the middle
+local auto_theme = require("lualine.themes.auto")
+auto_theme.normal.c.bg = "#00000000"
+auto_theme.insert.c.bg = "#00000000"
+auto_theme.visual.c.bg = "#00000000"
+auto_theme.replace.c.bg = "#00000000"
+auto_theme.inactive.c.bg = "#00000000"
+auto_theme.command.c.bg = "#00000000"
+
 lualine.setup({
 	options = {
 		icons_enabled = true,
-		theme = "auto",
+		theme = auto_theme,
 		-- component_separators = { left = "", right = "" },
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
