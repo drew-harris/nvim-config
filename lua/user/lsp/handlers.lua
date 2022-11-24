@@ -23,12 +23,12 @@ M.setup = function()
 	end
 
 	local config = {
-    underline = {
-      severity = { max = vim.diagnostic.severity.INFO }
-    },
-    virtual_text = {
-      severity = { min = vim.diagnostic.severity.WARN }
-    },
+		underline = {
+			severity = { max = vim.diagnostic.severity.INFO },
+		},
+		virtual_text = {
+			severity = { min = vim.diagnostic.severity.WARN },
+		},
 		signs = {
 			active = signs, -- show signs
 		},
@@ -73,7 +73,6 @@ local function lsp_keymaps(bufnr)
 	keymap(bufnr, "n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
 	keymap(bufnr, "n", "<leader>ls", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 	keymap(bufnr, "n", "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
-	keymap(bufnr, "n", "<leader>lo", ":OrganizeImports<CR>", opts)
 end
 
 M.on_attach = function(client, bufnr)
