@@ -1,10 +1,10 @@
 local servers = {
 	"sumneko_lua",
-	-- "cssls",
+	"cssls",
 	-- "html",
 	--"pyright",
 	-- "bashls",
-  "tsserver",
+	"tsserver",
 	"jsonls",
 	-- "yamlls",
 }
@@ -36,24 +36,24 @@ end
 local opts = {}
 
 local function organize_imports()
-  local params = {
-    command = "_typescript.organizeImports",
-    arguments = {vim.api.nvim_buf_get_name(0)},
-    title = ""
-  }
-  vim.lsp.buf.execute_command(params)
+	local params = {
+		command = "_typescript.organizeImports",
+		arguments = { vim.api.nvim_buf_get_name(0) },
+		title = "",
+	}
+	vim.lsp.buf.execute_command(params)
 end
 
 for _, server in pairs(servers) do
 	opts = {
 		on_attach = require("user.lsp.handlers").on_attach,
 		capabilities = require("user.lsp.handlers").capabilities,
-    commands = {
-      OrganizeImports = {
-        organize_imports,
-        description = "Organize Imports"
-      }
-    }
+		commands = {
+			OrganizeImports = {
+				organize_imports,
+				description = "Organize Imports",
+			},
+		},
 	}
 
 	server = vim.split(server, "@")[1]
@@ -62,7 +62,6 @@ for _, server in pairs(servers) do
 	if require_ok then
 		opts = vim.tbl_deep_extend("force", conf_opts, opts)
 	end
-
 
 	lspconfig[server].setup(opts)
 end
