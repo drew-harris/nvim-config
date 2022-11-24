@@ -55,6 +55,7 @@ auto_theme.visual.c.bg = "#00000000"
 auto_theme.replace.c.bg = "#00000000"
 auto_theme.inactive.c.bg = "#00000000"
 auto_theme.command.c.bg = "#00000000"
+auto_theme.terminal.c.bg = "#00000000"
 
 lualine.setup({
 	options = {
