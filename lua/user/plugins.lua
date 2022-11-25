@@ -74,8 +74,8 @@ return packer.startup(function(use)
 	use({ "protesilaos/tempus-themes-vim" })
 	use({ "navarasu/onedark.nvim" })
 	use({ "NLKNguyen/papercolor-theme" })
-	use({ "shaunsingh/solarized.nvim" })
 	use({ "tobi-wan-kenobi/zengarden" })
+	use({ "ishan9299/nvim-solarized-lua" })
 
 	-- Cmp
 	use({ "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" }) -- The completion plugin

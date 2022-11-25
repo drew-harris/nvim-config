@@ -48,14 +48,23 @@ local spaces = function()
 end
 
 -- Make bottom bar transparent in the middle
-local auto_theme = require("lualine.themes.auto")
-auto_theme.normal.c.bg = "#00000000"
-auto_theme.insert.c.bg = "#00000000"
-auto_theme.visual.c.bg = "#00000000"
-auto_theme.replace.c.bg = "#00000000"
-auto_theme.inactive.c.bg = "#00000000"
-auto_theme.command.c.bg = "#00000000"
-auto_theme.terminal.c.bg = "#00000000"
+local auto_theme = require("lualine.themes.solarized_dark")
+
+local modes = {
+	"normal",
+	"insert",
+	"visual",
+	"replace",
+	"inactive",
+	"command",
+	"terminal",
+}
+
+for _, editorMode in pairs(modes) do
+	if auto_theme[editorMode] ~= nil and auto_theme[editorMode].c ~= nil then
+		auto_theme[editorMode].c.bg = "#00000000"
+	end
+end
 
 lualine.setup({
 	options = {
@@ -73,7 +82,7 @@ lualine.setup({
 	sections = {
 		lualine_a = { branch, diagnostics },
 		lualine_b = { mode },
-		lualine_c = { "filename" },
+		--lualine_c = { "filename" },
 		lualine_y = { diff, spaces, filetype },
 		lualine_z = { "location" },
 	},
@@ -81,7 +90,7 @@ lualine.setup({
 		lualine_a = {},
 		lualine_b = {},
 		lualine_x = { "encoding", "fileformat", "filetype" },
-		-- lualine_c = { "filename" },
+		lualine_c = { "filename" },
 		lualine_z = {},
 	},
 	tabline = {},
