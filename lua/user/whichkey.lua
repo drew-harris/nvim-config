@@ -107,7 +107,9 @@ local mappings = {
 	q = {
 		name = "Quickfix",
 		t = { "<cmd>TodoQuickFix<cr>", "Todos" },
-		q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Diagnostics" },
+		-- FIX: Does not work
+		-- Error executing lua [string ":lua"]:1: attempt to call field 'set_loclist' (a nil value)
+		q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
 	},
 
 	p = {
