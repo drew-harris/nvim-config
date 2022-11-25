@@ -65,5 +65,11 @@ for _, server in pairs(servers) do
 		opts = vim.tbl_deep_extend("force", conf_opts, opts)
 	end
 
+	if server == "sumneko_lua" then
+		require("neodev").setup({
+			-- Options for neodev
+		})
+	end
+
 	lspconfig[server].setup(opts)
 end

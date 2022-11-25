@@ -76,6 +76,7 @@ return packer.startup(function(use)
 	use({ "NLKNguyen/papercolor-theme" })
 	use({ "tobi-wan-kenobi/zengarden" })
 	use({ "ishan9299/nvim-solarized-lua" })
+	use({ "projekt0n/github-nvim-theme" })
 
 	-- Cmp
 	use({ "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" }) -- The completion plugin
@@ -95,6 +96,7 @@ return packer.startup(function(use)
 	use({ "williamboman/mason-lspconfig.nvim", commit = "0051870dd728f4988110a1b2d47f4a4510213e31" })
 	use({ "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" }) -- for formatters and linters
 	use({ "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" })
+	use("folke/neodev.nvim")
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" })
@@ -108,11 +110,27 @@ return packer.startup(function(use)
 	-- Git
 	use({ "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" })
 
-	-- Drew's Colorschemes
-	use({ "projekt0n/github-nvim-theme" })
-
 	-- Drew's Motions
 	use({ "ggandor/leap.nvim" })
+
+	-- Todo Highlighting
+	use({
+		"folke/todo-comments.nvim",
+		requires = "nvim-lua/plenary.nvim",
+		config = function()
+			require("todo-comments").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
+		end,
+	})
+
+	-- Peeks lines when typing :<number>
+	use("nacro90/numb.nvim")
+
+	-- Smooth scrolling
+	use("karb94/neoscroll.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
