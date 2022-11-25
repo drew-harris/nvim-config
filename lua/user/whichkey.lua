@@ -87,7 +87,7 @@ local mappings = {
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["x"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-	["z"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+	["z"] = { "<cmd>set hlsearch!<CR>", "No Highlight" },
 	["f"] = {
 		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
 		"Find files",

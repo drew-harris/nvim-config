@@ -99,7 +99,7 @@ return packer.startup(function(use)
 	use("folke/neodev.nvim")
 	-- Better quickfix windows
 	-- Only load on filetype quickfix
-	use({ "kevinhwang91/nvim-bqf" })
+	use({ "kevinhwang91/nvim-bqf", ft = "qf" })
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim" })
