@@ -7,4 +7,9 @@ require("numb").setup()
 -- Smooth scrolling
 require("neoscroll").setup({
 	easing_function = "quadratic",
+	-- TODO: Figure out how to center cursor after every scroll
+
+	-- post_hook = function()
+	-- 	require("neoscroll").zz(200)
+	-- end,
 })
