@@ -49,7 +49,7 @@ return packer.startup(function(use)
 	use({ "kyazdani42/nvim-web-devicons" })
 	use({ "kyazdani42/nvim-tree.lua" })
 	use({ "akinsho/bufferline.nvim" })
-	use({ "moll/vim-bbye" })
+	use({ "moll/vim-bbye" }) -- Fixes bdelete
 	use({ "nvim-lualine/lualine.nvim" })
 	use({ "akinsho/toggleterm.nvim" })
 	use({ "ahmedkhalf/project.nvim" })
@@ -61,7 +61,6 @@ return packer.startup(function(use)
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim" })
 	use({ "Shatur/neovim-ayu" })
-	use({ "rakr/vim-one" })
 	use({ "dracula/vim" })
 	use({ "ellisonleao/gruvbox.nvim" })
 	use({ "sainnhe/everforest" })
@@ -71,10 +70,8 @@ return packer.startup(function(use)
 		"ViViDboarder/wombat.nvim",
 		requires = "rktjmp/lush.nvim",
 	})
-	use({ "protesilaos/tempus-themes-vim" })
 	use({ "navarasu/onedark.nvim" })
 	use({ "NLKNguyen/papercolor-theme" })
-	use({ "tobi-wan-kenobi/zengarden" })
 	use({ "ishan9299/nvim-solarized-lua" })
 	use({ "projekt0n/github-nvim-theme" })
 
@@ -87,6 +84,8 @@ return packer.startup(function(use)
 	use({ "hrsh7th/cmp-nvim-lua" })
 
 	-- Snippets
+	-- TODO: Learn LuaSnip
+	-- https://www.youtube.com/watch?v=Dn800rlPIho
 	use({ "L3MON4D3/LuaSnip" }) --snippet engine
 	use({ "rafamadriz/friendly-snippets" }) -- a bunch of snippets to use
 
@@ -97,6 +96,8 @@ return packer.startup(function(use)
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
 	use({ "RRethy/vim-illuminate" })
 	use("folke/neodev.nvim")
+	use("stevearc/aerial.nvim") -- Outline panel
+
 	-- Better quickfix windows
 	-- Only load on filetype quickfix
 	use({ "kevinhwang91/nvim-bqf", ft = "qf" })

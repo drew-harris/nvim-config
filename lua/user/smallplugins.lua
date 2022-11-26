@@ -12,6 +12,7 @@ require("todo-comments").setup({
 require("neoscroll").setup({
 	easing_function = "quadratic",
 	-- TODO: Figure out how to center cursor after every scroll
+	-- Mignt need to submit Github Issue
 
 	-- Better performance
 	pre_hook = function()
@@ -21,4 +22,12 @@ require("neoscroll").setup({
 	post_hook = function()
 		vim.cmd("IndentBlanklineEnable")
 	end,
+})
+
+require("aerial").setup({
+	backends = { "treesitter", "lsp", "markdown", "man" },
+
+	layout = {
+		default_direction = "prefer_left",
+	},
 })
