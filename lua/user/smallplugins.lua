@@ -15,13 +15,13 @@ require("neoscroll").setup({
 	-- Mignt need to submit Github Issue
 
 	-- Better performance
-	pre_hook = function()
-		vim.cmd("IndentBlanklineDisable")
-	end,
-
-	post_hook = function()
-		vim.cmd("IndentBlanklineEnable")
-	end,
+	-- pre_hook = function()
+	-- 	vim.cmd("IndentBlanklineDisable")
+	-- end,
+	--
+	-- post_hook = function()
+	-- 	vim.cmd("IndentBlanklineEnable")
+	-- end,
 })
 
 require("aerial").setup({
