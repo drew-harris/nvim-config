@@ -13,7 +13,12 @@ require("neoscroll").setup({
 	easing_function = "quadratic",
 	-- TODO: Figure out how to center cursor after every scroll
 
-	-- post_hook = function()
-	-- 	require("neoscroll").zz(200)
-	-- end,
+	-- Better performance
+	pre_hook = function()
+		vim.cmd("IndentBlanklineDisable")
+	end,
+
+	post_hook = function()
+		vim.cmd("IndentBlanklineEnable")
+	end,
 })

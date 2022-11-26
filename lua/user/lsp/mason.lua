@@ -1,15 +1,15 @@
 local servers = {
 	"sumneko_lua",
 	"cssls",
-	"angularls",
-	-- "html",
-	--"pyright",
-	-- "bashls",
+	"angularls", -- unfortunate
 	"prismals",
 	"eslint",
 	"tsserver",
 	"jsonls",
 	-- "yamlls",
+	-- "html",
+	--"pyright",
+	-- "bashls",
 }
 
 local settings = {
@@ -59,6 +59,7 @@ for _, server in pairs(servers) do
 		},
 	}
 
+	---@diagnostic disable-next-line: missing-parameter  From initial commit
 	server = vim.split(server, "@")[1]
 
 	local require_ok, conf_opts = pcall(require, "user.lsp.settings." .. server)
