@@ -107,9 +107,7 @@ local mappings = {
 	q = {
 		name = "Quickfix",
 		t = { "<cmd>TodoQuickFix<cr>", "Todos" },
-		-- FIX: Does not work
-		-- Error executing lua [string ":lua"]:1: attempt to call field 'set_loclist' (a nil value)
-		q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
+		q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
 	},
 
 	p = {
@@ -142,6 +140,7 @@ local mappings = {
 			"<cmd>Gitsigns diffthis HEAD<cr>",
 			"Diff",
 		},
+		t = { "<cmd>Gitsigns toggle_signs<cr>", "Toggle Git Signs" },
 	},
 
 	l = {
@@ -167,7 +166,7 @@ local mappings = {
 			"Prev Diagnostic",
 		},
 		l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
-		q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
+		q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
 		r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
 		s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
 		S = {
