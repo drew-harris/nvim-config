@@ -100,6 +100,7 @@ return packer.startup(function(use)
 	-- Better quickfix windows
 	-- Only load on filetype quickfix
 	use({ "kevinhwang91/nvim-bqf", ft = "qf" })
+	use({ "ray-x/lsp_signature.nvim" })
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim" })

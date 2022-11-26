@@ -90,6 +90,15 @@ M.on_attach = function(client, bufnr)
 		client.server_capabilities.documentFormattingProvider = false
 	end
 
+	require("lsp_signature").on_attach({
+		handler_opts = {
+			border = "rounded",
+		},
+		close_timeout = 2000,
+		hint_prefix = " ",
+		toggle_key = "<C-s>",
+	}, bufnr)
+
 	lsp_keymaps(bufnr)
 	local status_ok, illuminate = pcall(require, "illuminate")
 	if not status_ok then
