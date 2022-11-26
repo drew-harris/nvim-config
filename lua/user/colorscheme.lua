@@ -1,7 +1,7 @@
-local colorscheme = "gruvbox"
+local colorscheme = "github_dark"
 
 require("github-theme").setup({
-	transparent = false,
+	transparent = true,
 })
 
 ---@diagnostic disable-next-line: param-type-mismatch
