@@ -112,6 +112,13 @@ return packer.startup(function(use)
 
 	-- Git
 	use({ "lewis6991/gitsigns.nvim" })
+	use({
+		"akinsho/git-conflict.nvim",
+		tag = "*",
+		config = function()
+			require("git-conflict").setup()
+		end,
+	})
 
 	-- Drew's Motions
 	use({ "ggandor/leap.nvim" })

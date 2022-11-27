@@ -2,6 +2,7 @@ local servers = {
 	"sumneko_lua",
 	"cssls",
 	"angularls", -- unfortunate
+  "rust_analyzer",
 	"prismals",
 	"eslint",
 	"tsserver",

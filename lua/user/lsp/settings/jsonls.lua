@@ -55,6 +55,11 @@ local schemas = {
 		url = "https://json.schemastore.org/now",
 	},
 	{
+		description = "Vercel",
+		fileMatch = { "vercel.json" },
+		url = "https://openapi.vercel.sh/vercel.json",
+	},
+	{
 		description = "Stylelint config",
 		fileMatch = {
 			".stylelintrc",
