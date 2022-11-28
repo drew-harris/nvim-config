@@ -74,6 +74,26 @@ return packer.startup(function(use)
 	use({ "ishan9299/nvim-solarized-lua" })
 	use({ "projekt0n/github-nvim-theme" })
 
+	use("Abstract-IDE/Abstract-cs")
+	use("martinsione/darkplus.nvim")
+	use("marko-cerovac/material.nvim")
+	use("bluz71/vim-nightfly-colors")
+	use({ "bluz71/vim-moonfly-colors", branch = "cterm-compat" })
+	use({ "sainnhe/sonokai" })
+	use("EdenEast/nightfox.nvim")
+	use("rafamadriz/neon")
+	use({
+		"glepnir/zephyr-nvim",
+		requires = { "nvim-treesitter/nvim-treesitter", opt = true },
+	})
+	use("ishan9299/modus-theme-vim")
+	use("titanzero/zephyrium")
+	use("rebelot/kanagawa.nvim")
+	use("Yazeed1s/minimal.nvim")
+	use("Mofiqul/adwaita.nvim")
+	use("savq/melange")
+	use("sainnhe/gruvbox-material")
+
 	-- Cmp
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
 	use({ "hrsh7th/cmp-buffer" }) -- buffer completions

@@ -1,4 +1,4 @@
-local colorscheme = "gruvbox"
+local colorscheme = "ayu-mirage"
 
 require("github-theme").setup({
 	transparent = true,
