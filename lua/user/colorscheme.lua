@@ -1,4 +1,4 @@
-local colorscheme = "catppuccin-mocha"
+local colorscheme = "gruvbox"
 
 require("github-theme").setup({
 	transparent = true,

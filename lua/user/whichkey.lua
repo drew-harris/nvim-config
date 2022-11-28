@@ -189,6 +189,7 @@ local mappings = {
 		k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 		t = { "<cmd>TodoTelescope<cr>", "Todos" },
 		C = { "<cmd>Telescope commands<cr>", "Commands" },
+		s = { '<cmd>lua require("telescope").extensions.live_grep_args.live_grep_raw()<cr>', "Styles" },
 	},
 
 	t = {
