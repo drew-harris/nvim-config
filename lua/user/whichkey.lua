@@ -203,6 +203,9 @@ local mappings = {
 		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
 		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
 	},
+
+	-- TODO: Add Octo
+	-- https://github.com/pwntester/octo.nvim
 }
 
 which_key.setup(setup)
