@@ -145,6 +145,8 @@ return packer.startup(function(use)
 
 	-- Drew's Motions
 	use({ "ggandor/leap.nvim" })
+	-- use("ggandor/lightspeed.nvim")
+	use("tpope/vim-repeat") -- Dependency
 
 	-- Todo Highlighting
 	use({

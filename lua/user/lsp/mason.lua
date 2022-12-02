@@ -2,15 +2,12 @@ local servers = {
 	"sumneko_lua",
 	"cssls",
 	"angularls", -- unfortunate
-  "rust_analyzer",
+	"rust_analyzer",
 	"prismals",
 	"eslint",
 	"tsserver",
 	"jsonls",
-	-- "yamlls",
-	-- "html",
-	--"pyright",
-	-- "bashls",
+	"denols",
 }
 
 local settings = {
@@ -72,6 +69,14 @@ for _, server in pairs(servers) do
 		require("neodev").setup({
 			-- Options for neodev
 		})
+	end
+
+	if server == "denols" then
+		opts.root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc")
+	end
+
+	if server == "tsserver" then
+		opts.root_dir = lspconfig.util.root_pattern("package.json")
 	end
 
 	lspconfig[server].setup(opts)

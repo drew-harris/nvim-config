@@ -1,5 +1,5 @@
 -- Motion plugin
-require("leap").add_default_mappings()
+-- require("leap").add_default_mappings()
 
 -- Line peek when typing :<num>
 require("numb").setup()
