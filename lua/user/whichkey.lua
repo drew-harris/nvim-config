@@ -204,6 +204,15 @@ local mappings = {
 		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
 	},
 
+	-- TODO: Create a keybind (in insert mode) to reject copilot for that line
+	c = {
+		name = "Copilot",
+		s = { "<cmd>Copilot split<cr>", "Split" },
+		d = { "<cmd>Copilot disable<cr>", "Disable" },
+		e = { "<cmd>Copilot enable<cr>", "Enable" },
+		w = { "<cmd>Copilot<cr>", "Window" },
+	},
+
 	-- TODO: Add Octo
 	-- https://github.com/pwntester/octo.nvim
 }

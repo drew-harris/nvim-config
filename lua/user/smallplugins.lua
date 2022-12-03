@@ -1,9 +1,6 @@
 -- Motion plugin
 -- require("leap").add_default_mappings()
 
--- Line peek when typing :<num>
-require("numb").setup()
-
 require("todo-comments").setup({
 	-- Configuration here
 })
@@ -31,3 +28,7 @@ require("aerial").setup({
 		default_direction = "prefer_left",
 	},
 })
+
+-- Copliot setup
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })

@@ -145,7 +145,6 @@ return packer.startup(function(use)
 
 	-- Drew's Motions
 	use({ "ggandor/leap.nvim" })
-	-- use("ggandor/lightspeed.nvim")
 	use("tpope/vim-repeat") -- Dependency
 
 	-- Todo Highlighting
@@ -154,13 +153,12 @@ return packer.startup(function(use)
 		requires = "nvim-lua/plenary.nvim",
 	})
 
-	-- Peeks lines when typing :<number>
-	use("nacro90/numb.nvim")
-
 	-- Smooth scrolling
 	use("karb94/neoscroll.nvim")
 
 	use("ThePrimeagen/harpoon")
+
+	use("github/copilot.vim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
