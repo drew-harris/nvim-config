@@ -82,6 +82,13 @@ local function lsp_keymaps(bufnr)
 	keymap(bufnr, "n", "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 end
 
+local ih = require("inlay-hints")
+ih.setup({
+	highlight = "Comment",
+	prefix = " » ",
+	aligned = true,
+})
+
 M.on_attach = function(client, bufnr)
 	if client.name == "tsserver" then
 		client.server_capabilities.documentFormattingProvider = false
@@ -89,6 +96,10 @@ M.on_attach = function(client, bufnr)
 
 	if client.name == "sumneko_lua" then
 		client.server_capabilities.documentFormattingProvider = false
+	end
+
+	if client.name == "rust_analyzer" then
+		ih.on_attach(client, bufnr)
 	end
 
 	require("lsp_signature").on_attach({

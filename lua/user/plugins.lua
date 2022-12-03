@@ -117,6 +117,10 @@ return packer.startup(function(use)
 	use("folke/neodev.nvim")
 	use("stevearc/aerial.nvim") -- Outline panel
 
+	-- Rust
+	use({ "simrat39/rust-tools.nvim" })
+	use("simrat39/inlay-hints.nvim")
+
 	-- Better quickfix windows
 	-- Only load on filetype quickfix
 	use({ "kevinhwang91/nvim-bqf", ft = "qf" })
