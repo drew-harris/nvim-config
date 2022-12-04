@@ -4,10 +4,12 @@ local servers = {
 	"angularls", -- unfortunate
 	"rust_analyzer",
 	"prismals",
+	"tailwindcss",
 	"eslint",
 	"tsserver",
 	"jsonls",
 	"denols",
+	"gopls",
 }
 
 local settings = {

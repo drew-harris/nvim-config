@@ -93,6 +93,10 @@ return packer.startup(function(use)
 	use("Mofiqul/adwaita.nvim")
 	use("savq/melange")
 	use("sainnhe/gruvbox-material")
+	use({
+		"rose-pine/neovim",
+		as = "rose-pine",
+	})
 
 	-- Cmp
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
