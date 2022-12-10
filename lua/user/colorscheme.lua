@@ -4,15 +4,7 @@ require("github-theme").setup({
 	transparent = true,
 })
 
-require("rose-pine").setup({
-	--- @usage 'main' | 'moon'
-	dark_variant = "main",
-	bold_vert_split = false,
-	dim_nc_background = true,
-	disable_background = true,
-	disable_float_background = false,
-	disable_italics = true,
-})
+require("rose-pine").setup()
 
 ---@diagnostic disable-next-line: param-type-mismatch
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)

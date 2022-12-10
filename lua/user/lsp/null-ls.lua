@@ -47,6 +47,7 @@ null_ls.setup({
 		--formatting.prettier,
 		null_ls.builtins.formatting.prettierd,
 		null_ls.builtins.formatting.rustfmt,
+		null_ls.builtins.formatting.gofmt,
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
 		--formatting.rust_analyzer, not sure if this works
