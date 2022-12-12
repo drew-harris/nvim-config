@@ -5,7 +5,6 @@ end
 
 local async_formatting = function(bufnr)
 	bufnr = bufnr or vim.api.nvim_get_current_buf()
-
 	vim.lsp.buf_request(
 		bufnr,
 		"textDocument/formatting",
