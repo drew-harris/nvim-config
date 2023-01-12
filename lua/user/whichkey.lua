@@ -85,7 +85,6 @@ local mappings = {
 		"Buffers",
 	},
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-	["E"] = { "<cmd>Ex<cr>", "Ex" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["x"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 	["z"] = { "<cmd>set hlsearch!<CR>", "No Highlight" },
@@ -95,8 +94,6 @@ local mappings = {
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["i"] = { "<cmd>IndentBlanklineToggle<cr>", "Toggle Indent Guide" },
-
-	["u"] = { "<cmd>UndoTreeToggle<cr>", "Undo Tree" },
 
 	h = {
 		name = "Harpoon",
@@ -113,14 +110,14 @@ local mappings = {
 		c = { "<cmd>GitConflictListQf<cr>", "Merge Conflicts" },
 	},
 
-	-- p = {
-	-- 	name = "Packer",
-	-- 	c = { "<cmd>PackerCompile<cr>", "Compile" },
-	-- 	i = { "<cmd>PackerInstall<cr>", "Install" },
-	-- 	s = { "<cmd>PackerSync<cr>", "Sync" },
-	-- 	S = { "<cmd>PackerStatus<cr>", "Status" },
-	-- 	u = { "<cmd>PackerUpdate<cr>", "Update" },
-	-- },
+	p = {
+		name = "Packer",
+		c = { "<cmd>PackerCompile<cr>", "Compile" },
+		i = { "<cmd>PackerInstall<cr>", "Install" },
+		s = { "<cmd>PackerSync<cr>", "Sync" },
+		S = { "<cmd>PackerStatus<cr>", "Status" },
+		u = { "<cmd>PackerUpdate<cr>", "Update" },
+	},
 
 	g = {
 		name = "Git",

@@ -65,7 +65,3 @@ keymap("n", "<leader>7", '<cmd>:lua require("harpoon.ui").nav_file(7)<cr>', opts
 --keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 --keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 --keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
--- The Primeagen
--- Greatest keymap ever
-keymap("x", "<leader>p", '"_dP', opts)
