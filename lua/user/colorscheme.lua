@@ -1,4 +1,4 @@
-local colorscheme = "catppuccin-mocha"
+local colorscheme = "github_dark_default"
 
 require("github-theme").setup({
 	transparent = true,
