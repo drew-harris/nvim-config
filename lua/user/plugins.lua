@@ -69,11 +69,14 @@ return packer.startup(function(use)
 		"ViViDboarder/wombat.nvim",
 		requires = "rktjmp/lush.nvim",
 	})
-	use({ "navarasu/onedark.nvim" })
 	use({ "NLKNguyen/papercolor-theme" })
-	use({ "ishan9299/nvim-solarized-lua" })
-	use({ "projekt0n/github-nvim-theme" })
-
+  require("onedarkpro").setup({
+    options = {
+      transparency = true
+    }
+  })
+  use({ "ishan9299/nvim-solarized-lua" })
+  use({ "projekt0n/github-nvim-theme" })
 	use("Abstract-IDE/Abstract-cs")
 	use("martinsione/darkplus.nvim")
 	use("marko-cerovac/material.nvim")

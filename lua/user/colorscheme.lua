@@ -1,4 +1,4 @@
-local colorscheme = "github_dark_default"
+local colorscheme = "onedark_vivid"
 
 require("github-theme").setup({
 	transparent = true,
