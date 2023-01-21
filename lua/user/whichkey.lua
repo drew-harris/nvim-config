@@ -83,6 +83,10 @@ local mappings = {
 		"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
 		"Buffers",
 	},
+	["d"] = {
+		"<cmd>BufferLinePick<cr>",
+		"Pick Buffer",
+	},
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["x"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
@@ -191,7 +195,7 @@ local mappings = {
 		s = { '<cmd>lua require("telescope").extensions.live_grep_args.live_grep_raw()<cr>', "Styles" },
 	},
 
-	t = {
+	["T"] = {
 		name = "Terminal",
 		n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
 		u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },

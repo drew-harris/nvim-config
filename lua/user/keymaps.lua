@@ -26,13 +26,15 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<c-l>", ":bnext<cr>", opts)
-keymap("n", "<C-h>", ":bprevious<CR>", opts)
+keymap("n", "<c-l>", "<cmd>BufferLineCycleNext<cr>", opts)
+keymap("n", "<C-h>", "<cmd>BufferLineCyclePrev<CR>", opts)
+keymap("i", "<c-l>", "<cmd>BufferLineCycleNext<cr>", opts)
+keymap("i", "<C-h>", "<cmd>BufferLineCyclePrev<CR>", opts)
+keymap("n", "<c-y>", "<cmd>BufferLineMovePrev<cr>", opts)
+keymap("n", "<C-p>", "<cmd>BufferLineMoveNext<CR>", opts)
 
 keymap("n", "<C-x>", "<cmd>Bdelete!<CR>", opts)
 
-keymap("i", "<c-l>", "<cmd>bnext<cr>", opts)
-keymap("i", "<C-h>", "<cmd>bprevious<CR>", opts)
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)

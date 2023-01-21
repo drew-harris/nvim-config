@@ -6,6 +6,33 @@ end
 bufferline.setup({
 	-- NOTE: Configure groups here for jsx and js ???
 	options = {
+		custom_areas = {
+			right = function()
+				local result = {}
+				local seve = vim.diagnostic.severity
+				local error = #vim.diagnostic.get(0, { severity = seve.ERROR })
+				local warning = #vim.diagnostic.get(0, { severity = seve.WARN })
+				local info = #vim.diagnostic.get(0, { severity = seve.INFO })
+				local hint = #vim.diagnostic.get(0, { severity = seve.HINT })
+
+				if error ~= 0 then
+					table.insert(result, { text = "  " .. error, fg = "#EC5241" })
+				end
+
+				if warning ~= 0 then
+					table.insert(result, { text = "  " .. warning, fg = "#EFB839" })
+				end
+
+				if hint ~= 0 then
+					table.insert(result, { text = "  " .. hint, fg = "#A3BA5E" })
+				end
+
+				if info ~= 0 then
+					table.insert(result, { text = "  " .. info, fg = "#7EA9A7" })
+				end
+				return result
+			end,
+		},
 		numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
 		close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
 		right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
@@ -16,10 +43,10 @@ bufferline.setup({
 		-- as an escape hatch for people who cannot bear it for whatever reason
 		-- indicator_icon = nil,
 		indicator = { style = "underline", icon = "▎" },
-		buffer_close_icon = "",
+		-- buffer_close_icon = "",
 		-- buffer_close_icon = '',
 		modified_icon = "●",
-		close_icon = "",
+		-- close_icon = "",
 		-- close_icon = '',
 		left_trunc_marker = "",
 		right_trunc_marker = "",
