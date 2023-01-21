@@ -83,7 +83,7 @@ local mappings = {
 		"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
 		"Buffers",
 	},
-	["d"] = {
+	["B"] = {
 		"<cmd>BufferLinePick<cr>",
 		"Pick Buffer",
 	},
@@ -106,6 +106,14 @@ local mappings = {
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["i"] = { "<cmd>IndentBlanklineToggle<cr>", "Toggle Indent Guide" },
+
+	d = {
+		name = "Debug",
+		b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
+		c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
+		n = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" },
+		u = { "<cmd>lua require('dapui').toggle()<cr>", "UI" },
+	},
 
 	h = {
 		name = "Harpoon",
