@@ -104,6 +104,7 @@ return packer.startup(function(use)
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
 	use({ "RRethy/vim-illuminate" })
 	use("folke/neodev.nvim")
+	use("arkav/lualine-lsp-progress")
 
 	use({
 		"weilbith/nvim-code-action-menu",
@@ -135,7 +136,6 @@ return packer.startup(function(use)
 	-- UI Improvements
 	use({ "stevearc/dressing.nvim" })
 	use({ "rcarriga/nvim-notify" })
-	use({ "j-hui/fidget.nvim" })
 	use({
 		"folke/noice.nvim",
 		requires = {

@@ -1,4 +1,4 @@
-local colorscheme = "tokyonight"
+local colorscheme = "onedark"
 
 require("github-theme").setup({
 	transparent = true,
@@ -15,8 +15,6 @@ end
 require("catppuccin").setup({
 	transparent_background = true,
 })
-
-require("rose-pine").setup()
 
 ---@diagnostic disable-next-line: param-type-mismatch
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)

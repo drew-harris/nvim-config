@@ -41,8 +41,6 @@ require("todo-comments").setup({
 -- 	background_colour = "#000000",
 -- })
 
-require("fidget").setup({})
-
 -- Noice
 require("noice").setup({
 	lsp = {
