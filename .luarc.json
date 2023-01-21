@@ -51,5 +51,8 @@
     "/Users/drew/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     "/Users/drew/.local/share/nvim/site/pack/packer/start/wombat.nvim",
     "${3rd}/luassert/library"
-  ]
+  ],
+    "diagnostics.disable": [
+        "unused-function"
+    ]
 }

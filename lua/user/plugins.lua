@@ -55,6 +55,7 @@ return packer.startup(function(use)
 	use({ "lewis6991/impatient.nvim" })
 	use({ "lukas-reineke/indent-blankline.nvim" })
 	use({ "goolord/alpha-nvim" })
+
 	use({ "folke/which-key.nvim" })
 
 	-- Colorschemes
@@ -143,6 +144,20 @@ return packer.startup(function(use)
 			"MunifTanjim/nui.nvim",
 			-- OPTIONAL:
 		},
+	})
+	use("echasnovski/mini.animate")
+	use({
+		"anuvyklack/windows.nvim",
+		requires = {
+			"anuvyklack/middleclass",
+			"anuvyklack/animation.nvim",
+		},
+		config = function()
+			vim.o.winwidth = 10
+			vim.o.winminwidth = 10
+			vim.o.equalalways = false
+			require("windows").setup()
+		end,
 	})
 
 	-- Git
