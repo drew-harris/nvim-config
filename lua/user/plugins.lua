@@ -111,7 +111,7 @@ return packer.startup(function(use)
 	use("mfussenegger/nvim-dap")
 	use("leoluz/nvim-dap-go")
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
-  use("jayp0521/mason-nvim-dap.nvim")
+	use("jayp0521/mason-nvim-dap.nvim")
 
 	use({
 		"weilbith/nvim-code-action-menu",
