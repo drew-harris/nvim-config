@@ -1,4 +1,4 @@
-local colorscheme = "catppuccin"
+local colorscheme = "tokyonight"
 
 require("github-theme").setup({
 	transparent = true,

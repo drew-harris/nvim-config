@@ -16,12 +16,12 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- -- Autocommand that reloads neovim whenever you save the plugins.lua file
--- vim.cmd([[
---   augroup packer_user_config
---     autocmd!
---     autocmd BufWritePost plugins.lua source <afile> | PackerSync
---   augroup end
--- ]])
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]])
 
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
@@ -65,16 +65,9 @@ return packer.startup(function(use)
 	use({ "sainnhe/everforest" })
 	use("tanvirtin/monokai.nvim")
 	use({ "catppuccin/nvim" })
-	use({
-		"ViViDboarder/wombat.nvim",
-		requires = "rktjmp/lush.nvim",
-	})
 	use({ "NLKNguyen/papercolor-theme" })
 	use({ "ishan9299/nvim-solarized-lua" })
 	use({ "projekt0n/github-nvim-theme" })
-	use("Abstract-IDE/Abstract-cs")
-	--use("martinsione/darkplus.nvim")
-	use("marko-cerovac/material.nvim")
 	use("bluz71/vim-nightfly-colors")
 	use({ "bluz71/vim-moonfly-colors", branch = "cterm-compat" })
 	use({ "sainnhe/sonokai" })
@@ -87,14 +80,7 @@ return packer.startup(function(use)
 	use("ishan9299/modus-theme-vim")
 	use("titanzero/zephyrium")
 	use("rebelot/kanagawa.nvim")
-	use("Yazeed1s/minimal.nvim")
 	use("Mofiqul/adwaita.nvim")
-	use("savq/melange")
-	use("sainnhe/gruvbox-material")
-	use({
-		"rose-pine/neovim",
-		as = "rose-pine",
-	})
 	use("olimorris/onedarkpro.nvim")
 
 	-- Cmp
@@ -118,7 +104,6 @@ return packer.startup(function(use)
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
 	use({ "RRethy/vim-illuminate" })
 	use("folke/neodev.nvim")
-	use("stevearc/aerial.nvim") -- Outline panel
 
 	use({
 		"weilbith/nvim-code-action-menu",
@@ -157,9 +142,6 @@ return packer.startup(function(use)
 			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
 			"MunifTanjim/nui.nvim",
 			-- OPTIONAL:
-			--   `nvim-notify` is only needed, if you want to use the notification view.
-			--   If not available, we use `mini` as the fallback
-			"rcarriga/nvim-notify",
 		},
 	})
 
@@ -188,7 +170,7 @@ return packer.startup(function(use)
 
 	use("ThePrimeagen/harpoon")
 
-	use("github/copilot.vim")
+	-- use("github/copilot.vim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
