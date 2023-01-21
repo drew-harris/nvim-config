@@ -31,7 +31,7 @@ local setup = {
 		-- For example:
 		-- ["<space>"] = "SPC",
 		-- ["<cr>"] = "RET",
-		-- ["<tab>"] = "TAB",
+		["<tab>"] = "TAB",
 	},
 	icons = {
 		breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
@@ -86,6 +86,15 @@ local mappings = {
 	["d"] = {
 		"<cmd>BufferLinePick<cr>",
 		"Pick Buffer",
+	},
+
+	["<tab>"] = {
+		"<cmd>tabn<cr>",
+		"Next Tab",
+	},
+	["t"] = {
+		"<c-w><S-T>",
+		"Move to new tab",
 	},
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
