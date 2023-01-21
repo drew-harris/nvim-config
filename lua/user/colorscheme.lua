@@ -1,7 +1,19 @@
-local colorscheme = "onedark_vivid"
+local colorscheme = "catppuccin"
 
 require("github-theme").setup({
 	transparent = true,
+})
+
+if colorscheme == "onedark" then
+	require("onedarkpro").setup({
+		options = {
+			transparency = true,
+		},
+	})
+end
+
+require("catppuccin").setup({
+	transparent_background = true,
 })
 
 require("rose-pine").setup()

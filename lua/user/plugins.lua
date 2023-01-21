@@ -70,15 +70,10 @@ return packer.startup(function(use)
 		requires = "rktjmp/lush.nvim",
 	})
 	use({ "NLKNguyen/papercolor-theme" })
-  require("onedarkpro").setup({
-    options = {
-      transparency = true
-    }
-  })
-  use({ "ishan9299/nvim-solarized-lua" })
-  use({ "projekt0n/github-nvim-theme" })
+	use({ "ishan9299/nvim-solarized-lua" })
+	use({ "projekt0n/github-nvim-theme" })
 	use("Abstract-IDE/Abstract-cs")
-	use("martinsione/darkplus.nvim")
+	--use("martinsione/darkplus.nvim")
 	use("marko-cerovac/material.nvim")
 	use("bluz71/vim-nightfly-colors")
 	use({ "bluz71/vim-moonfly-colors", branch = "cterm-compat" })
@@ -100,6 +95,7 @@ return packer.startup(function(use)
 		"rose-pine/neovim",
 		as = "rose-pine",
 	})
+	use("olimorris/onedarkpro.nvim")
 
 	-- Cmp
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
@@ -149,7 +145,23 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 	})
 
-	--use("nvim-treesitter/nvim-treesitter-context")
+	use("nvim-treesitter/nvim-treesitter-context")
+
+	-- UI Improvements
+	use({ "stevearc/dressing.nvim" })
+	use({ "rcarriga/nvim-notify" })
+	use({ "j-hui/fidget.nvim" })
+	use({
+		"folke/noice.nvim",
+		requires = {
+			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+			"MunifTanjim/nui.nvim",
+			-- OPTIONAL:
+			--   `nvim-notify` is only needed, if you want to use the notification view.
+			--   If not available, we use `mini` as the fallback
+			"rcarriga/nvim-notify",
+		},
+	})
 
 	-- Git
 	use({ "lewis6991/gitsigns.nvim" })
