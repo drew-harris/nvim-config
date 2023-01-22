@@ -44,3 +44,5 @@ require("mason-nvim-dap").setup_handlers({
 })
 
 require("dapui").setup()
+
+vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "", linehl = "", numhl = "" })
