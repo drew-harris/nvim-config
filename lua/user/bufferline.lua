@@ -70,19 +70,13 @@ bufferline.setup({
 		-- end,
 		-- NOTE: this will be called a lot so don't do any heavy processing here
 		custom_filter = function(buf_number)
-			-- filter out filetypes you don't want to see
-			if vim.bo[buf_number].filetype ~= "<i-dont-want-to-see-this>" then
-				return true
-			end
 			-- filter out by buffer name
-			if vim.fn.bufname(buf_number) ~= "[dab-repl]" then
-				return true
+			if vim.fn.bufname(buf_number) == "[dap-repl]" then
+				return false
 			end
 			-- filter out based on arbitrary rules
 			-- e.g. filter out vim wiki buffer from tabline in your work repo
-			if vim.fn.getcwd() == "<work-repo>" and vim.bo[buf_number].filetype ~= "wiki" then
-				return true
-			end
+			return true
 		end,
 		-- offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
 		show_buffer_icons = true,
