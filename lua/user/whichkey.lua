@@ -92,11 +92,14 @@ local mappings = {
 		"<cmd>tabn<cr>",
 		"Next Tab",
 	},
+
 	["t"] = {
 		"<c-w><S-T>",
 		"Move to new tab",
 	},
+
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+	["a"] = { "<cmd>AerialToggle<cr>", "Outline" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["x"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 	["z"] = { "<cmd>set hlsearch!<CR>", "No Highlight" },

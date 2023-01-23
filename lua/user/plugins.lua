@@ -137,12 +137,14 @@ return packer.startup(function(use)
 	use({
 		"nvim-treesitter/nvim-treesitter",
 	})
+	use({
+		"stevearc/aerial.nvim",
+	})
 
 	use("nvim-treesitter/nvim-treesitter-context")
 
 	-- UI Improvements
 	use({ "stevearc/dressing.nvim" })
-	use({ "rcarriga/nvim-notify" })
 	use({
 		"folke/noice.nvim",
 		requires = {
