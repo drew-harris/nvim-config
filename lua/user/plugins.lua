@@ -146,14 +146,6 @@ return packer.startup(function(use)
 
 	-- UI Improvements
 	use({ "stevearc/dressing.nvim" })
-	use({
-		"folke/noice.nvim",
-		requires = {
-			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-			"MunifTanjim/nui.nvim",
-			-- OPTIONAL:
-		},
-	})
 
 	-- Git
 	use({ "lewis6991/gitsigns.nvim" })
