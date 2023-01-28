@@ -58,6 +58,7 @@ require("mason-lspconfig").setup_handlers({
 					description = "Organize Imports",
 				},
 			},
+			settings = nil,
 		}
 
 		---@diagnostic disable-next-line: missing-parameter  From initial commit
@@ -80,6 +81,20 @@ require("mason-lspconfig").setup_handlers({
 
 		if server == "tsserver" then
 			opts.root_dir = lspconfig.util.root_pattern("package.json")
+		end
+
+		if server == "tailwindcss" then
+			opts.settings = {
+				tailwindCSS = {
+					experimental = {
+						classRegex = {
+							"cva\\(([^)]*)\\)",
+							"[\"'`]([^\"'`]*).*?[\"'`]",
+						},
+					},
+				},
+			}
+			print(opts)
 		end
 
 		lspconfig[server].setup(opts)
