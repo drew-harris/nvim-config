@@ -54,6 +54,8 @@ require("lazy").setup({
 	"rebelot/kanagawa.nvim",
 	"Mofiqul/adwaita.nvim",
 	"olimorris/onedarkpro.nvim",
+	"phha/zenburn.nvim",
+	{ "echasnovski/mini.base16", version = "*" },
 
 	-- Cmp
 	"hrsh7th/nvim-cmp",

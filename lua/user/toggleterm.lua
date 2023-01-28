@@ -15,6 +15,7 @@ toggleterm.setup({
 	persist_size = true,
 	direction = "float",
 	close_on_exit = true,
+	---@diagnostic disable-next-line: undefined-field
 	shell = vim.o.shell,
 	float_opts = {
 		border = "curved",
