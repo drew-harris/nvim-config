@@ -80,6 +80,26 @@ require("lazy").setup({
 	"folke/neodev.nvim",
 	"arkav/lualine-lsp-progress",
 
+	-- Test Runner
+	{
+		"nvim-neotest/neotest",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+			"marilari88/neotest-vitest",
+		},
+		config = function()
+			require("neotest").setup({
+				adapters = {
+					require("neotest-vitest"),
+				},
+				quickfix = {
+					open = false,
+				},
+			})
+		end,
+	},
+
 	-- Debugging
 	"mfussenegger/nvim-dap",
 	"leoluz/nvim-dap-go",
@@ -130,5 +150,5 @@ require("lazy").setup({
 
 	"ThePrimeagen/harpoon",
 
-	-- use("github/copilot.vim")
+	"github/copilot.vim",
 })

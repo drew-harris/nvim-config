@@ -34,8 +34,8 @@ require("aerial").setup({
 })
 
 -- Copliot setup
--- vim.g.copilot_no_tab_map = true
--- vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 
 -- Better quick fix, hide stupid menu
 vim.g["code_action_menu_show_details"] = false

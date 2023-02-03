@@ -173,6 +173,12 @@ local mappings = {
 		C = { "<cmd>GitConflictListQf<cr>", "Merge Conflicts" },
 	},
 
+	r = {
+		a = { "<cmd>lua require('neotest').run.run()<cr>", "Run Tests" },
+		o = { "<cmd>lua require('neotest').output.toggle()<cr>", "Toggle Output" },
+		s = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Toggle Output" },
+	},
+
 	l = {
 		name = "LSP",
 		--a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
