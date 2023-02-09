@@ -151,4 +151,7 @@ require("lazy").setup({
 	"ThePrimeagen/harpoon",
 
 	"github/copilot.vim",
+
+	--Cmake
+	"Shatur/neovim-tasks",
 })

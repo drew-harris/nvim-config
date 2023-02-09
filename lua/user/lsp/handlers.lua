@@ -122,6 +122,10 @@ M.on_attach = function(client, bufnr)
 		ih.on_attach(client, bufnr)
 	end
 
+	if client.name == "clangd" then
+		vim.api.nvim_command("set shiftwidth=4")
+	end
+
 	require("lsp_signature").on_attach({
 		handler_opts = {
 			border = "rounded",

@@ -27,14 +27,13 @@ require("mason-null-ls").setup_handlers({
 	end,
 })
 
--- will setup any installed and configured sources above
--- null_ls.setup()
-
 null_ls.setup({
 	debug = false,
 	sources = {
 		null_ls.builtins.formatting.prettierd,
-		-- null_ls.builtins.formatting.rustfmt,
+		null_ls.builtins.formatting.clang_format.with({
+			extra_args = { "{IndentWidth: 4}" },
+		}),
 		null_ls.builtins.formatting.gofmt,
 		-- formatting.black.with({ extra_args = { "--fast" } }),
 		-- formatting.stylua,
