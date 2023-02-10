@@ -94,6 +94,11 @@ local mappings = {
 	},
 
 	["t"] = {
+		name = "Tasks",
+		["p"] = { "<cmd> lua require('telescope').extensions.toggletasks.spawn()<cr>", "Pick" },
+	},
+
+	["|"] = {
 		"<c-w><S-T>",
 		"Move to new tab",
 	},

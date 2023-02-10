@@ -100,6 +100,11 @@ require("lazy").setup({
 		end,
 	},
 
+	-- Task Runner
+	{
+		"jedrzejboczar/toggletasks.nvim",
+	},
+
 	-- Debugging
 	"mfussenegger/nvim-dap",
 	"leoluz/nvim-dap-go",
@@ -151,7 +156,4 @@ require("lazy").setup({
 	"ThePrimeagen/harpoon",
 
 	"github/copilot.vim",
-
-	--Cmake
-	"Shatur/neovim-tasks",
 })
