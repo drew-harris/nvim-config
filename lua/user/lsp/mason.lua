@@ -1,17 +1,3 @@
-local servers = {
-	"sumneko_lua",
-	"cssls",
-	"angularls", -- unfortunate
-	"rust_analyzer",
-	"prismals",
-	"tailwindcss",
-	"eslint",
-	"tsserver",
-	"jsonls",
-	"denols",
-	"gopls",
-}
-
 local settings = {
 	ui = {
 		border = "none",
@@ -27,7 +13,6 @@ local settings = {
 
 require("mason").setup(settings)
 require("mason-lspconfig").setup({
-	ensure_installed = servers,
 	automatic_installation = false,
 })
 

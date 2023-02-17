@@ -25,15 +25,17 @@ require("mason-null-ls").setup_handlers({
 	prettierd = function(source_name, methods)
 		null_ls.register(null_ls.builtins.formatting.prettierd)
 	end,
+	clang_format = function(source_name, methods)
+		null_ls.register(null_ls.builtins.formatting.clang_format.with({
+			extra_args = { "{IndentWidth: 4}" },
+		}))
+	end,
 })
 
 null_ls.setup({
 	debug = false,
 	sources = {
 		null_ls.builtins.formatting.prettierd,
-		null_ls.builtins.formatting.clang_format.with({
-			extra_args = { "{IndentWidth: 4}" },
-		}),
 		null_ls.builtins.formatting.gofmt,
 		-- formatting.black.with({ extra_args = { "--fast" } }),
 		-- formatting.stylua,
