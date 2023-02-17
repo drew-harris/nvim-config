@@ -27,7 +27,6 @@ require("todo-comments").setup({
 
 require("aerial").setup({
 	backends = { "treesitter", "lsp", "markdown", "man" },
-
 	layout = {
 		default_direction = "prefer_left",
 	},

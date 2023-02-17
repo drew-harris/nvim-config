@@ -77,8 +77,11 @@ cmp.setup({
 		-- Set `select` to `false` to only confirm explicitly selected items.
 		["<CR>"] = vim.schedule_wrap(function(fallback)
 			if cmp.visible() and has_words_before() then
-				-- cmp.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert })
-				cmp.close()
+				if cmp.get_selected_entry().source.name == "copilot" then
+					cmp.close()
+				else
+					cmp.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert })
+				end
 			else
 				fallback()
 			end
@@ -103,6 +106,7 @@ cmp.setup({
 				luasnip = "[Snippet]",
 				buffer = "[Buffer]",
 				path = "[Path]",
+				copilot = "[Copilot]",
 			})[entry.source.name]
 			return vim_item
 		end,
