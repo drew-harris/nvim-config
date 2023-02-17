@@ -81,7 +81,7 @@ lualine.setup({
 	},
 	sections = {
 		lualine_a = { branch, diagnostics },
-		lualine_b = { mode },
+		lualine_b = { mode, "filename" },
 		lualine_c = {
 			...,
 			"lsp_progress",

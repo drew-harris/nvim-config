@@ -1,4 +1,4 @@
-local colorscheme = "onedark"
+local colorscheme = "jellybeans-nvim"
 
 require("github-theme").setup({
 	transparent = true,

@@ -56,6 +56,7 @@ require("lazy").setup({
 	{ "olimorris/onedarkpro.nvim" },
 	{ "phha/zenburn.nvim" },
 	{ "echasnovski/mini.base16", version = "*" },
+	{ "metalelf0/jellybeans-nvim", dependencies = "rktjmp/lush.nvim" },
 
 	-- Cmp
 	{ "hrsh7th/nvim-cmp", event = "InsertEnter", dependencies = "hrsh7th/cmp-buffer" },

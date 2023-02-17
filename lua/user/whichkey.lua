@@ -87,34 +87,30 @@ local mappings = {
 		"<cmd>BufferLinePick<cr>",
 		"Pick Buffer",
 	},
-
 	["<tab>"] = {
 		"<cmd>tabn<cr>",
 		"Next Tab",
 	},
-
 	["t"] = {
 		name = "Tasks",
 		["p"] = { "<cmd> lua require('telescope').extensions.toggletasks.spawn()<cr>", "Pick" },
 	},
-
 	["|"] = {
 		"<c-w><S-T>",
 		"Move to new tab",
 	},
-
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	["a"] = { "<cmd>AerialToggle<cr>", "Outline" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["x"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 	["z"] = { "<cmd>set hlsearch!<CR>", "No Highlight" },
+	["p"] = { "<cmd>b#<cr>", "Previous Buffer" },
 	["f"] = {
 		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
 		"Find files",
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["i"] = { "<cmd>IndentBlanklineToggle<cr>", "Toggle Indent Guide" },
-
 	d = {
 		name = "Debug",
 		u = { "<cmd>lua require('dapui').toggle()<cr>", "UI" },
@@ -128,7 +124,6 @@ local mappings = {
 		h = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
 		t = { "<cmd>lua require'dap'.run_to_cursor()<cr>", "Run To Cursor" },
 	},
-
 	h = {
 		name = "Harpoon",
 		a = { '<cmd>lua require("harpoon.mark").add_file()<cr>', "Add" },
@@ -136,23 +131,12 @@ local mappings = {
 		n = { '<cmd>lua require("harpoon.ui").nav_next()<cr>', "Next" },
 		p = { '<cmd>lua require("harpoon.ui").nav_prev()<cr>', "Previous" },
 	},
-
 	q = {
 		name = "Quickfix",
 		t = { "<cmd>TodoQuickFix<cr>", "Todos" },
 		q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
 		c = { "<cmd>GitConflictListQf<cr>", "Merge Conflicts" },
 	},
-
-	p = {
-		name = "Packer",
-		c = { "<cmd>PackerCompile<cr>", "Compile" },
-		i = { "<cmd>PackerInstall<cr>", "Install" },
-		s = { "<cmd>PackerSync<cr>", "Sync" },
-		S = { "<cmd>PackerStatus<cr>", "Status" },
-		u = { "<cmd>PackerUpdate<cr>", "Update" },
-	},
-
 	g = {
 		name = "Git",
 		g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
@@ -177,13 +161,11 @@ local mappings = {
 		t = { "<cmd>Gitsigns toggle_signs<cr>", "Toggle Git Signs" },
 		C = { "<cmd>GitConflictListQf<cr>", "Merge Conflicts" },
 	},
-
 	r = {
 		a = { "<cmd>lua require('neotest').run.run()<cr>", "Run Tests" },
 		o = { "<cmd>lua require('neotest').output.toggle()<cr>", "Toggle Output" },
 		s = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Toggle Output" },
 	},
-
 	l = {
 		name = "LSP",
 		--a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
@@ -231,7 +213,6 @@ local mappings = {
 		C = { "<cmd>Telescope commands<cr>", "Commands" },
 		s = { '<cmd>lua require("telescope").extensions.live_grep_args.live_grep_raw()<cr>', "Styles" },
 	},
-
 	["T"] = {
 		name = "Terminal",
 		n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
@@ -243,7 +224,6 @@ local mappings = {
 		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
 		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
 	},
-
 	-- TODO: Create a keybind (in insert mode) to reject copilot for that line
 	c = {
 		name = "Copilot",
@@ -252,7 +232,6 @@ local mappings = {
 		e = { "<cmd>Copilot enable<cr>", "Enable" },
 		w = { "<cmd>Copilot<cr>", "Window" },
 	},
-
 	-- TODO: Add Octo
 	-- https://github.com/pwntester/octo.nvim
 }
