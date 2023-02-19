@@ -80,7 +80,8 @@ local opts = {
 
 local mappings = {
 	["b"] = {
-		"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+		-- "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{preview = true})<cr>",
+		"<cmd>lua require('telescope.builtin').buffers()<cr>",
 		"Buffers",
 	},
 	["B"] = {
@@ -106,7 +107,8 @@ local mappings = {
 	["z"] = { "<cmd>set hlsearch!<CR>", "No Highlight" },
 	["p"] = { "<cmd>b#<cr>", "Previous Buffer" },
 	["f"] = {
-		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+		-- "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{preview = true})<cr>",
+		"<cmd>lua require('telescope.builtin').find_files()<cr>",
 		"Find files",
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
