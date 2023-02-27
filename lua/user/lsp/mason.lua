@@ -64,9 +64,9 @@ require("mason-lspconfig").setup_handlers({
 			opts.root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc")
 		end
 
-		if server == "tsserver" then
-			opts.root_dir = lspconfig.util.root_pattern("package.json")
-		end
+		-- if server == "tsserver" then
+		-- 	opts.root_dir = lspconfig.util.root_pattern("package.json")
+		-- end
 
 		-- if server == "tailwindcss" then
 		-- 	opts.settings = {

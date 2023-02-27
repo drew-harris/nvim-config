@@ -101,6 +101,7 @@ local mappings = {
 		"Move to new tab",
 	},
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+	["E"] = { "<cmd>Ex<cr>", "Netrw" },
 	["a"] = { "<cmd>AerialToggle<cr>", "Outline" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["x"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
