@@ -15,7 +15,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Install your plugins here
 require("lazy").setup({
-	"wbthomason/packer.nvim",
 	"nvim-lua/plenary.nvim",
 	"windwp/nvim-autopairs",
 	{ "windwp/nvim-ts-autotag", lazy = true, config = true, ft = { "js", "tsx", "ts", "tsx" } },
@@ -80,6 +79,8 @@ require("lazy").setup({
 	{ "RRethy/vim-illuminate", event = "VeryLazy" },
 	"folke/neodev.nvim",
 	"arkav/lualine-lsp-progress",
+	"nanotee/sqls.nvim",
+	{ "j-hui/fidget.nvim" },
 
 	-- Test Runner
 	{
@@ -102,9 +103,7 @@ require("lazy").setup({
 	},
 
 	-- Task Runner
-	{
-		"jedrzejboczar/toggletasks.nvim",
-	},
+	"jedrzejboczar/toggletasks.nvim",
 
 	-- Debugging
 	"mfussenegger/nvim-dap",

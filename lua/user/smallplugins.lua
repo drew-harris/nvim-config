@@ -48,3 +48,5 @@ require("copilot_cmp").setup({
 
 -- Better quick fix, hide stupid menu
 vim.g["code_action_menu_show_details"] = false
+
+require("fidget").setup({})

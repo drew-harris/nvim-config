@@ -84,7 +84,7 @@ lualine.setup({
 		lualine_b = { mode, "filename" },
 		lualine_c = {
 			...,
-			"lsp_progress",
+			-- "lsp_progress",
 		},
 		lualine_y = { diff, spaces, filetype },
 		lualine_z = { "location" },

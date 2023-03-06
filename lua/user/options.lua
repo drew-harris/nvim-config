@@ -33,6 +33,8 @@ local options = {
 	guifont = "monospace:h17", -- the font used in graphical neovim applications
 	autoread = true,
 	laststatus = 3, -- Full width single statusline
+	-- foldmethod = "expr",
+	-- foldexpr = "nvim_treesitter#foldexpr()",
 }
 
 vim.opt.shortmess:append("c")

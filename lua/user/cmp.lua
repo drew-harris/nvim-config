@@ -64,6 +64,8 @@ cmp.setup({
 	},
 	formatters = {
 		insert_text = require("copilot_cmp.format").remove_existing,
+		label = require("copilot_cmp.format").format_label_text,
+		preview = require("copilot_cmp.format").deindent,
 	},
 	sorting = {
 		priority_weight = 2,
@@ -99,8 +101,13 @@ cmp.setup({
 		-- Set `select` to `false` to only confirm explicitly selected items.
 		["<CR>"] = vim.schedule_wrap(function(fallback)
 			if cmp.visible() and has_words_before() then
-				if cmp.get_selected_entry().source.name == "copilot" then
-					cmp.close()
+				if
+					cmp.get_selected_entry()
+					and cmp.get_selected_entry().source
+					and cmp.get_selected_entry().source.name == "copilot"
+				then
+					cmp.confirm({ select = false, behavior = cmp.ConfirmBehavior.Replace })
+				-- cmp.close()
 				else
 					cmp.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert })
 				end

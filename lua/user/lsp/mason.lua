@@ -64,6 +64,11 @@ require("mason-lspconfig").setup_handlers({
 			opts.root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc")
 		end
 
+		if server == "sqls" then
+			-- Set flags
+			opts.flags = { config = "/Users/drew/programs/database/config.yml" }
+		end
+
 		-- if server == "tsserver" then
 		-- 	opts.root_dir = lspconfig.util.root_pattern("package.json")
 		-- end
