@@ -34,6 +34,11 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 keymap("n", "<C-x>", "<cmd>Bdelete!<CR>", opts)
 
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
+
 keymap("n", "<leader>y", '"+y', opts)
 keymap("v", "<leader>y", '"+y', opts)
 -- Visual --
