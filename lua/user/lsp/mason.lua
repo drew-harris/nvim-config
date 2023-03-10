@@ -54,10 +54,8 @@ require("mason-lspconfig").setup_handlers({
 			opts = vim.tbl_deep_extend("force", conf_opts, opts)
 		end
 
-		if server == "sumneko_lua" then
-			require("neodev").setup({
-				-- Options for neodev
-			})
+		if server == "lua_ls" then
+			require("neodev").setup({})
 		end
 
 		if server == "denols" then
