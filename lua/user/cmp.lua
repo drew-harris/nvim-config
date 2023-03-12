@@ -115,7 +115,6 @@ cmp.setup({
 				fallback()
 			end
 		end),
-
 		["<Tab>"] = vim.schedule_wrap(function(fallback)
 			if cmp.visible() and has_words_before() then
 				cmp.select_next_item({ behavior = cmp.SelectBehavior.Replace })
@@ -141,7 +140,8 @@ cmp.setup({
 		end,
 	},
 	sources = {
-		{ name = "copilot" },
+		-- TODO: Add me back
+		-- { name = "copilot" },
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
 		{ name = "buffer" },

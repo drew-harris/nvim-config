@@ -114,6 +114,7 @@ local mappings = {
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["i"] = { "<cmd>IndentBlanklineToggle<cr>", "Toggle Indent Guide" },
+
 	d = {
 		name = "Debug",
 		u = { "<cmd>lua require('dapui').toggle()<cr>", "UI" },
@@ -234,6 +235,11 @@ local mappings = {
 		d = { "<cmd>Copilot disable<cr>", "Disable" },
 		e = { "<cmd>Copilot enable<cr>", "Enable" },
 		w = { "<cmd>Copilot<cr>", "Window" },
+	},
+
+	m = {
+		name = "More...",
+		d = { "<cmd>DBUIToggle<cr>", "Toggle DBUI" },
 	},
 	-- TODO: Add Octo
 	-- https://github.com/pwntester/octo.nvim

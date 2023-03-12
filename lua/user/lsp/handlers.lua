@@ -90,17 +90,14 @@ ih.setup({
 	eol = {
 		-- whether to align to the extreme right or not
 		right_align = false,
-
 		-- padding from the right if right_align is true
 		right_align_padding = 7,
-
 		parameter = {
 			separator = ", ",
 			format = function(hints)
 				return string.format("     (%s)", hints)
 			end,
 		},
-
 		type = {
 			separator = ", ",
 			format = function(hints)
@@ -115,7 +112,7 @@ M.on_attach = function(client, bufnr)
 		client.server_capabilities.documentFormattingProvider = false
 	end
 
-	if client.name == "sumneko_lua" then
+	if client.name == "lua_ls" then
 		client.server_capabilities.documentFormattingProvider = false
 	end
 

@@ -157,4 +157,8 @@ require("lazy").setup({
 
 	"zbirenbaum/copilot.lua",
 	"zbirenbaum/copilot-cmp",
+
+	-- Databases
+	"tpope/vim-dadbod",
+	"kristijanhusak/vim-dadbod-ui",
 })
