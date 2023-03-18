@@ -128,6 +128,10 @@ M.on_attach = function(client, bufnr)
 		vim.api.nvim_command("set shiftwidth=4")
 	end
 
+	if client.name == "tailwindcss" then
+		require("tailwindcss-colors").buf_attach(bufnr)
+	end
+
 	if client.name == "sqls" then
 		require("sqls").on_attach(client, bufnr)
 	end

@@ -57,6 +57,11 @@ require("lazy").setup({
 	{ "echasnovski/mini.base16", version = "*" },
 	{ "metalelf0/jellybeans-nvim", dependencies = "rktjmp/lush.nvim" },
 
+	-- Utils
+	"abecodes/tabout.nvim",
+	{ "norcalli/nvim-colorizer.lua", opts = {} },
+	{ "themaxmarchuk/tailwindcss-colors.nvim", opts = {} },
+
 	-- Cmp
 	{ "hrsh7th/nvim-cmp", event = "InsertEnter", dependencies = "hrsh7th/cmp-buffer" },
 	"hrsh7th/cmp-path",
@@ -81,6 +86,7 @@ require("lazy").setup({
 	"arkav/lualine-lsp-progress",
 	"nanotee/sqls.nvim",
 	{ "j-hui/fidget.nvim" },
+	"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 
 	-- Test Runner
 	{
@@ -111,8 +117,6 @@ require("lazy").setup({
 	{ "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
 	"jayp0521/mason-nvim-dap.nvim",
 
-	{ "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" },
-
 	-- Rust
 	"simrat39/rust-tools.nvim",
 	"simrat39/inlay-hints.nvim",
@@ -139,6 +143,7 @@ require("lazy").setup({
 	{
 		"akinsho/git-conflict.nvim",
 		config = function()
+			---@diagnostic disable-next-line: missing-parameter
 			require("git-conflict").setup()
 		end,
 	},
@@ -157,6 +162,20 @@ require("lazy").setup({
 
 	"zbirenbaum/copilot.lua",
 	"zbirenbaum/copilot-cmp",
+
+	-- Markdown
+	{
+		"ellisonleao/glow.nvim",
+		---@diagnostic disable-next-line: assign-type-mismatch
+		config = {
+			function()
+				require("glow").setup({
+					width_ratio = 0.9, -- maximum width of the Glow window compared to the nvim window size (overrides `width`)
+					height_ratio = 0.9,
+				})
+			end,
+		},
+	},
 
 	-- Databases
 	"tpope/vim-dadbod",

@@ -106,8 +106,7 @@ cmp.setup({
 					and cmp.get_selected_entry().source
 					and cmp.get_selected_entry().source.name == "copilot"
 				then
-					cmp.confirm({ select = false, behavior = cmp.ConfirmBehavior.Replace })
-				-- cmp.close()
+					cmp.close()
 				else
 					cmp.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert })
 				end
@@ -141,7 +140,7 @@ cmp.setup({
 	},
 	sources = {
 		-- TODO: Add me back
-		-- { name = "copilot" },
+		{ name = "copilot" },
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
 		{ name = "buffer" },

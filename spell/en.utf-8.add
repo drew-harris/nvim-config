@@ -30,3 +30,7 @@ backend
 frontend
 localhost
 VITE
+Algos
+nlogn
+logn
+Quicksort

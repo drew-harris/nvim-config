@@ -13,6 +13,7 @@ require("mason-nvim-dap").setup_handlers({
 
 	firefox = function(source_name)
 		dap.adapters.firefox = {
+
 			type = "executable",
 			command = "node",
 			args = { "/Users/drew/programs/vscode-firefox-debug/dist/adapter.bundle.js" },

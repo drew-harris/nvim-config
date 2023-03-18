@@ -203,6 +203,7 @@ local mappings = {
 		},
 		o = { "<cmd>OrganizeImports<CR>", "Organize Imports" },
 		p = { "<cmd>lua vim.diagnostic.open_float({focusable = false})<cr>", "View Issues" },
+		t = { "<cmd> lua require('lsp_lines').toggle()<cr>", "Toggle Diagnostic Lines" },
 	},
 	s = {
 		name = "Search",
@@ -240,6 +241,7 @@ local mappings = {
 	m = {
 		name = "More...",
 		d = { "<cmd>DBUIToggle<cr>", "Toggle DBUI" },
+		g = { "<cmd>Glow<cr>", "Glow" },
 	},
 	-- TODO: Add Octo
 	-- https://github.com/pwntester/octo.nvim

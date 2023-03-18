@@ -50,3 +50,8 @@ require("copilot_cmp").setup({
 vim.g["code_action_menu_show_details"] = false
 
 require("fidget").setup({})
+
+require("tabout").setup({})
+
+require("lsp_lines").setup()
+require("lsp_lines").toggle()
