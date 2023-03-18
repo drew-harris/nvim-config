@@ -49,6 +49,7 @@ require("lazy").setup({
 	{ "rafamadriz/neon" },
 	{ "glepnir/zephyr-nvim" },
 	{ "ishan9299/modus-theme-vim" },
+	"askfiy/visual_studio_code",
 	{ "titanzero/zephyrium" },
 	{ "rebelot/kanagawa.nvim" },
 	{ "Mofiqul/adwaita.nvim" },
@@ -127,6 +128,10 @@ require("lazy").setup({
 	-- Telescope
 	{ "nvim-telescope/telescope.nvim", dependencies = "nvim-telescope/telescope-live-grep-args.nvim" },
 	{ "molecule-man/telescope-menufacture" },
+	{
+		"nvim-telescope/telescope-file-browser.nvim",
+		dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+	},
 
 	-- Treesitter
 	"nvim-treesitter/nvim-treesitter",

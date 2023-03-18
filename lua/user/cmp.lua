@@ -63,9 +63,9 @@ cmp.setup({
 		end,
 	},
 	formatters = {
-		insert_text = require("copilot_cmp.format").remove_existing,
+		-- insert_text = require("copilot_cmp.format").remove_existing,
 		label = require("copilot_cmp.format").format_label_text,
-		preview = require("copilot_cmp.format").deindent,
+		-- preview = require("copilot_cmp.format").deindent,
 	},
 	sorting = {
 		priority_weight = 2,
@@ -106,7 +106,9 @@ cmp.setup({
 					and cmp.get_selected_entry().source
 					and cmp.get_selected_entry().source.name == "copilot"
 				then
-					cmp.close()
+					print("copilot")
+					cmp.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert })
+					-- cmp.close()
 				else
 					cmp.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert })
 				end
@@ -116,7 +118,7 @@ cmp.setup({
 		end),
 		["<Tab>"] = vim.schedule_wrap(function(fallback)
 			if cmp.visible() and has_words_before() then
-				cmp.select_next_item({ behavior = cmp.SelectBehavior.Replace })
+				cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
 			else
 				fallback()
 			end
