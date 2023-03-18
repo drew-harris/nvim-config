@@ -68,6 +68,7 @@
   "onedarkpro.nvim": { "branch": "main", "commit": "a43138792c23e3f56399666049dd57afb61706ae" },
   "papercolor-theme": { "branch": "master", "commit": "9051480ad9129ff4ab4fffb38b44779b9081626f" },
   "plenary.nvim": { "branch": "master", "commit": "253d34830709d690f013daf2853a9d21ad7accab" },
+  "refactoring.nvim": { "branch": "master", "commit": "57c32c6b7a211e5a3a5e4ddc4ad2033daff5cf9a" },
   "rust-tools.nvim": { "branch": "master", "commit": "71d2cf67b5ed120a0e31b2c8adb210dd2834242f" },
   "sonokai": { "branch": "master", "commit": "be321c982bf109b182fb38af2302da838fcaaa02" },
   "sqls.nvim": { "branch": "main", "commit": "bb70de250433ca5f6f7b617a9b3f5ab02eccf861" },

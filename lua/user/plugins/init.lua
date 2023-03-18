@@ -159,6 +159,7 @@ require("lazy").setup({
 	"karb94/neoscroll.nvim",
 
 	"ThePrimeagen/harpoon",
+	"ThePrimeagen/refactoring.nvim",
 
 	"zbirenbaum/copilot.lua",
 	"zbirenbaum/copilot-cmp",
