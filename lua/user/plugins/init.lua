@@ -125,8 +125,8 @@ require("lazy").setup({
 	"ray-x/lsp_signature.nvim",
 
 	-- Telescope
-	-- use({
 	{ "nvim-telescope/telescope.nvim", dependencies = "nvim-telescope/telescope-live-grep-args.nvim" },
+	{ "molecule-man/telescope-menufacture" },
 
 	-- Treesitter
 	"nvim-treesitter/nvim-treesitter",

@@ -97,7 +97,13 @@ telescope.setup({
 		--   extension_config_key = value,
 		-- }
 		-- please take a look at the readme of the extension you want to configure
+		menufacture = {
+			mappings = {
+				main_menu = { [{ "i", "n" }] = "<C-\\>" },
+			},
+		},
 	},
 })
 
 require("telescope").load_extension("live_grep_args")
+require("telescope").load_extension("menufacture")

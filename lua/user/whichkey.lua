@@ -80,7 +80,6 @@ local opts = {
 
 local mappings = {
 	["b"] = {
-		-- "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{preview = true})<cr>",
 		"<cmd>lua require('telescope.builtin').buffers()<cr>",
 		"Buffers",
 	},
@@ -109,7 +108,8 @@ local mappings = {
 	["p"] = { "<cmd>b#<cr>", "Previous Buffer" },
 	["f"] = {
 		-- "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{preview = true})<cr>",
-		"<cmd>lua require('telescope.builtin').find_files()<cr>",
+		-- "<cmd>lua require('telescope.builtin').find_files()<cr>",
+		require("telescope").extensions.menufacture.find_files,
 		"Find files",
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
@@ -172,7 +172,6 @@ local mappings = {
 	},
 	l = {
 		name = "LSP",
-		--a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
 		a = { "<cmd>CodeActionMenu<cr>", "Code Action" },
 		d = {
 			"<cmd>Telescope diagnostics bufnr=0<cr>",
