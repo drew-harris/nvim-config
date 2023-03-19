@@ -11,12 +11,6 @@ end
 
 require("luasnip/loaders/from_vscode").lazy_load()
 
-local check_backspace = function()
-	local col = vim.fn.col(".") - 1
-	---@diagnostic disable-next-line: undefined-field
-	return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
-end
-
 --   פּ ﯟ   some other good icons
 local kind_icons = {
 	Text = "",
