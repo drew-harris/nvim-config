@@ -243,6 +243,7 @@ local mappings = {
 			"<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>",
 			"File browser at current file",
 		},
+		c = { "<cmd>CellularAutomaton make_it_rain<cr>", "CA" },
 	},
 	-- TODO: Add Octo
 	-- https://github.com/pwntester/octo.nvim

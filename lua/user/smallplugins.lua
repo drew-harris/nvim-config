@@ -32,22 +32,13 @@ require("aerial").setup({
 	},
 })
 
--- Copliot setup
--- vim.g.copilot_no_tab_map = true
--- vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-
-require("copilot").setup({
-	suggestion = { enabled = false },
-	panel = { enabled = false },
-})
-require("copilot_cmp").setup({})
-
 -- Better quick fix, hide stupid menu
 vim.g["code_action_menu_show_details"] = false
 
 require("fidget").setup({})
 
-require("tabout").setup({})
+-- TODO: REMOVE
+-- require("tabout").setup({})
 
 require("lsp_lines").setup()
 require("lsp_lines").toggle()

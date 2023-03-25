@@ -111,6 +111,7 @@ require("lazy").setup({
 
 	-- Task Runner
 	"jedrzejboczar/toggletasks.nvim",
+	"weilbith/nvim-code-action-menu",
 
 	-- Debugging
 	"mfussenegger/nvim-dap",
@@ -166,7 +167,8 @@ require("lazy").setup({
 	"ThePrimeagen/harpoon",
 	"ThePrimeagen/refactoring.nvim",
 
-	"zbirenbaum/copilot.lua",
+	{ "zbirenbaum/copilot.lua", cmd = "Copilot", event = "InsertEnter" },
+
 	"zbirenbaum/copilot-cmp",
 
 	-- Markdown
@@ -182,6 +184,9 @@ require("lazy").setup({
 			end,
 		},
 	},
+
+	-- Fun
+	"eandrju/cellular-automaton.nvim",
 
 	-- Databases
 	"tpope/vim-dadbod",

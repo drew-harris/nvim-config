@@ -66,10 +66,3 @@ keymap("n", "<leader>4", '<cmd>:lua require("harpoon.ui").nav_file(4)<cr>', opts
 keymap("n", "<leader>5", '<cmd>:lua require("harpoon.ui").nav_file(5)<cr>', opts)
 keymap("n", "<leader>6", '<cmd>:lua require("harpoon.ui").nav_file(6)<cr>', opts)
 keymap("n", "<leader>7", '<cmd>:lua require("harpoon.ui").nav_file(7)<cr>', opts)
-
--- Terminal --
--- Better terminal navigation
---keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
---keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
---keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
---keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)

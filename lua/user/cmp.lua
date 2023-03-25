@@ -10,6 +10,7 @@ if not snip_status_ok then
 end
 
 require("luasnip/loaders/from_vscode").lazy_load()
+require("copilot_cmp").setup({})
 
 --   פּ ﯟ   some other good icons
 local kind_icons = {
@@ -57,15 +58,15 @@ cmp.setup({
 		end,
 	},
 	formatters = {
-		-- insert_text = require("copilot_cmp.format").remove_existing,
+		insert_text = require("copilot_cmp.format").remove_existing,
 		label = require("copilot_cmp.format").format_label_text,
-		-- preview = require("copilot_cmp.format").deindent,
+		preview = require("copilot_cmp.format").deindent,
 	},
 	sorting = {
-		priority_weight = 2,
+		priority_weight = 4,
 		comparators = {
-			require("copilot_cmp.comparators").prioritize,
-			require("copilot_cmp.comparators").score,
+			-- require("copilot_cmp.comparators").prioritize,
+			-- require("copilot_cmp.comparators").score,
 
 			-- Below is the default comparitor list and order for nvim-cmp
 			cmp.config.compare.offset,
@@ -95,21 +96,12 @@ cmp.setup({
 		-- Set `select` to `false` to only confirm explicitly selected items.
 		["<CR>"] = vim.schedule_wrap(function(fallback)
 			if cmp.visible() and has_words_before() then
-				if
-					cmp.get_selected_entry()
-					and cmp.get_selected_entry().source
-					and cmp.get_selected_entry().source.name == "copilot"
-				then
-					print("copilot")
-					cmp.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert })
-					-- cmp.close()
-				else
-					cmp.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert })
-				end
+				cmp.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert })
 			else
 				fallback()
 			end
 		end),
+
 		["<Tab>"] = vim.schedule_wrap(function(fallback)
 			if cmp.visible() and has_words_before() then
 				cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
@@ -136,8 +128,8 @@ cmp.setup({
 	},
 	sources = {
 		-- TODO: Add me back
-		{ name = "copilot" },
 		{ name = "nvim_lsp" },
+		{ name = "copilot" },
 		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "path" },
@@ -156,3 +148,8 @@ cmp.setup({
 		native_menu = false,
 	},
 })
+
+-- Close copilot_cmp menu when opening cmp
+-- cmp.event:on("menu_opened", function()
+-- 	vim.b.copilot_suggestion_hidden = true
+-- end)
