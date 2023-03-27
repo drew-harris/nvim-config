@@ -88,6 +88,17 @@ require("lazy").setup({
 	"nanotee/sqls.nvim",
 	{ "j-hui/fidget.nvim" },
 	"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+	{
+		"SmiteshP/nvim-navbuddy",
+		dependencies = {
+			"neovim/nvim-lspconfig",
+			"SmiteshP/nvim-navic",
+			"MunifTanjim/nui.nvim",
+		},
+	},
+
+	-- C++
+	"vim-scripts/valgrind.vim",
 
 	-- Test Runner
 	{

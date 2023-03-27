@@ -95,8 +95,8 @@ cmp.setup({
 		-- Accept currently selected item. If none selected, `select` first item.
 		-- Set `select` to `false` to only confirm explicitly selected items.
 		["<CR>"] = vim.schedule_wrap(function(fallback)
-			if cmp.visible() and has_words_before() then
-				cmp.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert })
+			if cmp.visible() and has_words_before() and cmp.get_selected_entry() then
+				cmp.confirm({ select = false, behavior = cmp.ConfirmBehavior.Insert })
 			else
 				fallback()
 			end

@@ -102,6 +102,7 @@ local mappings = {
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	["E"] = { "<cmd>Ex<cr>", "Netrw" },
 	["a"] = { "<cmd>AerialToggle<cr>", "Outline" },
+	["n"] = { "<cmd>Navbuddy<cr>", "Navbuddy" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["x"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 	["z"] = { "<cmd>set hlsearch!<CR>", "No Highlight" },
