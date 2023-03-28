@@ -24,7 +24,7 @@
 -- 	},
 --
 -- 	messages = {
--- 		enabled = false, -- enables the Noice messages UI
+-- 		enabled = true, -- enables the Noice messages UI
 -- 	},
 -- 	notify = {
 -- 		enabled = false,
@@ -48,9 +48,13 @@
 -- 	},
 --
 -- 	hover = {
--- 		enabled = false,
+-- 		enabled = true,
 -- 	},
 -- 	signature = {
+-- 		enabled = true,
+-- 	},
+--
+-- 	cmdline = {
 -- 		enabled = false,
 -- 	},
 -- })

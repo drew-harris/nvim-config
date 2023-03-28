@@ -1,4 +1,5 @@
 local colorscheme = "jellybeans-nvim"
+-- local colorscheme = "gruvbox"
 
 require("github-theme").setup({
 	transparent = true,

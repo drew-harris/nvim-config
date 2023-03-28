@@ -96,6 +96,7 @@ require("lazy").setup({
 			"MunifTanjim/nui.nvim",
 		},
 	},
+	require("user.lsp.saga"),
 
 	-- C++
 	"vim-scripts/valgrind.vim",
@@ -147,7 +148,6 @@ require("lazy").setup({
 
 	-- Treesitter
 	"nvim-treesitter/nvim-treesitter",
-	"stevearc/aerial.nvim",
 
 	"nvim-treesitter/nvim-treesitter-context",
 
@@ -202,4 +202,5 @@ require("lazy").setup({
 	-- Databases
 	"tpope/vim-dadbod",
 	"kristijanhusak/vim-dadbod-ui",
+	"folke/noice.nvim",
 })
