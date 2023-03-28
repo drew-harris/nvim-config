@@ -20,10 +20,10 @@ require("todo-comments").setup({
 })
 
 -- Smooth scrolling
-require("neoscroll").setup({
-	easing_function = "quadratic",
-	-- TODO: Figure out how to center cursor after every scroll
-})
+-- require("neoscroll").setup({
+-- 	easing_function = "quadratic",
+-- 	-- TODO: Figure out how to center cursor after every scroll
+-- })
 
 require("aerial").setup({
 	backends = { "treesitter", "lsp", "markdown", "man" },
