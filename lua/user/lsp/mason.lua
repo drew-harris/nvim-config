@@ -71,18 +71,18 @@ require("mason-lspconfig").setup_handlers({
 		-- 	opts.root_dir = lspconfig.util.root_pattern("package.json")
 		-- end
 
-		if server == "tailwindcss" then
-			opts.settings = {
-				tailwindCSS = {
-					experimental = {
-						classRegex = {
-							"cva\\(([^)]*)\\)",
-							"[\"'`]([^\"'`]*).*?[\"'`]",
-						},
-					},
-				},
-			}
-		end
+		-- if server == "tailwindcss" then
+		-- 	opts.settings = {
+		-- 		tailwindCSS = {
+		-- 			experimental = {
+		-- 				classRegex = {
+		-- 					"cva\\(([^)]*)\\)",
+		-- 					"[\"'`]([^\"'`]*).*?[\"'`]",
+		-- 				},
+		-- 			},
+		-- 		},
+		-- 	}
+		-- end
 
 		lspconfig[server].setup(opts)
 	end,

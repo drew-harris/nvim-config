@@ -97,6 +97,8 @@ require("lazy").setup({
 		},
 	},
 	require("user.lsp.saga"),
+	"jose-elias-alvarez/nvim-lsp-ts-utils",
+	"edgedb/edgedb-vim",
 
 	-- C++
 	"vim-scripts/valgrind.vim",
@@ -195,6 +197,7 @@ require("lazy").setup({
 			end,
 		},
 	},
+	{ "JellyApple102/flote.nvim", opts = {} },
 
 	-- Fun
 	"eandrju/cellular-automaton.nvim",

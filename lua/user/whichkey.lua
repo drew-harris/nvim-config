@@ -109,7 +109,7 @@ local mappings = {
 	["p"] = { "<cmd>b#<cr>", "Previous Buffer" },
 	["f"] = {
 		-- "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{preview = true})<cr>",
-		-- "<cmd>lua require('telescope.builtin').find_files()<cr>",
+		-- "<cmd>lua require('telescope.builtin').find_files({})<cr>",
 		require("telescope").extensions.menufacture.find_files,
 		"Find files",
 	},
@@ -245,6 +245,7 @@ local mappings = {
 			"File browser at current file",
 		},
 		c = { "<cmd>CellularAutomaton make_it_rain<cr>", "CA" },
+		n = { "<cmd>Flote<cr>", "Notes" },
 	},
 	-- TODO: Add Octo
 	-- https://github.com/pwntester/octo.nvim

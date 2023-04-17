@@ -1,4 +1,4 @@
-local colorscheme = "jellybeans-nvim"
+local colorscheme = "github_dark_default"
 -- local colorscheme = "gruvbox"
 
 require("github-theme").setup({

@@ -4,7 +4,7 @@ return {
 	config = function()
 		require("lspsaga").setup({
 			beacon = {
-				enable = false,
+				enable = true,
 			},
 			outline = {
 				win_position = "left",
