@@ -101,7 +101,7 @@ local mappings = {
 	},
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	["E"] = { "<cmd>Ex<cr>", "Netrw" },
-	["a"] = { "<cmd>Lspsaga outline<cr>", "Outline" },
+	["a"] = { "<cmd>FlutterOutlineToggle<cr>", "Outline" },
 	["n"] = { "<cmd>Navbuddy<cr>", "Navbuddy" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["x"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },

@@ -99,6 +99,15 @@ require("lazy").setup({
 	require("user.lsp.saga"),
 	"jose-elias-alvarez/nvim-lsp-ts-utils",
 	"edgedb/edgedb-vim",
+	-- FLUTTER
+	{
+		"akinsho/flutter-tools.nvim",
+		lazy = false,
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"stevearc/dressing.nvim", -- optional for vim.ui.select
+		},
+	},
 
 	-- C++
 	"vim-scripts/valgrind.vim",
@@ -170,6 +179,7 @@ require("lazy").setup({
 	-- Drew's Motions
 	"ggandor/leap.nvim",
 	"tpope/vim-repeat",
+	"tpope/vim-sleuth",
 
 	-- Todo Highlighting
 	"folke/todo-comments.nvim",
@@ -201,6 +211,10 @@ require("lazy").setup({
 
 	-- Fun
 	"eandrju/cellular-automaton.nvim",
+	{
+		-- "m4xshen/hardtime.nvim",
+		opts = {},
+	},
 
 	-- Databases
 	"tpope/vim-dadbod",
