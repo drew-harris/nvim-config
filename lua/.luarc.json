@@ -98,5 +98,8 @@
         "/Users/drew/.local/share/nvim/lazy/fidget.nvim/lua",
         "/Users/drew/.config/nvim/lua",
         "${3rd}/luv/library"
+    ],
+    "diagnostics.disable": [
+        "assign-type-mismatch"
     ]
 }

@@ -1,4 +1,4 @@
-local colorscheme = "github_dark"
+local colorscheme = "monokai-pro"
 -- local colorscheme = "gruvbox"
 
 if colorscheme == "onedark" then

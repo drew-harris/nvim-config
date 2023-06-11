@@ -21,7 +21,17 @@ require("lazy").setup({
 	{ "JoosepAlviste/nvim-ts-context-commentstring" },
 	{ "numToStr/Comment.nvim" },
 	"kyazdani42/nvim-web-devicons",
+
 	"kyazdani42/nvim-tree.lua",
+
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"MunifTanjim/nui.nvim",
+		},
+	},
+
 	"akinsho/bufferline.nvim",
 	"nvim-lualine/lualine.nvim",
 	"akinsho/toggleterm.nvim",
@@ -36,8 +46,15 @@ require("lazy").setup({
 	{ "Shatur/neovim-ayu" },
 	{ "ellisonleao/gruvbox.nvim" },
 	{ "sainnhe/everforest" },
-	{ "tanvirtin/monokai.nvim" },
 	{ "catppuccin/nvim" },
+	{
+		"loctvl842/monokai-pro.nvim",
+		opts = {
+			transparent_background = true,
+			-- filter = "machine",
+			inc_search = "underline",
+		},
+	},
 	{ "NLKNguyen/papercolor-theme" },
 	{ "ishan9299/nvim-solarized-lua" },
 	{
@@ -215,6 +232,7 @@ require("lazy").setup({
 				"dbui",
 				"code-action-menu-menu",
 				"flutterToolsOutline",
+				"neo-tree",
 			},
 		},
 	},

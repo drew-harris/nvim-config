@@ -80,7 +80,7 @@ local opts = {
 
 local mappings = {
 	["b"] = {
-		"<cmd>lua require('telescope.builtin').buffers()<cr>",
+		"<cmd>Neotree buffers float toggle<cr>",
 		"Buffers",
 	},
 	["B"] = {
@@ -99,9 +99,9 @@ local mappings = {
 		"<c-w><S-T>",
 		"Move to new tab",
 	},
-	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+	["e"] = { "<cmd>Neotree float toggle reveal<cr>", "Explorer" },
 	["E"] = { "<cmd>Ex<cr>", "Netrw" },
-	["a"] = { "<cmd>FlutterOutlineToggle<cr>", "Outline" },
+	["a"] = { "<cmd>Neotree document_symbols<cr>", "Outline" },
 	["n"] = { "<cmd>Navbuddy<cr>", "Navbuddy" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["x"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
@@ -151,7 +151,7 @@ local mappings = {
 		p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
 		r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
 		R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
-		s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
+		s = { "<cmd>Neotree git_status float toggle<cr>", "Status In Tree" },
 		u = {
 			"<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
 			"Undo Stage Hunk",
