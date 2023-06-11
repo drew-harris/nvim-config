@@ -22,5 +22,4 @@ dashboard.section.buttons.val = {
 }
 
 dashboard.opts.opts.noautocmd = true
--- vim.cmd([[autocmd User AlphaReady echo 'ready']])
 alpha.setup(dashboard.opts)

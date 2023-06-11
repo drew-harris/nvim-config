@@ -184,10 +184,6 @@ M.on_attach = function(client, bufnr)
 		require("tailwindcss-colors").buf_attach(bufnr)
 	end
 
-	if client.name == "sqls" then
-		require("sqls").on_attach(client, bufnr)
-	end
-
 	require("lsp_signature").on_attach({
 		handler_opts = {
 			border = "rounded",

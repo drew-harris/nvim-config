@@ -20,8 +20,6 @@ require("lazy").setup({
 	{ "numToStr/Comment.nvim" },
 	"kyazdani42/nvim-web-devicons",
 
-	"kyazdani42/nvim-tree.lua",
-
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		dependencies = {
@@ -41,45 +39,7 @@ require("lazy").setup({
 	"folke/which-key.nvim",
 
 	-- Colorschemes
-	{ "folke/tokyonight.nvim" },
-	{ "Shatur/neovim-ayu" },
-	{ "ellisonleao/gruvbox.nvim" },
-	{ "sainnhe/everforest" },
-	{ "catppuccin/nvim" },
-	{
-		"loctvl842/monokai-pro.nvim",
-		opts = {
-			transparent_background = true,
-			-- filter = "machine",
-			inc_search = "underline",
-		},
-	},
-	{ "NLKNguyen/papercolor-theme" },
-	{ "ishan9299/nvim-solarized-lua" },
-	{
-		"projekt0n/github-nvim-theme",
-		lazy = false, -- make sure we load this during startup if it is your main colorscheme
-		priority = 1000, -- make sure to load this before all the other start plugins
-		config = function()
-			require("github-theme").setup({
-				options = {
-					transparent = true,
-				},
-				-- ...
-			})
-		end,
-	},
-	{ "sainnhe/sonokai" },
-	{ "EdenEast/nightfox.nvim" },
-	{ "rafamadriz/neon" },
-	{ "glepnir/zephyr-nvim" },
-	{ "ishan9299/modus-theme-vim" },
-	"askfiy/visual_studio_code",
-	{ "titanzero/zephyrium" },
-	{ "rebelot/kanagawa.nvim" },
-	{ "Mofiqul/adwaita.nvim" },
-	{ "olimorris/onedarkpro.nvim" },
-	{ "metalelf0/jellybeans-nvim", dependencies = "rktjmp/lush.nvim" },
+	require("user.plugins.themes"),
 
 	-- Utils
 	{ "norcalli/nvim-colorizer.lua", opts = {} },
@@ -174,6 +134,7 @@ require("lazy").setup({
 
 	-- UI Improvements
 	{ "stevearc/dressing.nvim", event = "VeryLazy" },
+
 	-- Git
 	"lewis6991/gitsigns.nvim",
 
@@ -195,6 +156,7 @@ require("lazy").setup({
 
 	"ThePrimeagen/harpoon",
 
+	-- AI
 	{ "zbirenbaum/copilot.lua", cmd = "Copilot", event = "InsertEnter" },
 	"zbirenbaum/copilot-cmp",
 	require("user.plugins.chatgpt"),
