@@ -19,16 +19,5 @@ require("todo-comments").setup({
 	-- Configuration here
 })
 
--- Smooth scrolling
--- require("neoscroll").setup({
--- 	easing_function = "quadratic",
--- 	-- TODO: Figure out how to center cursor after every scroll
--- })
-
 -- Better quick fix, hide stupid menu
 vim.g["code_action_menu_show_details"] = false
-
--- require("fidget").setup({})
-
--- TODO: REMOVE
--- require("tabout").setup({})

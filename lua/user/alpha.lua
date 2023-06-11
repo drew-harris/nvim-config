@@ -11,6 +11,7 @@ dashboard.section.header.val = {
 	[[| (_| | | |    |  __/  \ V  V /  | | | |  _  | | | | |  __/ | |_ ]],
 	[[ \__,_| |_|     \___|   \_/\_/   |_| |_| (_) |_| |_|  \___|  \__|]],
 }
+
 dashboard.section.buttons.val = {
 	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
 	dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
@@ -19,9 +20,6 @@ dashboard.section.buttons.val = {
 	dashboard.button("c", "  Configuration", ":e $MYVIMRC <CR>"),
 	dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 }
-
-dashboard.section.header.opts.hl = "Include"
-dashboard.section.buttons.opts.hl = "Keyword"
 
 dashboard.opts.opts.noautocmd = true
 -- vim.cmd([[autocmd User AlphaReady echo 'ready']])

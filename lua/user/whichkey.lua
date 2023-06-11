@@ -80,7 +80,7 @@ local opts = {
 
 local mappings = {
 	["b"] = {
-		"<cmd>Neotree buffers float toggle<cr>",
+		"<cmd>Neotree buffers float toggle reveal<cr>",
 		"Buffers",
 	},
 	["B"] = {
@@ -101,7 +101,6 @@ local mappings = {
 	},
 	["e"] = { "<cmd>Neotree float toggle reveal<cr>", "Explorer" },
 	["E"] = { "<cmd>Ex<cr>", "Netrw" },
-	["a"] = { "<cmd>Neotree document_symbols float toggle reveal<cr>", "Outline" },
 	["n"] = { "<cmd>Navbuddy<cr>", "Navbuddy" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["x"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
@@ -110,7 +109,10 @@ local mappings = {
 	["f"] = {
 		-- "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{preview = true})<cr>",
 		-- "<cmd>lua require('telescope.builtin').find_files({})<cr>",
-		require("telescope").extensions.menufacture.find_files,
+		function()
+			vim.cmd("Neotree close")
+			require("telescope").extensions.menufacture.find_files()
+		end,
 		"Find files",
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
@@ -151,7 +153,7 @@ local mappings = {
 		p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
 		r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
 		R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
-		s = { "<cmd>Neotree git_status float toggle<cr>", "Status In Tree" },
+		s = { "<cmd>Neotree git_status float toggle reveal<cr>", "Status In Tree" },
 		u = {
 			"<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
 			"Undo Stage Hunk",
@@ -251,3 +253,23 @@ local mappings = {
 
 which_key.setup(setup)
 which_key.register(mappings, opts)
+
+local visual_mappings = {
+	a = {
+		name = "AI",
+		e = { "<cmd>ChatGPTRun explain_code<cr>", "Explain Code" },
+		f = { "<cmd>ChatGPTRun fix_bugs<cr>", "Fix Bugs" },
+		o = { "<cmd>ChatGPTRun optimize_code<cr>", "Optimize Code" },
+		m = { "<cmd>ChatGPTEditWithInstructions<cr>", "Modify Code" },
+		d = { "<cmd>ChatGPTRun dockstring<cr>", "Document Code" },
+	},
+}
+
+which_key.register(visual_mappings, {
+	mode = "v", -- NORMAL mode
+	prefix = "<leader>",
+	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+	silent = true, -- use `silent` when creating keymaps
+	noremap = true, -- use `noremap` when creating keymaps
+	nowait = true, -- use `nowait` when creating keymaps
+})

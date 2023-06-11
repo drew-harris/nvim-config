@@ -197,6 +197,7 @@ require("lazy").setup({
 
 	{ "zbirenbaum/copilot.lua", cmd = "Copilot", event = "InsertEnter" },
 	"zbirenbaum/copilot-cmp",
+	require("user.plugins.chatgpt"),
 
 	-- Markdown
 	{
@@ -217,23 +218,23 @@ require("lazy").setup({
 	"eandrju/cellular-automaton.nvim",
 	"wakatime/vim-wakatime",
 
-	{
-		"m4xshen/hardtime.nvim",
-		opts = {
-			disable_mouse = false,
-			max_count = 4,
-			disabled_filetypes = {
-				"qf",
-				"netrw",
-				"NvimTree",
-				"lazy",
-				"mason",
-				"dbui",
-				"code-action-menu-menu",
-				"flutterToolsOutline",
-				"neo-tree",
-				"help",
-			},
-		},
-	},
+	-- {
+	-- 	"m4xshen/hardtime.nvim",
+	-- 	opts = {
+	-- 		disable_mouse = false,
+	-- 		max_count = 4,
+	-- 		disabled_filetypes = {
+	-- 			"qf",
+	-- 			"netrw",
+	-- 			"NvimTree",
+	-- 			"lazy",
+	-- 			"mason",
+	-- 			"dbui",
+	-- 			"code-action-menu-menu",
+	-- 			"flutterToolsOutline",
+	-- 			"neo-tree",
+	-- 			"help",
+	-- 		},
+	-- 	},
+	-- },
 })

@@ -1,6 +1,17 @@
 require("neo-tree").setup({
+	buffers = {
+		window = {
+			mappings = {
+				["x"] = "buffer_delete",
+			},
+		},
+	},
+
 	window = {
 		position = "right",
+		mappings = {
+			["<esc>"] = "close_window",
+		},
 	},
 	source_selector = {
 		winbar = true,
