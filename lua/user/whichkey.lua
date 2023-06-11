@@ -101,7 +101,7 @@ local mappings = {
 	},
 	["e"] = { "<cmd>Neotree float toggle reveal<cr>", "Explorer" },
 	["E"] = { "<cmd>Ex<cr>", "Netrw" },
-	["a"] = { "<cmd>Neotree document_symbols<cr>", "Outline" },
+	["a"] = { "<cmd>Neotree document_symbols float toggle reveal<cr>", "Outline" },
 	["n"] = { "<cmd>Navbuddy<cr>", "Navbuddy" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["x"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },

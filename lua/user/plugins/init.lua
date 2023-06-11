@@ -1,5 +1,3 @@
-local fn = vim.fn
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -32,6 +30,7 @@ require("lazy").setup({
 		},
 	},
 
+	"famiu/bufdelete.nvim",
 	"akinsho/bufferline.nvim",
 	"nvim-lualine/lualine.nvim",
 	"akinsho/toggleterm.nvim",
@@ -86,6 +85,7 @@ require("lazy").setup({
 	{ "norcalli/nvim-colorizer.lua", opts = {} },
 	{ "themaxmarchuk/tailwindcss-colors.nvim", opts = {} },
 
+	require("user.lsp.saga"),
 	-- Cmp
 	{ "hrsh7th/nvim-cmp", event = "InsertEnter", dependencies = "hrsh7th/cmp-buffer" },
 	"hrsh7th/cmp-path",
@@ -174,7 +174,6 @@ require("lazy").setup({
 
 	-- UI Improvements
 	{ "stevearc/dressing.nvim", event = "VeryLazy" },
-
 	-- Git
 	"lewis6991/gitsigns.nvim",
 
@@ -233,6 +232,7 @@ require("lazy").setup({
 				"code-action-menu-menu",
 				"flutterToolsOutline",
 				"neo-tree",
+				"help",
 			},
 		},
 	},
