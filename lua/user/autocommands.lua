@@ -24,11 +24,11 @@ vim.cmd([[
     autocmd VimResized * tabdo wincmd =
   augroup end
 
-  augroup _alpha
-    autocmd!
-    " autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=0
-    autocmd BufUnload <buffer> set tabline+=%f
-  augroup end
+  " augroup _alpha
+  "   autocmd!
+  "   " autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=0
+  "   autocmd BufUnload <buffer> set tabline+=%f
+  " augroup end
 ]])
 
 -- NOTE: Changed line 29, last number was 2

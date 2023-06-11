@@ -29,7 +29,7 @@ require("lazy").setup({
 	},
 
 	"famiu/bufdelete.nvim",
-	"akinsho/bufferline.nvim",
+	require("user.plugins.bufferline"),
 	"nvim-lualine/lualine.nvim",
 	"akinsho/toggleterm.nvim",
 	"lewis6991/impatient.nvim",
@@ -107,7 +107,6 @@ require("lazy").setup({
 
 	-- Task Runner
 	"jedrzejboczar/toggletasks.nvim",
-
 	"weilbith/nvim-code-action-menu",
 
 	-- Debugging
@@ -120,7 +119,15 @@ require("lazy").setup({
 	"simrat39/rust-tools.nvim",
 	"simrat39/inlay-hints.nvim",
 
-	{ "kevinhwang91/nvim-bqf", ft = "qf" },
+	{
+		"kevinhwang91/nvim-bqf",
+		ft = "qf",
+		opts = {
+			auto_enable = true,
+			auto_resize_height = true, -- highly recommended enable
+		},
+	},
+
 	"ray-x/lsp_signature.nvim",
 
 	-- Telescope

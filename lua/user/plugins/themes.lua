@@ -21,9 +21,6 @@ return {
 		end,
 	},
 	{ "askfiy/visual_studio_code" },
-	{ "rebelot/kanagawa.nvim" },
 	{ "olimorris/onedarkpro.nvim" },
 	{ "metalelf0/jellybeans-nvim", dependencies = "rktjmp/lush.nvim" },
-
-	{ "jacoborus/tender.vim" },
 }
