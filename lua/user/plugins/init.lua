@@ -23,7 +23,6 @@ require("lazy").setup({
 	"kyazdani42/nvim-web-devicons",
 	"kyazdani42/nvim-tree.lua",
 	"akinsho/bufferline.nvim",
-	"moll/vim-bbye",
 	"nvim-lualine/lualine.nvim",
 	"akinsho/toggleterm.nvim",
 	"lewis6991/impatient.nvim",
@@ -35,7 +34,6 @@ require("lazy").setup({
 	-- Colorschemes
 	{ "folke/tokyonight.nvim" },
 	{ "Shatur/neovim-ayu" },
-	{ "dracula/vim" },
 	{ "ellisonleao/gruvbox.nvim" },
 	{ "sainnhe/everforest" },
 	{ "tanvirtin/monokai.nvim" },
@@ -48,11 +46,13 @@ require("lazy").setup({
 		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
 			require("github-theme").setup({
+				options = {
+					transparent = true,
+				},
 				-- ...
 			})
 		end,
 	},
-	{ "bluz71/vim-nightfly-colors" },
 	{ "sainnhe/sonokai" },
 	{ "EdenEast/nightfox.nvim" },
 	{ "rafamadriz/neon" },
@@ -63,12 +63,9 @@ require("lazy").setup({
 	{ "rebelot/kanagawa.nvim" },
 	{ "Mofiqul/adwaita.nvim" },
 	{ "olimorris/onedarkpro.nvim" },
-	{ "phha/zenburn.nvim" },
-	{ "echasnovski/mini.base16", version = "*" },
 	{ "metalelf0/jellybeans-nvim", dependencies = "rktjmp/lush.nvim" },
 
 	-- Utils
-	"abecodes/tabout.nvim",
 	{ "norcalli/nvim-colorizer.lua", opts = {} },
 	{ "themaxmarchuk/tailwindcss-colors.nvim", opts = {} },
 
@@ -93,10 +90,6 @@ require("lazy").setup({
 	"jay-babu/mason-null-ls.nvim",
 	{ "RRethy/vim-illuminate", event = "VeryLazy" },
 	"folke/neodev.nvim",
-	"arkav/lualine-lsp-progress",
-	"nanotee/sqls.nvim",
-	{ "j-hui/fidget.nvim" },
-	"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 	{
 		"SmiteshP/nvim-navbuddy",
 		dependencies = {
@@ -105,8 +98,6 @@ require("lazy").setup({
 			"MunifTanjim/nui.nvim",
 		},
 	},
-	require("user.lsp.saga"),
-	"jose-elias-alvarez/nvim-lsp-ts-utils",
 	-- FLUTTER
 	{
 		"akinsho/flutter-tools.nvim",
@@ -116,9 +107,6 @@ require("lazy").setup({
 			"stevearc/dressing.nvim", -- optional for vim.ui.select
 		},
 	},
-
-	-- C++
-	"vim-scripts/valgrind.vim",
 
 	-- Test Runner
 	{
@@ -142,6 +130,7 @@ require("lazy").setup({
 
 	-- Task Runner
 	"jedrzejboczar/toggletasks.nvim",
+
 	"weilbith/nvim-code-action-menu",
 
 	-- Debugging
@@ -160,10 +149,6 @@ require("lazy").setup({
 	-- Telescope
 	{ "nvim-telescope/telescope.nvim", dependencies = "nvim-telescope/telescope-live-grep-args.nvim" },
 	{ "molecule-man/telescope-menufacture" },
-	{
-		"nvim-telescope/telescope-file-browser.nvim",
-		dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
-	},
 
 	-- Treesitter
 	"nvim-treesitter/nvim-treesitter",
@@ -192,14 +177,9 @@ require("lazy").setup({
 	-- Todo Highlighting
 	"folke/todo-comments.nvim",
 
-	-- Smooth scrolling
-	"karb94/neoscroll.nvim",
-
 	"ThePrimeagen/harpoon",
-	"ThePrimeagen/refactoring.nvim",
 
 	{ "zbirenbaum/copilot.lua", cmd = "Copilot", event = "InsertEnter" },
-
 	"zbirenbaum/copilot-cmp",
 
 	-- Markdown
@@ -238,7 +218,4 @@ require("lazy").setup({
 			},
 		},
 	},
-
-	-- Databases
-	"folke/noice.nvim",
 })

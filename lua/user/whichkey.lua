@@ -207,7 +207,6 @@ local mappings = {
 		},
 		o = { "<cmd>OrganizeImports<CR>", "Organize Imports" },
 		p = { "<cmd>lua vim.diagnostic.open_float({focusable = false})<cr>", "View Issues" },
-		t = { "<cmd> lua require('lsp_lines').toggle()<cr>", "Toggle Diagnostic Lines" },
 	},
 	s = {
 		name = "Search",
@@ -243,11 +242,6 @@ local mappings = {
 		name = "More...",
 		d = { "<cmd>DBUIToggle<cr>", "Toggle DBUI" },
 		g = { "<cmd>Glow<cr>", "Glow" },
-		f = { "<cmd>Telescope file_browser<cr>", "Telescope File Browser" },
-		F = {
-			"<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>",
-			"File browser at current file",
-		},
 		c = { "<cmd>CellularAutomaton make_it_rain<cr>", "CA" },
 		n = { "<cmd>Flote<cr>", "Notes" },
 	},

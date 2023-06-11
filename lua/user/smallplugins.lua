@@ -32,6 +32,3 @@ vim.g["code_action_menu_show_details"] = false
 
 -- TODO: REMOVE
 -- require("tabout").setup({})
-
-require("lsp_lines").setup()
-require("lsp_lines").toggle()

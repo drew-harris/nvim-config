@@ -1,4 +1,4 @@
-local colorscheme = "jellybeans-nvim"
+local colorscheme = "github_dark"
 -- local colorscheme = "gruvbox"
 
 if colorscheme == "onedark" then

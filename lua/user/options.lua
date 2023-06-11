@@ -32,7 +32,7 @@ local options = {
 	sidescrolloff = 8, -- minimal number of screen columns either side of cursor if wrap is `false`
 	guifont = "Hack Nerd Font Mono:16", -- the font used in graphical neovim applications
 	autoread = true,
-	laststatus = 3, -- Full width single statusline
+	laststatus = 0, -- Full width single statusline
 	-- foldmethod = "expr",
 	-- foldexpr = "nvim_treesitter#foldexpr()",
 }
