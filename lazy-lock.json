@@ -102,6 +102,7 @@
   "vim-nightfly-colors": { "branch": "master", "commit": "0c163ac5304582372e11bcb918e1d3e760d8619b" },
   "vim-repeat": { "branch": "master", "commit": "24afe922e6a05891756ecf331f39a1f6743d3d5a" },
   "vim-sleuth": { "branch": "master", "commit": "1cc4557420f215d02c4d2645a748a816c220e99b" },
+  "vim-wakatime": { "branch": "master", "commit": "02be9238319937e04afea73fd0fc7da5413ee041" },
   "visual_studio_code": { "branch": "master", "commit": "14d5212cdb7d63a56389e8467b920b729d8eedbc" },
   "which-key.nvim": { "branch": "main", "commit": "4b73390eec680b4c061ea175eb32c0ff3412271d" },
   "zenburn.nvim": { "branch": "master", "commit": "cc78ddba1d65f885d3928692ee628ed40216b900" },

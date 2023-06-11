@@ -11,7 +11,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 local function on_attach()
-	print("LSP started")
 	keymap("n", "gd", "<cmd>:lua vim.lsp.buf.definition()<cr>", opts)
 	keymap("n", "K", "<cmd>:lua vim.lsp.buf.hover()<cr>", opts)
 	keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)

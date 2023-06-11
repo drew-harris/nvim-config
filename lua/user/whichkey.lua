@@ -157,11 +157,15 @@ local mappings = {
 			"Undo Stage Hunk",
 		},
 		o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
-		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+		b = { "<cmd>Gitsigns toggle_current_line_blame<cr>", "Toggle line blame" },
 		c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
 		d = {
 			"<cmd>Gitsigns diffthis HEAD<cr>",
 			"Diff",
+		},
+		D = {
+			"<cmd>Gitsigns preview_hunk_inline<cr>",
+			"Inline Diff",
 		},
 		t = { "<cmd>Gitsigns toggle_signs<cr>", "Toggle Git Signs" },
 		C = { "<cmd>GitConflictListQf<cr>", "Merge Conflicts" },

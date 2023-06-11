@@ -42,7 +42,17 @@ require("lazy").setup({
 	{ "catppuccin/nvim" },
 	{ "NLKNguyen/papercolor-theme" },
 	{ "ishan9299/nvim-solarized-lua" },
-	{ "projekt0n/github-nvim-theme" },
+	{
+		"projekt0n/github-nvim-theme",
+		lazy = false, -- make sure we load this during startup if it is your main colorscheme
+		priority = 1000, -- make sure to load this before all the other start plugins
+		config = function()
+			require("github-theme").setup({
+				transparent = true,
+				-- ...
+			})
+		end,
+	},
 	{ "bluz71/vim-nightfly-colors" },
 	{ "sainnhe/sonokai" },
 	{ "EdenEast/nightfox.nvim" },
@@ -211,9 +221,24 @@ require("lazy").setup({
 
 	-- Fun
 	"eandrju/cellular-automaton.nvim",
+	"wakatime/vim-wakatime",
+
 	{
-		-- "m4xshen/hardtime.nvim",
-		opts = {},
+		"m4xshen/hardtime.nvim",
+		opts = {
+			disable_mouse = false,
+			max_count = 4,
+			disabled_filetypes = {
+				"qf",
+				"netrw",
+				"NvimTree",
+				"lazy",
+				"mason",
+				"dbui",
+				"code-action-menu-menu",
+				"flutterToolsOutline",
+			},
+		},
 	},
 
 	-- Databases
