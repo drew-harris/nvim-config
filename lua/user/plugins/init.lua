@@ -48,7 +48,6 @@ require("lazy").setup({
 		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
 			require("github-theme").setup({
-				transparent = true,
 				-- ...
 			})
 		end,
@@ -108,7 +107,6 @@ require("lazy").setup({
 	},
 	require("user.lsp.saga"),
 	"jose-elias-alvarez/nvim-lsp-ts-utils",
-	"edgedb/edgedb-vim",
 	-- FLUTTER
 	{
 		"akinsho/flutter-tools.nvim",
@@ -242,7 +240,5 @@ require("lazy").setup({
 	},
 
 	-- Databases
-	"tpope/vim-dadbod",
-	"kristijanhusak/vim-dadbod-ui",
 	"folke/noice.nvim",
 })

@@ -12,9 +12,7 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 require("mason-null-ls").setup({
 	ensure_installed = { "stylua", "jq" },
-})
-
-require("mason-null-ls").setup_handlers({
+	handlers = {
 	function(source_name, methods)
 		-- all sources with no handler get passed here
 
@@ -30,7 +28,12 @@ require("mason-null-ls").setup_handlers({
 			extra_args = { "{IndentWidth: 4}" },
 		}))
 	end,
+
+	}
 })
+
+--require("mason-null-ls").setup_handlers({
+--})
 
 null_ls.setup({
 	debug = false,

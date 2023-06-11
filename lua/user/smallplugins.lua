@@ -28,7 +28,7 @@ require("todo-comments").setup({
 -- Better quick fix, hide stupid menu
 vim.g["code_action_menu_show_details"] = false
 
-require("fidget").setup({})
+-- require("fidget").setup({})
 
 -- TODO: REMOVE
 -- require("tabout").setup({})
