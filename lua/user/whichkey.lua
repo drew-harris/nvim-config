@@ -80,7 +80,7 @@ local opts = {
 
 local mappings = {
 	["b"] = {
-		"<cmd>Neotree buffers float toggle reveal<cr>",
+		"<cmd>Neotree buffers toggle reveal<cr>",
 		"Buffers",
 	},
 	["B"] = {
@@ -99,7 +99,7 @@ local mappings = {
 		"<c-w><S-T>",
 		"Move to new tab",
 	},
-	["e"] = { "<cmd>Neotree float toggle reveal<cr>", "Explorer" },
+	["e"] = { "<cmd>Neotree toggle reveal<cr>", "Explorer" },
 	["E"] = { "<cmd>Ex<cr>", "Netrw" },
 	["n"] = { "<cmd>Navbuddy<cr>", "Navbuddy" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
@@ -153,7 +153,7 @@ local mappings = {
 		p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
 		r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
 		R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
-		s = { "<cmd>Neotree git_status float toggle reveal<cr>", "Status In Tree" },
+		s = { "<cmd>Neotree git_status toggle reveal<cr>", "Status In Tree" },
 		u = {
 			"<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
 			"Undo Stage Hunk",

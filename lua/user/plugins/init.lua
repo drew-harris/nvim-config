@@ -29,7 +29,7 @@ require("lazy").setup({
 	},
 
 	"famiu/bufdelete.nvim",
-	require("user.plugins.bufferline"),
+	-- require("user.plugins.bufferline"),
 	"nvim-lualine/lualine.nvim",
 	"akinsho/toggleterm.nvim",
 	"lewis6991/impatient.nvim",

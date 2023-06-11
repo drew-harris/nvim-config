@@ -1,14 +1,6 @@
 local colorscheme = "monokai-pro"
 -- local colorscheme = "gruvbox"
 
-if colorscheme == "onedark" then
-	require("onedarkpro").setup({
-		options = {
-			transparency = true,
-		},
-	})
-end
-
 vim.api.nvim_create_autocmd("ColorScheme", {
 	callback = function()
 		local links = {

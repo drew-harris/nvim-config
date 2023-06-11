@@ -48,7 +48,7 @@ M.setup = function()
 
 	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
 		border = "rounded",
-		focusable = false,
+		focusable = true,
 	})
 
 	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {

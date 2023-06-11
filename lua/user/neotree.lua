@@ -8,7 +8,7 @@ require("neo-tree").setup({
 	},
 
 	window = {
-		position = "right",
+		position = "float",
 		mappings = {
 			["<esc>"] = "close_window",
 		},
@@ -29,16 +29,6 @@ require("neo-tree").setup({
 				source = "git_status", -- string
 				display_name = "  Git ", -- string | nil
 			},
-			{
-				source = "document_symbols",
-				display_name = "  Symbols ",
-			},
 		},
-	},
-	sources = {
-		"filesystem",
-		"buffers",
-		"git_status",
-		"document_symbols",
 	},
 })

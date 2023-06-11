@@ -17,7 +17,7 @@ return {
 				return true
 			end,
 			show_buffer_icons = true,
-			show_buffer_close_icons = true,
+			show_buffer_close_icons = false,
 			-- can also be a table containing 2 custom separators
 			-- [focused and unfocused]. eg: { '|', '|' }
 			separator_style = "thin", -- | "thick" | "thin" | { 'any', 'any' }, | "padded" | "slant"

@@ -21,6 +21,10 @@ return {
 		end,
 	},
 	{ "askfiy/visual_studio_code" },
-	{ "olimorris/onedarkpro.nvim" },
+	{ "olimorris/onedarkpro.nvim", opts = {
+		options = {
+			transparency = true,
+		},
+	} },
 	{ "metalelf0/jellybeans-nvim", dependencies = "rktjmp/lush.nvim" },
 }
