@@ -19,15 +19,15 @@ require("neo-tree").setup({
 		sources = { -- table
 			{
 				source = "filesystem", -- string
-				display_name = "  Files ", -- string | nil
+				display_name = "  Files ", -- string | nil
 			},
 			{
 				source = "buffers", -- string
-				display_name = "  Buffers ", -- string | nil
+				display_name = " 󰆏 Buffers ", -- string | nil
 			},
 			{
 				source = "git_status", -- string
-				display_name = "  Git ", -- string | nil
+				display_name = "  Git ", -- string | nil
 			},
 		},
 	},

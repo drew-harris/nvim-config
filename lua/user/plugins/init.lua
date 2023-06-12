@@ -171,7 +171,6 @@ require("lazy").setup({
 	-- Markdown
 	{
 		"ellisonleao/glow.nvim",
-		---@diagnostic disable-next-line: assign-type-mismatch
 		config = {
 			function()
 				require("glow").setup({
