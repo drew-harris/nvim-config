@@ -162,8 +162,12 @@ local mappings = {
 		b = { "<cmd>Gitsigns toggle_current_line_blame<cr>", "Toggle line blame" },
 		c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
 		d = {
-			"<cmd>Gitsigns diffthis HEAD<cr>",
-			"Diff",
+			name = "Diff",
+			o = { "<cmd>DiffviewOpen<cr>", "Open Diff View" },
+			c = { "<cmd>DiffviewClose<cr>", "CLOSE" },
+			p = { "<cmd>DiffviewOpen origin/main...HEAD<cr>", "PR Against Main" },
+			h = { "<cmd>DiffviewOpen HEAD~1<cr>", "HEAD~1" },
+			f = { "<cmd>DiffviewFileHistory<cr>", "File History" },
 		},
 		D = {
 			"<cmd>Gitsigns preview_hunk_inline<cr>",

@@ -144,6 +144,7 @@ require("lazy").setup({
 
 	-- Git
 	"lewis6991/gitsigns.nvim",
+	require("user.plugins.diffs"),
 
 	{
 		"akinsho/git-conflict.nvim",
