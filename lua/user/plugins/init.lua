@@ -157,9 +157,10 @@ require("lazy").setup({
 	},
 
 	-- Drew's Motions
-	"ggandor/leap.nvim",
+	-- "ggandor/leap.nvim",
 	"tpope/vim-repeat",
 	"tpope/vim-sleuth",
+	require("user.flash"),
 
 	-- Todo Highlighting
 	"folke/todo-comments.nvim",
