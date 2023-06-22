@@ -33,9 +33,9 @@ local options = {
 	guifont = "Hack Nerd Font Mono:16", -- the font used in graphical neovim applications
 	autoread = true,
 	laststatus = 0, -- Full width single statusline
-	foldmethod = "expr",
-	foldexpr = "v:lua.vim.treesitter.foldexpr()", -- Very strange
-	foldlevel = 20,
+	-- foldmethod = "expr",
+	-- foldexpr = "v:lua.vim.treesitter.foldexpr()", -- Very strange
+	-- foldlevel = 20,
 }
 
 vim.opt.shortmess:append("c")
@@ -58,7 +58,7 @@ vim.cmd("hi SignColumn guibg=none ctermbg=none")
 vim.cmd("hi EndOfBuffer guibg=none ctermbg=none")
 
 -- Better autoread
-vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
-	command = "if mode() != 'c' | checktime | endif",
-	pattern = { "*" },
-})
+-- vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
+-- 	command = "if mode() != 'c' | checktime | endif",
+-- 	pattern = { "*" },
+-- })

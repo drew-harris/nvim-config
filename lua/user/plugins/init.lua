@@ -30,11 +30,13 @@ require("lazy").setup({
 
 	"famiu/bufdelete.nvim",
 	-- require("user.plugins.bufferline"),
-	"nvim-lualine/lualine.nvim",
 	"akinsho/toggleterm.nvim",
 	"lewis6991/impatient.nvim",
 	"lukas-reineke/indent-blankline.nvim",
 	"goolord/alpha-nvim",
+
+	-- Alternate file
+	"rgroli/other.nvim",
 
 	"folke/which-key.nvim",
 

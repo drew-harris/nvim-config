@@ -103,6 +103,7 @@ local mappings = {
 	["E"] = { "<cmd>Ex<cr>", "Netrw" },
 	["n"] = { "<cmd>Navbuddy<cr>", "Navbuddy" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
+	["o"] = { "<cmd>Other<cr>", "Other file" },
 	["x"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 	["z"] = { "<cmd>set hlsearch!<CR>", "No Highlight" },
 	["p"] = { "<cmd>b#<cr>", "Previous Buffer" },
