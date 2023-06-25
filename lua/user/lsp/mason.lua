@@ -66,9 +66,10 @@ require("mason-lspconfig").setup_handlers({
 			opts.root_dir = lspconfig.util.root_pattern("pom.xml", "gradle.build", ".git")
 		end
 
-		-- if server == "tsserver" then
-		-- 	opts.root_dir = lspconfig.util.root_pattern("package.json")
-		-- end
+		if server == "tsserver" then
+			opts.root_dir = lspconfig.util.root_pattern("package.json")
+			-- Setup eslint_d
+		end
 
 		if server == "tailwindcss" then
 			opts.settings = {

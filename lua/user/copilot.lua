@@ -6,7 +6,7 @@ require("copilot").setup({
 	suggestion = { enabled = true, auto_trigger = false, keymap = {
 		next = "<C-c>",
 	} },
-	panel = { enabled = false },
+	panel = { enabled = true },
 })
 
 local keymap = vim.api.nvim_set_keymap
