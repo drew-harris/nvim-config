@@ -129,7 +129,7 @@ cmp.setup({
 	sources = {
 		-- TODO: Add me back
 		{ name = "nvim_lsp" },
-		{ name = "copilot" },
+		-- { name = "copilot" },
 		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "path" },

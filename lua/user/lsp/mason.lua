@@ -74,10 +74,11 @@ require("mason-lspconfig").setup_handlers({
 		if server == "tailwindcss" then
 			opts.settings = {
 				tailwindCSS = {
+					-- classAttributes = { "class", "className", "variants.*" },
 					experimental = {
 						classRegex = {
 							"cva\\(([^)]*)\\)",
-							"[\"'`]([^\"'`]*).*?[\"'`]",
+							-- "[\"'`]([^\"'`]*).*?[\"'`]",
 						},
 					},
 				},
