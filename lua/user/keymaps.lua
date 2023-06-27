@@ -65,3 +65,13 @@ keymap("n", "<leader>6", '<cmd>:lua require("harpoon.ui").nav_file(6)<cr>', opts
 keymap("n", "<leader>7", '<cmd>:lua require("harpoon.ui").nav_file(7)<cr>', opts)
 keymap("n", "<leader>8", '<cmd>:lua require("harpoon.ui").nav_file(8)<cr>', opts)
 keymap("n", "<leader>9", '<cmd>:lua require("harpoon.ui").nav_file(9)<cr>', opts)
+
+keymap("n", "<leader>h1", '<cmd>:lua require("harpoon.tmux").sendCommand("{last}", 1)<cr>', opts)
+keymap("n", "<leader>h2", '<cmd>:lua require("harpoon.tmux").sendCommand("{last}", 2)<cr>', opts)
+keymap("n", "<leader>h3", '<cmd>:lua require("harpoon.tmux").sendCommand("{last}", 3)<cr>', opts)
+keymap("n", "<leader>h4", '<cmd>:lua require("harpoon.tmux").sendCommand("{last}", 4)<cr>', opts)
+keymap("n", "<leader>h5", '<cmd>:lua require("harpoon.tmux").sendCommand("{last}", 5)<cr>', opts)
+keymap("n", "<leader>h6", '<cmd>:lua require("harpoon.tmux").sendCommand("{last}", 6)<cr>', opts)
+keymap("n", "<leader>h7", '<cmd>:lua require("harpoon.tmux").sendCommand("{last}", 7)<cr>', opts)
+keymap("n", "<leader>h8", '<cmd>:lua require("harpoon.tmux").sendCommand("{last}", 8)<cr>', opts)
+keymap("n", "<leader>h9", '<cmd>:lua require("harpoon.tmux").sendCommand("{last}", 9)<cr>', opts)

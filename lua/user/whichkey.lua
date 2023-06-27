@@ -138,6 +138,12 @@ local mappings = {
 		e = { '<cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>', "Edit" },
 		n = { '<cmd>lua require("harpoon.ui").nav_next()<cr>', "Next" },
 		p = { '<cmd>lua require("harpoon.ui").nav_prev()<cr>', "Previous" },
+		c = {
+			function()
+				require("harpoon.cmd-ui").toggle_quick_menu()
+			end,
+			"Edit Commands",
+		},
 	},
 	q = {
 		name = "Quickfix",
