@@ -35,10 +35,7 @@ require("lazy").setup({
 	"lukas-reineke/indent-blankline.nvim",
 	"goolord/alpha-nvim",
 
-	-- require("user.plugins.lualine"),
-
-	-- Alternate file
-	"rgroli/other.nvim",
+	require("user.plugins.lualine"),
 
 	"folke/which-key.nvim",
 
