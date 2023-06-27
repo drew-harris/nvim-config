@@ -1,4 +1,5 @@
 return {
+	{ "rose-pine/neovim", name = "rose-pine" },
 	{
 		"loctvl842/monokai-pro.nvim",
 		opts = {
