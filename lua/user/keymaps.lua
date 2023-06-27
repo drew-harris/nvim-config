@@ -63,3 +63,5 @@ keymap("n", "<leader>4", '<cmd>:lua require("harpoon.ui").nav_file(4)<cr>', opts
 keymap("n", "<leader>5", '<cmd>:lua require("harpoon.ui").nav_file(5)<cr>', opts)
 keymap("n", "<leader>6", '<cmd>:lua require("harpoon.ui").nav_file(6)<cr>', opts)
 keymap("n", "<leader>7", '<cmd>:lua require("harpoon.ui").nav_file(7)<cr>', opts)
+keymap("n", "<leader>8", '<cmd>:lua require("harpoon.ui").nav_file(8)<cr>', opts)
+keymap("n", "<leader>9", '<cmd>:lua require("harpoon.ui").nav_file(9)<cr>', opts)

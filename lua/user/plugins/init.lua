@@ -35,6 +35,8 @@ require("lazy").setup({
 	"lukas-reineke/indent-blankline.nvim",
 	"goolord/alpha-nvim",
 
+	-- require("user.plugins.lualine"),
+
 	-- Alternate file
 	"rgroli/other.nvim",
 
@@ -165,7 +167,16 @@ require("lazy").setup({
 	-- Todo Highlighting
 	"folke/todo-comments.nvim",
 
-	"ThePrimeagen/harpoon",
+	{
+		"ThePrimeagen/harpoon",
+		config = function()
+			require("harpoon").setup({
+				tabline = true,
+				tabline_prefix = " ",
+				tabline_suffix = " ",
+			})
+		end,
+	},
 
 	-- AI
 	{ "zbirenbaum/copilot.lua", cmd = "Copilot", event = "InsertEnter" },
