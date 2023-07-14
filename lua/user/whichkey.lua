@@ -109,14 +109,20 @@ local mappings = {
 	["p"] = { "<cmd>b#<cr>", "Previous Buffer" },
 	["f"] = {
 		-- "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{preview = true})<cr>",
-		-- "<cmd>lua require('telescope.builtin').find_files({})<cr>",
-		function()
-			vim.cmd("Neotree close")
-			require("telescope").extensions.menufacture.find_files()
-		end,
+		"<cmd>lua require('telescope.builtin').find_files({})<cr>",
+		-- function()
+		-- 	vim.cmd("Neotree close")
+		-- 	require("telescope").extensions.menufacture.find_files()
+		-- end,
 		"Find files",
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+	G = {
+		function()
+			require("neogit").open()
+		end,
+		"Edit Commands",
+	},
 	["i"] = { "<cmd>IndentBlanklineToggle<cr>", "Toggle Indent Guide" },
 
 	d = {
@@ -138,6 +144,7 @@ local mappings = {
 		e = { '<cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>', "Edit" },
 		n = { '<cmd>lua require("harpoon.ui").nav_next()<cr>', "Next" },
 		p = { '<cmd>lua require("harpoon.ui").nav_prev()<cr>', "Previous" },
+		s = { "<cmd>Telescope harpoon marks<cr>", "Search Marks" },
 		c = {
 			function()
 				require("harpoon.cmd-ui").toggle_quick_menu()

@@ -1,5 +1,7 @@
 return {
-	{ "rose-pine/neovim", name = "rose-pine" },
+	{ "rose-pine/neovim", name = "rose-pine", opts = {
+		disable_background = true,
+	} },
 	{
 		"loctvl842/monokai-pro.nvim",
 		opts = {

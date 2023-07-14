@@ -142,10 +142,12 @@ require("lazy").setup({
 
 	-- UI Improvements
 	{ "stevearc/dressing.nvim", event = "VeryLazy" },
+	-- require("user.plugins.block"),
 
 	-- Git
 	"lewis6991/gitsigns.nvim",
 	require("user.plugins.diffs"),
+	require("user.plugins.neogit"),
 
 	{
 		"akinsho/git-conflict.nvim",
@@ -168,12 +170,12 @@ require("lazy").setup({
 		"ThePrimeagen/harpoon",
 		config = function()
 			require("harpoon").setup({
-				tabline = true,
+				tabline = false,
 				tabline_prefix = "   ",
 				tabline_suffix = "   ",
 				enter_on_sendcmd = true,
 				global_settings = {
-					tabline = true,
+					tabline = false,
 					tabline_prefix = "   ",
 					tabline_suffix = "   ",
 					enter_on_sendcmd = true,
@@ -204,6 +206,8 @@ require("lazy").setup({
 	-- Fun
 	"eandrju/cellular-automaton.nvim",
 	"wakatime/vim-wakatime",
+
+	-- { "echasnovski/mini.animate", opts = {} },
 
 	-- {
 	-- 	"m4xshen/hardtime.nvim",

@@ -78,7 +78,7 @@ require("mason-lspconfig").setup_handlers({
 					experimental = {
 						classRegex = {
 							"cva\\(([^)]*)\\)",
-							-- "[\"'`]([^\"'`]*).*?[\"'`]",
+							"[\"'`]([^\"'`]*).*?[\"'`]",
 						},
 					},
 				},
