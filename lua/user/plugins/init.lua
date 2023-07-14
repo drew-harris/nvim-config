@@ -20,6 +20,7 @@ require("lazy").setup({
 	{ "numToStr/Comment.nvim" },
 	"kyazdani42/nvim-web-devicons",
 
+	"tpope/vim-vinegar",
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		dependencies = {

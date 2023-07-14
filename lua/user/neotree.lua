@@ -13,6 +13,11 @@ require("neo-tree").setup({
 			["<esc>"] = "close_window",
 		},
 	},
+
+	filesystem = {
+		hijack_netrw_behavior = "disabled",
+	},
+
 	source_selector = {
 		winbar = true,
 		-- statusline = true,
