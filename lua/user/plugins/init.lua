@@ -27,6 +27,7 @@ require("lazy").setup({
 			"nvim-lua/plenary.nvim",
 			"MunifTanjim/nui.nvim",
 		},
+		branch = "v3.x",
 	},
 
 	"famiu/bufdelete.nvim",

@@ -71,19 +71,19 @@ require("mason-lspconfig").setup_handlers({
 			-- Setup eslint_d
 		end
 
-		if server == "tailwindcss" then
-			opts.settings = {
-				tailwindCSS = {
-					-- classAttributes = { "class", "className", "variants.*" },
-					experimental = {
-						classRegex = {
-							"cva\\(([^)]*)\\)",
-							"[\"'`]([^\"'`]*).*?[\"'`]",
-						},
-					},
-				},
-			}
-		end
+		-- if server == "tailwindcss" then
+		-- 	opts.settings = {
+		-- 		tailwindCSS = {
+		-- 			-- classAttributes = { "class", "className", "variants.*" },
+		-- 			experimental = {
+		-- 				classRegex = {
+		-- 					"cva\\(([^)]*)\\)",
+		-- 					"[\"'`]([^\"'`]*).*?[\"'`]",
+		-- 				},
+		-- 			},
+		-- 		},
+		-- 	}
+		-- end
 
 		lspconfig[server].setup(opts)
 	end,
