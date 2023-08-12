@@ -183,14 +183,14 @@ M.on_attach = function(client, bufnr)
 		require("tailwindcss-colors").buf_attach(bufnr)
 	end
 
-	-- require("lsp_signature").on_attach({
-	-- 	handler_opts = {
-	-- 		border = "rounded",
-	-- 	},
-	-- 	close_timeout = 2000,
-	-- 	hint_prefix = " ",
-	-- 	toggle_key = "<C-s>",
-	-- }, bufnr)
+	require("lsp_signature").on_attach({
+		handler_opts = {
+			border = "rounded",
+		},
+		close_timeout = 2000,
+		hint_prefix = " ",
+		toggle_key = "<C-s>",
+	}, bufnr)
 
 	lsp_keymaps(bufnr)
 	local status_ok, illuminate = pcall(require, "illuminate")

@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-fields
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -47,6 +48,7 @@ require("lazy").setup({
 	-- Utils
 	{ "norcalli/nvim-colorizer.lua", opts = {} },
 	{ "themaxmarchuk/tailwindcss-colors.nvim", opts = {} },
+	require("user.plugins.tw-values"),
 
 	require("user.lsp.saga"),
 	-- Cmp
@@ -78,6 +80,7 @@ require("lazy").setup({
 			"MunifTanjim/nui.nvim",
 		},
 	},
+
 	-- FLUTTER
 	{
 		"akinsho/flutter-tools.nvim",
@@ -172,12 +175,12 @@ require("lazy").setup({
 		"ThePrimeagen/harpoon",
 		config = function()
 			require("harpoon").setup({
-				tabline = false,
+				tabline = true,
 				tabline_prefix = "   ",
 				tabline_suffix = "   ",
 				enter_on_sendcmd = true,
 				global_settings = {
-					tabline = false,
+					tabline = true,
 					tabline_prefix = "   ",
 					tabline_suffix = "   ",
 					enter_on_sendcmd = true,
