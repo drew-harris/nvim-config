@@ -16,14 +16,14 @@ configs.setup({
 		enable = true,
 	},
 	indent = { enable = true, disable = { "python" } },
-	incremental_selection = {
-		enable = true,
-		keymaps = {
-			init_selection = ",",
-			node_incremental = ",",
-			node_decremental = ".",
-		},
-	},
+	-- incremental_selection = {
+	-- 	enable = true,
+	-- 	keymaps = {
+	-- 		init_selection = ",",
+	-- 		node_incremental = ",",
+	-- 		node_decremental = ".",
+	-- 	},
+	-- },
 	textobjects = {
 		select = {
 			enable = true,

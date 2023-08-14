@@ -155,6 +155,26 @@ require("lazy").setup({
 	require("user.plugins.neogit"),
 
 	{
+		"sustech-data/wildfire.nvim",
+		event = "VeryLazy",
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		config = function()
+			require("wildfire").setup({
+				surrounds = {
+					{ "(", ")" },
+					{ "{", "}" },
+					{ "<", ">" },
+					{ "[", "]" },
+				},
+				keymaps = {
+					init_selection = ",",
+					node_incremental = ",",
+				},
+			})
+		end,
+	},
+
+	{
 		"akinsho/git-conflict.nvim",
 		config = function()
 			---@diagnostic disable-next-line: missing-parameter
@@ -214,23 +234,23 @@ require("lazy").setup({
 
 	-- { "echasnovski/mini.animate", opts = {} },
 
-	-- {
-	-- 	"m4xshen/hardtime.nvim",
-	-- 	opts = {
-	-- 		disable_mouse = false,
-	-- 		max_count = 4,
-	-- 		disabled_filetypes = {
-	-- 			"qf",
-	-- 			"netrw",
-	-- 			"NvimTree",
-	-- 			"lazy",
-	-- 			"mason",
-	-- 			"dbui",
-	-- 			"code-action-menu-menu",
-	-- 			"flutterToolsOutline",
-	-- 			"neo-tree",
-	-- 			"help",
-	-- 		},
-	-- 	},
-	-- },
+	{
+		"m4xshen/hardtime.nvim",
+		opts = {
+			disable_mouse = false,
+			max_count = 4,
+			disabled_filetypes = {
+				"qf",
+				"netrw",
+				"NvimTree",
+				"lazy",
+				"mason",
+				"dbui",
+				"code-action-menu-menu",
+				"flutterToolsOutline",
+				"neo-tree",
+				"help",
+			},
+		},
+	},
 })

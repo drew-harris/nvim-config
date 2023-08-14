@@ -1,7 +1,11 @@
 return {
-	{ "rose-pine/neovim", name = "rose-pine", opts = {
-		disable_background = true,
-	} },
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		opts = {
+			-- disable_background = true,
+		},
+	},
 	{
 		"loctvl842/monokai-pro.nvim",
 		opts = {
@@ -18,4 +22,20 @@ return {
 	} },
 	{ "metalelf0/jellybeans-nvim", dependencies = "rktjmp/lush.nvim" },
 	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
+	{
+		"kartikp10/noctis.nvim",
+	},
+	{
+		"jacoborus/tender.vim",
+	},
+	{
+		"Shatur/neovim-ayu",
+	},
+	{ "projekt0n/github-nvim-theme" },
 }
