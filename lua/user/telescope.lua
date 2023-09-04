@@ -107,4 +107,4 @@ telescope.setup({
 
 require("telescope").load_extension("live_grep_args")
 require("telescope").load_extension("menufacture")
-require("telescope").load_extension("harpoon")
+-- require("telescope").load_extension("harpoon")

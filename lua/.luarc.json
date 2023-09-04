@@ -100,5 +100,6 @@
     "${3rd}/luv/library",
         "${3rd}/luv/library"
   ],
-  "diagnostics.disable": ["assign-type-mismatch"]
+  "diagnostics.disable": ["assign-type-mismatch"],
+    "completion.autoRequire": false
 }

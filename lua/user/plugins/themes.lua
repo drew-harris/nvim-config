@@ -37,5 +37,24 @@ return {
 	{
 		"Shatur/neovim-ayu",
 	},
-	{ "projekt0n/github-nvim-theme" },
+	{
+		"projekt0n/github-nvim-theme",
+		config = function()
+			require("github-theme").setup({
+				options = {
+					transparent = true,
+					transparent_background = true,
+				},
+			})
+		end,
+	},
+
+	{
+		"doums/darcula",
+	},
+
+	{
+		"briones-gabriel/darcula-solid.nvim",
+	},
+	{ "Mofiqul/dracula.nvim" },
 }

@@ -183,6 +183,10 @@ M.on_attach = function(client, bufnr)
 		require("tailwindcss-colors").buf_attach(bufnr)
 	end
 
+	if client.name == "graphql" then
+		client.server_capabilities.semanticTokensProvider = nil
+	end
+
 	require("lsp_signature").on_attach({
 		handler_opts = {
 			border = "rounded",

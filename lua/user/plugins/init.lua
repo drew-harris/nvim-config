@@ -80,6 +80,7 @@ require("lazy").setup({
 			"MunifTanjim/nui.nvim",
 		},
 	},
+	{ "mfussenegger/nvim-jdtls" },
 
 	-- FLUTTER
 	{
@@ -191,6 +192,8 @@ require("lazy").setup({
 	-- Todo Highlighting
 	"folke/todo-comments.nvim",
 
+	require("user.plugins.leetcode"),
+
 	{
 		"ThePrimeagen/harpoon",
 		config = function()
@@ -234,23 +237,23 @@ require("lazy").setup({
 
 	-- { "echasnovski/mini.animate", opts = {} },
 
-	{
-		"m4xshen/hardtime.nvim",
-		opts = {
-			disable_mouse = false,
-			max_count = 4,
-			disabled_filetypes = {
-				"qf",
-				"netrw",
-				"NvimTree",
-				"lazy",
-				"mason",
-				"dbui",
-				"code-action-menu-menu",
-				"flutterToolsOutline",
-				"neo-tree",
-				"help",
-			},
-		},
-	},
+	-- {
+	-- 	"m4xshen/hardtime.nvim",
+	-- 	opts = {
+	-- 		disable_mouse = false,
+	-- 		max_count = 4,
+	-- 		disabled_filetypes = {
+	-- 			"qf",
+	-- 			"netrw",
+	-- 			"NvimTree",
+	-- 			"lazy",
+	-- 			"mason",
+	-- 			"dbui",
+	-- 			"code-action-menu-menu",
+	-- 			"flutterToolsOutline",
+	-- 			"neo-tree",
+	-- 			"help",
+	-- 		},
+	-- 	},
+	-- },
 })
