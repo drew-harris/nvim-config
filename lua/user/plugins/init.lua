@@ -187,7 +187,7 @@ require("lazy").setup({
 	-- "ggandor/leap.nvim",
 	"tpope/vim-repeat",
 	"tpope/vim-sleuth",
-	require("user.flash"),
+	require("user.leap"),
 
 	-- Todo Highlighting
 	"folke/todo-comments.nvim",

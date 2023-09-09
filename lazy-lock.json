@@ -17,8 +17,7 @@
   "darcula-solid.nvim": { "branch": "main", "commit": "d950b9ca20096313c435a93e57af7815766f3d3d" },
   "diffview.nvim": { "branch": "main", "commit": "ff8e57a966618e973f443b2df177cab02e7f325c" },
   "dracula.nvim": { "branch": "main", "commit": "9fe831e685a76e1a1898a694623b33247c4d036c" },
-  "dressing.nvim": { "branch": "master", "commit": "e6eff7a5a950a853c3903d906dbcea03f778db5f" },
-  "flash.nvim": { "branch": "main", "commit": "85a12eaaa7f7c8b903b5480113434ab773d94452" },
+  "dressing.nvim": { "branch": "master", "commit": "169877dbcae54b23b464b219e053e92854bbb37f" },
   "flote.nvim": { "branch": "main", "commit": "26edcdbd148f2950efc6ab22081e05165429edf4" },
   "flutter-tools.nvim": { "branch": "main", "commit": "5de1b5fca5e07849b2626c8aeda81d2ba6362af1" },
   "friendly-snippets": { "branch": "main", "commit": "5749f093759c29e3694053d048ceb940fe12c3d3" },
@@ -89,4 +88,3 @@
   "visual_studio_code": { "branch": "master", "commit": "0b517bd7fecc813aa93a19460312d2eadb2d1c3f" },
   "which-key.nvim": { "branch": "main", "commit": "d871f2b664afd5aed3dc1d1573bef2fb24ce0484" },
   "wildfire.nvim": { "branch": "master", "commit": "2328dc42f52d65e533f5ba1d0245116328f80371" }
-}
