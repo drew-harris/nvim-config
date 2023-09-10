@@ -8,7 +8,7 @@ require("neo-tree").setup({
 	},
 
 	window = {
-		position = "right",
+		position = "float",
 		mappings = {
 			["<esc>"] = "close_window",
 		},
@@ -16,6 +16,13 @@ require("neo-tree").setup({
 
 	filesystem = {
 		hijack_netrw_behavior = "disabled",
+	},
+
+	sources = {
+		"filesystem",
+		"buffers",
+		"git_status",
+		"document_symbols",
 	},
 
 	source_selector = {
