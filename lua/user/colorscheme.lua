@@ -1,7 +1,7 @@
--- local colorscheme = "monokai-pro"
+local colorscheme = "monokai-pro"
 -- local colorscheme = "github_dark"
 -- local colorscheme = "gruvbox"
-local colorscheme = "darcula-solid"
+-- local colorscheme = "darcula-solid"
 
 vim.api.nvim_create_autocmd("ColorScheme", {
 	callback = function()
