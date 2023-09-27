@@ -1,4 +1,4 @@
----@diagnostic disable: param-type-mismatch
+---@diagnostic disable: param-type-mismatch, missing-fields
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
 	return
@@ -51,6 +51,7 @@ local has_words_before = function()
 	return col ~= 0 and vim.api.nvim_buf_get_text(0, line - 1, 0, line - 1, col, {})[1]:match("^%s*$") == nil
 end
 
+---@diagnostic disable-next-line: missing-fields
 cmp.setup({
 	snippet = {
 		expand = function(args)
@@ -133,6 +134,7 @@ cmp.setup({
 		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "path" },
+		{ name = "crates" }, -- Rust support
 	},
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,

@@ -125,6 +125,7 @@ require("lazy").setup({
 	-- Rust
 	"simrat39/rust-tools.nvim",
 	"simrat39/inlay-hints.nvim",
+	require("user.plugins.crates"),
 
 	{
 		"kevinhwang91/nvim-bqf",
