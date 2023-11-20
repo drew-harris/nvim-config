@@ -51,3 +51,6 @@ minecraft
 CTRL
 HuMIn
 deps
+CLR
+Interop
+JIT

@@ -93,6 +93,7 @@ require("lazy").setup({
 	},
 
 	-- Test Runner
+	"vrischmann/tree-sitter-templ",
 	{
 		"nvim-neotest/neotest",
 		dependencies = {
@@ -111,6 +112,7 @@ require("lazy").setup({
 			})
 		end,
 	},
+	"joerdav/templ.vim",
 
 	-- Task Runner
 	"jedrzejboczar/toggletasks.nvim",

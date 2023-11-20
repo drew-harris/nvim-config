@@ -57,4 +57,5 @@ return {
 		"briones-gabriel/darcula-solid.nvim",
 	},
 	{ "Mofiqul/dracula.nvim" },
+	{ "stevedylandev/flexoki-nvim", name = "flexoki" },
 }

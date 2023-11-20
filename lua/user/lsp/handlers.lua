@@ -173,6 +173,7 @@ M.on_attach = function(client, bufnr)
 
 	if client.name == "clangd" then
 		vim.api.nvim_command("set shiftwidth=4")
+		client.server_capabilities.semanticTokensProvider = nil
 	end
 
 	if client.name == "jdtls" then
@@ -201,6 +202,7 @@ M.on_attach = function(client, bufnr)
 	if not status_ok then
 		return
 	end
+
 	illuminate.on_attach(client)
 end
 

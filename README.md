@@ -1,6 +1,18 @@
 # Drews Vim Config
 
-Based off of [Neovim from scratch](https://github.com/LunarVim/Neovim-from-scratch)
+```dot
+digraph {
+  margin=0.75
+  bgcolor="#ffffff00"
+  color=white
+  fontcolor=white
+  node [color=white, fontcolor=white]
+  edge [color=white]
+}
+```
+
+Based off of
+[Neovim from scratch](https://github.com/LunarVim/Neovim-from-scratch)
 
 ## Get healthy
 
@@ -10,7 +22,8 @@ Open `nvim` and enter the following:
 :checkhealth
 ```
 
-You'll probably notice you don't have support for copy/paste also that python and node haven't been setup
+You'll probably notice you don't have support for copy/paste also that python
+and node haven't been setup
 
 So let's fix that
 
@@ -46,7 +59,8 @@ Next we need to install python support (node is optional)
 
 ---
 
-**NOTE** make sure you have [node](https://nodejs.org/en/) installed, I recommend a node manager like [fnm](https://github.com/Schniz/fnm).
+**NOTE** make sure you have [node](https://nodejs.org/en/) installed, I
+recommend a node manager like [fnm](https://github.com/Schniz/fnm).
 
 ### Upgrade to latest release
 

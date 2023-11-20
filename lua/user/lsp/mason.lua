@@ -32,6 +32,35 @@ local function organize_imports()
 	vim.lsp.buf.execute_command(params)
 end
 
+vim.filetype.add({
+	extension = {
+		pest = "pest",
+	},
+})
+
+vim.filetype.add({
+	extension = {
+		templ = "templ",
+	},
+})
+
+require("lspconfig.configs").pest = {
+	default_config = {
+		cmd = { "pest-language-server" },
+		name = "pest",
+		filetypes = { "pest" },
+		root_dir = lspconfig.util.root_pattern("Cargo.toml"),
+		settings = {},
+	},
+}
+
+-- Setup pest
+
+lspconfig.pest.setup({
+	on_attach = require("user.lsp.handlers").on_attach,
+	capabilities = require("user.lsp.handlers").capabilities,
+})
+
 require("mason-lspconfig").setup_handlers({
 	function(server)
 		opts = {
@@ -64,15 +93,6 @@ require("mason-lspconfig").setup_handlers({
 
 		if server == "jdtls" then
 			opts.root_dir = lspconfig.util.root_pattern("pom.xml", "gradle.build", ".git")
-			opts.settings = {
-				java = {
-					project = {
-						source_paths = {
-							"/Users/drew/programs/minecraft/libraries/api/target/generated-sources/apollo/service",
-						},
-					},
-				},
-			}
 
 			-- opts.settings.java.project.source_paths = {
 			-- 	"/Users/drew/programs/minecraft/libraries/api/target/generated-sources/apollo/service/",
@@ -86,20 +106,54 @@ require("mason-lspconfig").setup_handlers({
 			-- Setup eslint_d
 		end
 
-		-- if server == "tailwindcss" then
-		-- 	opts.settings = {
-		-- 		tailwindCSS = {
-		-- 			-- classAttributes = { "class", "className", "variants.*" },
-		-- 			experimental = {
-		-- 				classRegex = {
-		-- 					"cva\\(([^)]*)\\)",
-		-- 					"[\"'`]([^\"'`]*).*?[\"'`]",
-		-- 				},
-		-- 			},
-		-- 		},
-		-- 	}
-		-- end
+		if server == "clangd" then
+			-- Add clang-tidy
+			opts.resolved_capabilities = {
+				execute_command = true,
+			}
+
+			opts.cmd = {
+				"clangd",
+				"--clang-tidy",
+				"--compile_args_from=filesystem",
+				"-j=4", -- number of workers
+			}
+		end
+
+		if server == "tailwindcss" then
+			-- Templ support
+			opts.filetypes = {
+				"html",
+				"css",
+				"scss",
+				"javascript",
+				"javascriptreact",
+				"typescript",
+				"typescriptreact",
+				"ts",
+				"tsx",
+				"templ",
+			}
+			opts.settings = {
+				tailwindCSS = {
+					-- classAttributes = { "class", "className", "variants.*" },
+					experimental = {
+						classRegex = {
+							"cva\\(([^)]*)\\)",
+							"[\"'`]([^\"'`]*).*?[\"'`]",
+						},
+					},
+				},
+			}
+			opts.init_options = {
+				userLanguages = {
+					templ = "html",
+				},
+			}
+		end
 
 		lspconfig[server].setup(opts)
 	end,
 })
+
+-- Add custom pest language server to lspconfig

@@ -3,6 +3,18 @@ if not status_ok then
 	return
 end
 
+-- local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+-- ---@diagnostic disable-next-line: inject-field
+-- parser_config.templ = {
+-- 	install_info = {
+-- 		url = "https://github.com/vrischmann/tree-sitter-templ", -- local path or git repo
+-- 		-- files = { "src/parser.c" }, -- note that some parsers also require src/scanner.c or src/scanner.cc
+-- 		-- optional entries:
+-- 		branch = "main", -- default branch in case of git repo if different from master
+-- 	},
+-- 	filetype = "templ", -- if filetype does not match the parser name
+-- }
+
 configs.setup({
 	ensure_installed = "all", -- one of "all" or a list of languages
 	ignore_install = { "phpdoc" }, -- List of parsers to ignore installingtree

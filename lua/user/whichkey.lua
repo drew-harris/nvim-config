@@ -127,7 +127,7 @@ local mappings = {
 		end,
 		"Edit Commands",
 	},
-	["i"] = { "<cmd>IndentBlanklineToggle<cr>", "Toggle Indent Guide" },
+	["i"] = { "<cmd>IBLToggle<cr>", "Toggle Indent Guide" },
 
 	d = {
 		name = "Debug",
@@ -230,7 +230,7 @@ local mappings = {
 			"Workspace Symbols",
 		},
 		o = { "<cmd>OrganizeImports<CR>", "Organize Imports" },
-		p = { "<cmd>lua vim.diagnostic.open_float({focusable = false})<cr>", "View Issues" },
+		p = { "<cmd>lua vim.diagnostic.open_float({focusable = true})<cr>", "View Issues" },
 	},
 	s = {
 		name = "Search",
