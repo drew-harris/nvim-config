@@ -15,11 +15,14 @@ return {
 		},
 	},
 	{ "askfiy/visual_studio_code" },
-	{ "olimorris/onedarkpro.nvim", opts = {
-		options = {
-			transparency = true,
+	{
+		"olimorris/onedarkpro.nvim",
+		opts = {
+			-- options = {
+			-- 	transparency = true,
+			-- },
 		},
-	} },
+	},
 	{ "metalelf0/jellybeans-nvim", dependencies = "rktjmp/lush.nvim" },
 	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
 	{
@@ -58,4 +61,5 @@ return {
 	},
 	{ "Mofiqul/dracula.nvim" },
 	{ "stevedylandev/flexoki-nvim", name = "flexoki" },
+	"RRethy/nvim-base16",
 }

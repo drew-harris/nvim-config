@@ -1,0 +1,1 @@
+return { "DNLHC/glance.nvim" }

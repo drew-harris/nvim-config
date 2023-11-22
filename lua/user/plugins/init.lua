@@ -16,8 +16,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	"nvim-lua/plenary.nvim",
 	"windwp/nvim-autopairs",
-	{ "windwp/nvim-ts-autotag", lazy = true, config = true, ft = { "js", "tsx", "ts", "tsx" } },
-	{ "JoosepAlviste/nvim-ts-context-commentstring" },
+	{ "windwp/nvim-ts-autotag" },
+	{ "JoosepAlviste/nvim-ts-context-commentstring", opts = {} },
 	{ "numToStr/Comment.nvim" },
 	"kyazdani42/nvim-web-devicons",
 
@@ -51,6 +51,7 @@ require("lazy").setup({
 	require("user.plugins.tw-values"),
 
 	require("user.lsp.saga"),
+	require("user.plugins.glance"),
 	-- Cmp
 	{ "hrsh7th/nvim-cmp", event = "InsertEnter", dependencies = "hrsh7th/cmp-buffer" },
 	"hrsh7th/cmp-path",

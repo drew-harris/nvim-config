@@ -38,6 +38,7 @@ local options = {
 	foldlevel = 20,
 }
 
+vim.g.skip_ts_context_commentstring_module = true
 vim.opt.shortmess:append("c")
 
 for k, v in pairs(options) do

@@ -33,4 +33,12 @@ end
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done({ map_char = { tex = "" } }))
 
 -- Used to complete JSX
-require("nvim-ts-autotag").setup()
+-- require("nvim-ts-autotag").setup({
+-- 	filetypes = { "html", "xml", "tsx" },
+-- 	autotag = {
+-- 		enable = true,
+-- 		enable_rename = true,
+-- 		enable_close = true,
+-- 		enable_close_on_slash = true,
+-- 	},
+-- })
