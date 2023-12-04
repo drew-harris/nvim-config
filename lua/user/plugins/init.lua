@@ -22,6 +22,7 @@ require("lazy").setup({
 	"kyazdani42/nvim-web-devicons",
 
 	"tpope/vim-vinegar",
+	require("user.plugins.oil"),
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		dependencies = {

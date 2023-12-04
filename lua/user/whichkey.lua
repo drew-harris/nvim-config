@@ -107,7 +107,13 @@ local mappings = {
 	["E"] = { "<cmd>Ex<cr>", "Netrw" },
 	["n"] = { "<cmd>Navbuddy<cr>", "Navbuddy" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
-	["o"] = { "<cmd>Other<cr>", "Other file" },
+	["o"] = { "<cmd>Oil<cr>", "Oil" },
+	["O"] = {
+		function()
+			require("oil").open(vim.loop.cwd())
+		end,
+		"Oil Root dir",
+	},
 	["x"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 	["z"] = { "<cmd>set hlsearch!<CR>", "No Highlight" },
 	["p"] = { "<cmd>b#<cr>", "Previous Buffer" },
@@ -212,7 +218,6 @@ local mappings = {
 		},
 		f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
-		I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
 		j = {
 			"<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
 			"Next Diagnostic",
