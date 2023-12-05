@@ -274,6 +274,14 @@ local mappings = {
 		c = { "<cmd>CellularAutomaton make_it_rain<cr>", "CA" },
 		n = { "<cmd>Flote<cr>", "Notes" },
 	},
+
+	k = {
+		name = "Kwik files!!!",
+		e = { "<cmd>e .env<cr>", "Open env file" },
+		i = { "<cmd>e .gitignore<cr>", "Open gitignore" },
+		p = { "<cmd>e package.json<cr>", "Open package.json" },
+		t = { "<cmd>e cargo.toml<cr>", "Open Cargo toml" },
+	},
 	-- TODO: Add Octo
 	-- https://github.com/pwntester/octo.nvim
 }

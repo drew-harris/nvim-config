@@ -4,7 +4,7 @@ return {
 		options = {
 			max_name_length = 30,
 			max_prefix_length = 30, -- prefix used when a buffer is de-duplicated
-			tab_size = 25,
+			tab_size = 15,
 			diagnostics = "nvim_lsp", -- | "nvim_lsp" | "coc",
 			diagnostics_update_in_insert = false,
 			custom_filter = function(buf_number)

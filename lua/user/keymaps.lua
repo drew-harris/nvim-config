@@ -23,8 +23,8 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
-keymap("n", "<C-h>", "<cmd>bprevious<cr>", opts)
-keymap("n", "<C-l>", "<cmd>bnext<cr>", opts)
+keymap("n", "<C-h>", "<cmd>CybuLastusedNext<cr>", opts)
+keymap("n", "<C-l>", "<cmd>CybuLastusedPrev<cr>", opts)
 
 keymap("n", "<C-x>", "<cmd>Bdelete!<CR>", opts)
 

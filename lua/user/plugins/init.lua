@@ -21,7 +21,6 @@ require("lazy").setup({
 	{ "numToStr/Comment.nvim" },
 	"kyazdani42/nvim-web-devicons",
 
-	"tpope/vim-vinegar",
 	require("user.plugins.oil"),
 	{
 		"nvim-neo-tree/neo-tree.nvim",
@@ -31,16 +30,15 @@ require("lazy").setup({
 		},
 		branch = "v3.x",
 	},
+	require("user.plugins.cybu"),
 
-	"famiu/bufdelete.nvim",
 	-- require("user.plugins.bufferline"),
 	"akinsho/toggleterm.nvim",
 	"lewis6991/impatient.nvim",
 	"lukas-reineke/indent-blankline.nvim",
 	"goolord/alpha-nvim",
 
-	-- require("user.plugins.lualine"),
-
+	-- require("user.plugins.block"),
 	"folke/which-key.nvim",
 
 	-- Colorschemes
@@ -53,6 +51,7 @@ require("lazy").setup({
 
 	require("user.lsp.saga"),
 	require("user.plugins.glance"),
+
 	-- Cmp
 	{ "hrsh7th/nvim-cmp", event = "InsertEnter", dependencies = "hrsh7th/cmp-buffer" },
 	"hrsh7th/cmp-path",
@@ -64,7 +63,7 @@ require("lazy").setup({
 	-- TODO: Learn LuaSnip
 	-- https://www.youtube.com/watch?v=Dn800rlPIho
 	"L3MON4D3/LuaSnip",
-	"rafamadriz/friendly-snippets",
+	-- "rafamadriz/friendly-snippets",
 
 	-- LSP
 	"neovim/nvim-lspconfig",
@@ -82,49 +81,48 @@ require("lazy").setup({
 			"MunifTanjim/nui.nvim",
 		},
 	},
-	{ "mfussenegger/nvim-jdtls" },
 
 	-- FLUTTER
-	{
-		"akinsho/flutter-tools.nvim",
-		lazy = false,
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"stevearc/dressing.nvim", -- optional for vim.ui.select
-		},
-	},
+	-- {
+	-- 	"akinsho/flutter-tools.nvim",
+	-- 	lazy = false,
+	-- 	dependencies = {
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"stevearc/dressing.nvim", -- optional for vim.ui.select
+	-- 	},
+	-- },
 
 	-- Test Runner
-	"vrischmann/tree-sitter-templ",
-	{
-		"nvim-neotest/neotest",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-treesitter/nvim-treesitter",
-			"marilari88/neotest-vitest",
-		},
-		config = function()
-			require("neotest").setup({
-				adapters = {
-					require("neotest-vitest"),
-				},
-				quickfix = {
-					open = false,
-				},
-			})
-		end,
-	},
-	"joerdav/templ.vim",
+	-- "vrischmann/tree-sitter-templ",
+	-- {
+	-- 	"nvim-neotest/neotest",
+	-- 	dependencies = {
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"nvim-treesitter/nvim-treesitter",
+	-- 		"marilari88/neotest-vitest",
+	-- 	},
+	-- 	config = function()
+	-- 		require("neotest").setup({
+	-- 			adapters = {
+	-- 				require("neotest-vitest"),
+	-- 			},
+	-- 			quickfix = {
+	-- 				open = false,
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- },
+	-- "joerdav/templ.vim",
 
 	-- Task Runner
-	"jedrzejboczar/toggletasks.nvim",
+	-- "jedrzejboczar/toggletasks.nvim",
 	"weilbith/nvim-code-action-menu",
 
 	-- Debugging
-	"mfussenegger/nvim-dap",
-	"leoluz/nvim-dap-go",
-	{ "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
-	"jayp0521/mason-nvim-dap.nvim",
+	-- "mfussenegger/nvim-dap",
+	-- "leoluz/nvim-dap-go",
+	-- { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
+	-- "jayp0521/mason-nvim-dap.nvim",
 
 	-- Rust
 	"simrat39/rust-tools.nvim",
@@ -148,7 +146,6 @@ require("lazy").setup({
 
 	-- Treesitter
 	"nvim-treesitter/nvim-treesitter",
-
 	"nvim-treesitter/nvim-treesitter-context",
 
 	-- UI Improvements
@@ -158,7 +155,7 @@ require("lazy").setup({
 	-- Git
 	"lewis6991/gitsigns.nvim",
 	require("user.plugins.diffs"),
-	require("user.plugins.neogit"),
+	-- require("user.plugins.neogit"),
 
 	{
 		"sustech-data/wildfire.nvim",
@@ -197,7 +194,7 @@ require("lazy").setup({
 	-- Todo Highlighting
 	"folke/todo-comments.nvim",
 
-	require("user.plugins.leetcode"),
+	-- require("user.plugins.leetcode"),
 
 	{
 		"ThePrimeagen/harpoon",
@@ -220,7 +217,7 @@ require("lazy").setup({
 	-- AI
 	{ "zbirenbaum/copilot.lua", cmd = "Copilot", event = "InsertEnter" },
 	"zbirenbaum/copilot-cmp",
-	require("user.plugins.chatgpt"),
+	-- require("user.plugins.chatgpt"),
 
 	-- Markdown
 	{
@@ -234,6 +231,7 @@ require("lazy").setup({
 			end,
 		},
 	},
+
 	{ "JellyApple102/flote.nvim", opts = {} },
 
 	-- Fun
