@@ -61,9 +61,13 @@ require("lazy").setup({
 
 	-- Snippets
 	-- TODO: Learn LuaSnip
+
 	-- https://www.youtube.com/watch?v=Dn800rlPIho
-	"L3MON4D3/LuaSnip",
-	-- "rafamadriz/friendly-snippets",
+	{
+		"L3MON4D3/LuaSnip",
+		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+	},
+	"rafamadriz/friendly-snippets",
 
 	-- LSP
 	"neovim/nvim-lspconfig",
