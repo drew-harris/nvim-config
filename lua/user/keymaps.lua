@@ -75,3 +75,5 @@ keymap("n", "<leader>h6", '<cmd>:lua require("harpoon.tmux").sendCommand("{last}
 keymap("n", "<leader>h7", '<cmd>:lua require("harpoon.tmux").sendCommand("{last}", 7)<cr>', opts)
 keymap("n", "<leader>h8", '<cmd>:lua require("harpoon.tmux").sendCommand("{last}", 8)<cr>', opts)
 keymap("n", "<leader>h9", '<cmd>:lua require("harpoon.tmux").sendCommand("{last}", 9)<cr>', opts)
+
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
