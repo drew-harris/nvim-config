@@ -34,9 +34,9 @@ return {
 	{
 		"kartikp10/noctis.nvim",
 	},
-	{
-		"jacoborus/tender.vim",
-	},
+	-- {
+	-- 	"jacoborus/tender.vim",
+	-- },
 	{
 		"Shatur/neovim-ayu",
 	},
@@ -59,7 +59,6 @@ return {
 	{
 		"briones-gabriel/darcula-solid.nvim",
 	},
-	{ "Mofiqul/dracula.nvim" },
-	{ "stevedylandev/flexoki-nvim", name = "flexoki" },
-	"RRethy/nvim-base16",
+	-- { "Mofiqul/dracula.nvim" },
+	-- "RRethy/nvim-base16",
 }

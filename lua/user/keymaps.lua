@@ -77,3 +77,7 @@ keymap("n", "<leader>h8", '<cmd>:lua require("harpoon.tmux").sendCommand("{last}
 keymap("n", "<leader>h9", '<cmd>:lua require("harpoon.tmux").sendCommand("{last}", 9)<cr>', opts)
 
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+-- Easy align
+keymap("n", "ga", "<cmd>:EasyAlign<cr>", opts)
+keymap("v", "ga", "<cmd>:EasyAlign<cr>", opts)

@@ -41,6 +41,9 @@ require("lazy").setup({
 	-- require("user.plugins.block"),
 	"folke/which-key.nvim",
 
+	-- Easy align
+	"junegunn/vim-easy-align",
+
 	-- Colorschemes
 	require("user.plugins.themes"),
 
@@ -140,6 +143,7 @@ require("lazy").setup({
 			auto_enable = true,
 			auto_resize_height = true, -- highly recommended enable
 		},
+		dependencies = { "junegunn/fzf" },
 	},
 
 	"ray-x/lsp_signature.nvim",
