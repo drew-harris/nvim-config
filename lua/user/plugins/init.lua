@@ -204,23 +204,7 @@ require("lazy").setup({
 
 	-- require("user.plugins.leetcode"),
 
-	{
-		"ThePrimeagen/harpoon",
-		config = function()
-			require("harpoon").setup({
-				tabline = true,
-				tabline_prefix = "   ",
-				tabline_suffix = "   ",
-				enter_on_sendcmd = true,
-				global_settings = {
-					tabline = true,
-					tabline_prefix = "   ",
-					tabline_suffix = "   ",
-					enter_on_sendcmd = true,
-				},
-			})
-		end,
-	},
+	require("user.plugins.harpoon"),
 
 	-- AI
 	{ "zbirenbaum/copilot.lua", cmd = "Copilot", event = "InsertEnter" },
