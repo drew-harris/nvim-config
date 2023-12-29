@@ -1,9 +1,17 @@
+local function harpoonlist()
+	local harpoon = require("harpoon")
+	-- Get list of files
+	local result = table.concat(harpoon:list():display(), " ")
+
+	return result
+end
+
 return {
 	"nvim-lualine/lualine.nvim",
 	config = function()
 		-- code
 		-- Make bottom bar transparent in the middle
-		local auto_theme = require("lualine.themes.auto")
+		local auto_theme = require("lualine.themes.wombat")
 
 		local modes = {
 			"normal",
@@ -60,8 +68,12 @@ return {
 				lualine_z = {},
 			},
 			tabline = {},
-			winbar = {},
-			inactive_winbar = {},
+			winbar = {
+				lualine_c = { harpoonlist },
+			},
+			inactive_winbar = {
+				lualine_c = { harpoonlist },
+			},
 			extensions = {},
 		})
 	end,
