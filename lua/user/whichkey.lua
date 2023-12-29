@@ -114,7 +114,7 @@ local mappings = {
 		end,
 		"Oil Root dir",
 	},
-	["x"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+	["x"] = { "<cmd>bw<CR>", "Close Buffer" },
 	["z"] = { "<cmd>set hlsearch!<CR>", "No Highlight" },
 	["p"] = { "<cmd>b#<cr>", "Previous Buffer" },
 	["f"] = {
@@ -281,6 +281,7 @@ local mappings = {
 		i = { "<cmd>e .gitignore<cr>", "Open gitignore" },
 		p = { "<cmd>e package.json<cr>", "Open package.json" },
 		t = { "<cmd>e cargo.toml<cr>", "Open Cargo toml" },
+		l = { "<cmd>e .eslintrc.cjs<cr>", "Open Eslintrc" },
 	},
 	-- TODO: Add Octo
 	-- https://github.com/pwntester/octo.nvim

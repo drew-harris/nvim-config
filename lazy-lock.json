@@ -41,6 +41,7 @@
   "monokai-pro.nvim": { "branch": "master", "commit": "6e7ce88ab4ddfcdeac65161d233a43e906940a0c" },
   "neo-tree.nvim": { "branch": "v3.x", "commit": "230ff118613fa07138ba579b89d13ec2201530b9" },
   "neodev.nvim": { "branch": "main", "commit": "ef351fae5df2559956398923c5d38c9b64e7d898" },
+  "neogit": { "branch": "master", "commit": "801143ee4db4121fc11a6468daae6680ba9fab51" },
   "neovim-ayu": { "branch": "master", "commit": "76dbf939b38e03ac5f9bd711ab3e434999f715c8" },
   "noctis.nvim": { "branch": "main", "commit": "0b9336e39c686a7e58de06e4dd38c2bd862a7b33" },
   "nui.nvim": { "branch": "main", "commit": "c9b4de623d19a85b353ff70d2ae9c77143abe69c" },

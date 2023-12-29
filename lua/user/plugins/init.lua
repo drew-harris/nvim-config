@@ -163,7 +163,7 @@ require("lazy").setup({
 	-- Git
 	"lewis6991/gitsigns.nvim",
 	require("user.plugins.diffs"),
-	-- require("user.plugins.neogit"),
+	require("user.plugins.neogit"),
 
 	{
 		"sustech-data/wildfire.nvim",

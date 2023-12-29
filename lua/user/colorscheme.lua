@@ -1,4 +1,5 @@
 local colorscheme = "monokai-pro"
+-- local colorscheme = "tokyonight"
 -- local colorscheme = "github_dark"
 -- local colorscheme = "gruvbox"
 -- local colorscheme = "darcula-solid"
