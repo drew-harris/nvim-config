@@ -150,8 +150,22 @@ local mappings = {
 	},
 	h = {
 		name = "Harpoon",
-		a = { '<cmd>lua require("harpoon.mark").add_file()<cr>', "Add" },
-		e = { '<cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>', "Edit" },
+		a = {
+			function()
+				local harpoon = require("harpoon")
+				harpoon:list():append()
+			end,
+			"Add",
+		},
+
+		e = {
+			function()
+				local harpoon = require("harpoon")
+				harpoon.ui:toggle_quick_menu(harpoon:list())
+			end,
+			"Edit",
+		},
+
 		n = { '<cmd>lua require("harpoon.ui").nav_next()<cr>', "Next" },
 		p = { '<cmd>lua require("harpoon.ui").nav_prev()<cr>', "Previous" },
 		s = { "<cmd>Telescope harpoon marks<cr>", "Search Marks" },

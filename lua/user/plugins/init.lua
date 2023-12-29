@@ -32,7 +32,7 @@ require("lazy").setup({
 	},
 	require("user.plugins.cybu"),
 
-	-- require("user.plugins.bufferline"),
+	require("user.plugins.bufferline"),
 	"akinsho/toggleterm.nvim",
 	"lewis6991/impatient.nvim",
 	"lukas-reineke/indent-blankline.nvim",

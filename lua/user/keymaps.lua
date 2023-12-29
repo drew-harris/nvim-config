@@ -23,8 +23,8 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
-keymap("n", "<C-h>", "<cmd>CybuLastusedNext<cr>", opts)
-keymap("n", "<C-l>", "<cmd>CybuLastusedPrev<cr>", opts)
+keymap("n", "<C-h>", "<cmd>CybuPrev<cr>", opts)
+keymap("n", "<C-l>", "<cmd>CybuNext<cr>", opts)
 
 keymap("n", "<C-x>", "<cmd>bd<CR>", opts)
 
@@ -56,15 +56,14 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Harpoon --
-keymap("n", "<leader>1", '<cmd>:lua require("harpoon.ui").nav_file(1)<cr>', opts)
-keymap("n", "<leader>2", '<cmd>:lua require("harpoon.ui").nav_file(2)<cr>', opts)
-keymap("n", "<leader>3", '<cmd>:lua require("harpoon.ui").nav_file(3)<cr>', opts)
-keymap("n", "<leader>4", '<cmd>:lua require("harpoon.ui").nav_file(4)<cr>', opts)
-keymap("n", "<leader>5", '<cmd>:lua require("harpoon.ui").nav_file(5)<cr>', opts)
-keymap("n", "<leader>6", '<cmd>:lua require("harpoon.ui").nav_file(6)<cr>', opts)
-keymap("n", "<leader>7", '<cmd>:lua require("harpoon.ui").nav_file(7)<cr>', opts)
-keymap("n", "<leader>8", '<cmd>:lua require("harpoon.ui").nav_file(8)<cr>', opts)
-keymap("n", "<leader>9", '<cmd>:lua require("harpoon.ui").nav_file(9)<cr>', opts)
+local harpoon = require("harpoon")
+
+for i = 1, 9 do
+	local keymap = "<leader>" .. tostring(i)
+	vim.keymap.set("n", keymap, function()
+		harpoon:list():select(i)
+	end, opts)
+end
 
 keymap("n", "<leader>h1", '<cmd>:lua require("harpoon.tmux").sendCommand("{last}", 1)<cr>', opts)
 keymap("n", "<leader>h2", '<cmd>:lua require("harpoon.tmux").sendCommand("{last}", 2)<cr>', opts)

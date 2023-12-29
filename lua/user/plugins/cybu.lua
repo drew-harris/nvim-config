@@ -29,7 +29,7 @@ return {
 			},
 			show_on_autocmd = false, -- event to trigger cybu (eg. "BufEnter")
 		},
-		display_time = 350, -- time the cybu window is displayed
+		display_time = 150, -- time the cybu window is displayed
 		style = {
 			highlights = {
 				current_buffer = "Title", -- current / selected buffer
