@@ -250,6 +250,22 @@ local mappings = {
 		C = { "<cmd>Telescope commands<cr>", "Commands" },
 		s = { '<cmd>lua require("telescope").extensions.live_grep_args.live_grep_raw()<cr>', "Styles" },
 	},
+
+	["S"] = {
+		name = "Snippets",
+		e = {
+			function()
+				require("scissors").editSnippet()
+			end,
+			"edit snippets",
+		},
+		a = {
+			function()
+				require("scissors").addNewSnippet()
+			end,
+			"addSnippet snippets",
+		},
+	},
 	["T"] = {
 		name = "Terminal",
 		n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
@@ -298,6 +314,22 @@ local visual_mappings = {
 		o = { "<cmd>ChatGPTRun optimize_code<cr>", "Optimize Code" },
 		m = { "<cmd>ChatGPTEditWithInstructions<cr>", "Modify Code" },
 		d = { "<cmd>ChatGPTRun dockstring<cr>", "Document Code" },
+	},
+
+	["S"] = {
+		name = "Snippets",
+		e = {
+			function()
+				require("scissors").editSnippet()
+			end,
+			"edit snippets",
+		},
+		a = {
+			function()
+				require("scissors").addNewSnippet()
+			end,
+			"addSnippet snippets",
+		},
 	},
 }
 

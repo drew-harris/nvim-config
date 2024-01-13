@@ -70,7 +70,8 @@ require("lazy").setup({
 		"L3MON4D3/LuaSnip",
 		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 	},
-	"rafamadriz/friendly-snippets",
+	require("user.plugins.scissors"),
+	-- "rafamadriz/friendly-snippets",
 
 	-- LSP
 	"neovim/nvim-lspconfig",

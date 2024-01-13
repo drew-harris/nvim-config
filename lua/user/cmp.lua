@@ -9,7 +9,9 @@ if not snip_status_ok then
 	return
 end
 
-require("luasnip/loaders/from_vscode").lazy_load()
+-- NOTE:
+require("luasnip.loaders.from_vscode").lazy_load({ paths = { vim.fn.stdpath("config") .. "/snippets" } })
+
 require("copilot_cmp").setup({})
 
 --   פּ ﯟ   some other good icons
@@ -63,6 +65,16 @@ cmp.setup({
 		-- label = require("copilot_cmp.format").format_label_text,
 		-- preview = require("copilot_cmp.format").deindent,
 	},
+
+	-- performance = {
+	-- 	debounce = 0,
+	-- 	throttle = 0,
+	-- },
+	--
+	-- completion = {
+	-- 	keyword_length = 1,
+	-- },
+	--
 	sorting = {
 		priority_weight = 4,
 		comparators = {
@@ -98,6 +110,8 @@ cmp.setup({
 		["<CR>"] = vim.schedule_wrap(function(fallback)
 			if cmp.visible() and has_words_before() and cmp.get_selected_entry() then
 				cmp.confirm({ select = false, behavior = cmp.ConfirmBehavior.Insert })
+			elseif luasnip.expand_or_jumpable() then
+				luasnip.expand_or_jump()
 			else
 				fallback()
 			end
