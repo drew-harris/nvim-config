@@ -135,6 +135,14 @@ require("mason-lspconfig").setup_handlers({
 				"templ",
 			}
 			opts.settings = {
+
+				-- "tailwindCSS.experimental.classRegex": [
+				--   // enables tailwind autocomplete for specified functions
+				--   ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+				--   ["cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+				--   ["cx\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+				-- ],
+
 				tailwindCSS = {
 					-- classAttributes = { "class", "className", "variants.*" },
 					-- experimental = {

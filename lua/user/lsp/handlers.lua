@@ -188,14 +188,14 @@ M.on_attach = function(client, bufnr)
 		client.server_capabilities.semanticTokensProvider = nil
 	end
 
-	require("lsp_signature").on_attach({
-		handler_opts = {
-			border = "rounded",
-		},
-		close_timeout = 2000,
-		hint_prefix = " ",
-		toggle_key = "<C-s>",
-	}, bufnr)
+	-- require("lsp_signature").on_attach({
+	-- 	handler_opts = {
+	-- 		border = "rounded",
+	-- 	},
+	-- 	close_timeout = 2000,
+	-- 	hint_prefix = " ",
+	-- 	toggle_key = "<C-s>",
+	-- }, bufnr)
 
 	lsp_keymaps(bufnr)
 	local status_ok, illuminate = pcall(require, "illuminate")
@@ -203,7 +203,7 @@ M.on_attach = function(client, bufnr)
 		return
 	end
 
-	illuminate.on_attach(client)
+	-- illuminate.on_attach(client)
 end
 
 return M
