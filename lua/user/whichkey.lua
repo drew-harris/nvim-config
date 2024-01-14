@@ -212,6 +212,10 @@ local mappings = {
 			"<cmd>Telescope diagnostics bufnr=0<cr>",
 			"Document Diagnostics",
 		},
+		["D"] = {
+			"<cmd>TSToolsGoToSourceDefinition<cr>",
+			"Go to Typescript Source",
+		},
 		w = {
 			"<cmd>Telescope diagnostics<cr>",
 			"Workspace Diagnostics",
