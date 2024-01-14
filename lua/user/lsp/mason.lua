@@ -21,16 +21,12 @@ if not lspconfig_status_ok then
 	return
 end
 
-local opts = {}
-
-local function organize_imports()
-	local params = {
-		command = "_typescript.organizeImports",
-		arguments = { vim.api.nvim_buf_get_name(0) },
-		title = "",
-	}
-	vim.lsp.buf.execute_command(params)
+local lspconfig_status_ok, tstools = pcall(require, "typescript-tools")
+if not lspconfig_status_ok then
+	return
 end
+
+local opts = {}
 
 vim.filetype.add({
 	extension = {
@@ -66,12 +62,6 @@ require("mason-lspconfig").setup_handlers({
 		opts = {
 			on_attach = require("user.lsp.handlers").on_attach,
 			capabilities = require("user.lsp.handlers").capabilities,
-			commands = {
-				OrganizeImports = {
-					organize_imports,
-					description = "Organize Imports",
-				},
-			},
 			settings = {},
 		}
 
@@ -156,7 +146,12 @@ require("mason-lspconfig").setup_handlers({
 			}
 		end
 
-		lspconfig[server].setup(opts)
+		-- Check for typescript
+		if server == "tsserver" then
+			tstools.setup(opts)
+		else
+			lspconfig[server].setup(opts)
+		end
 	end,
 })
 

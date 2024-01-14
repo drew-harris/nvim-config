@@ -89,6 +89,7 @@ require("lazy").setup({
 			"MunifTanjim/nui.nvim",
 		},
 	},
+	require("user.plugins.tstools"),
 
 	-- FLUTTER
 	-- {
