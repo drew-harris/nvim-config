@@ -134,25 +134,21 @@ require("mason-lspconfig").setup_handlers({
 				"tsx",
 				"templ",
 			}
-			opts.settings = {
-
-				-- "tailwindCSS.experimental.classRegex": [
-				--   // enables tailwind autocomplete for specified functions
-				--   ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-				--   ["cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-				--   ["cx\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
-				-- ],
-
-				tailwindCSS = {
-					-- classAttributes = { "class", "className", "variants.*" },
-					-- experimental = {
-					-- 	classRegex = {
-					-- 		"cva\\(([^)]*)\\)",
-					-- 		"[\"'`]([^\"'`]*).*?[\"'`]",
-					-- 	},
-					-- },
-				},
-			}
+			-- opts.settings = {
+			-- 	tailwindCSS = {
+			-- 		classAttributes = { "class", "className", "variants.*" },
+			-- 		experimental = {
+			-- 			classRegex = {
+			-- 				"cva\\(([^)]*)\\)",
+			-- 				"[\"'`]([^\"'`]*).*?[\"'`]",
+			-- 				"cn\\(([^)]*)\\)",
+			-- 				"[\"'`]([^\"'`]*).*?[\"'`]",
+			-- 				"cx\\(([^)]*)\\)",
+			-- 				"[\"'`]([^\"'`]*).*?[\"'`]",
+			-- 			},
+			-- 		},
+			-- 	},
+			-- }
 			opts.init_options = {
 				userLanguages = {
 					templ = "html",

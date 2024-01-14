@@ -102,24 +102,24 @@ require("lazy").setup({
 
 	-- Test Runner
 	-- "vrischmann/tree-sitter-templ",
-	-- {
-	-- 	"nvim-neotest/neotest",
-	-- 	dependencies = {
-	-- 		"nvim-lua/plenary.nvim",
-	-- 		"nvim-treesitter/nvim-treesitter",
-	-- 		"marilari88/neotest-vitest",
-	-- 	},
-	-- 	config = function()
-	-- 		require("neotest").setup({
-	-- 			adapters = {
-	-- 				require("neotest-vitest"),
-	-- 			},
-	-- 			quickfix = {
-	-- 				open = false,
-	-- 			},
-	-- 		})
-	-- 	end,
-	-- },
+	{
+		"nvim-neotest/neotest",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+			"marilari88/neotest-vitest",
+		},
+		config = function()
+			require("neotest").setup({
+				adapters = {
+					require("neotest-vitest"),
+				},
+				quickfix = {
+					open = false,
+				},
+			})
+		end,
+	},
 	-- "joerdav/templ.vim",
 
 	-- Task Runner

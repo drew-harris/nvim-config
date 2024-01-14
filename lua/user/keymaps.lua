@@ -23,9 +23,6 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
-keymap("n", "<C-h>", "<cmd>CybuLastusedNext<cr>", opts)
-keymap("n", "<C-l>", "<cmd>CybuLastusedPrev<cr>", opts)
-
 keymap("n", "<C-x>", "<cmd>bd<CR>", opts)
 
 keymap("n", "<C-d>", "<C-d>zz", opts)
@@ -77,6 +74,7 @@ keymap("n", "<leader>h8", '<cmd>:lua require("harpoon.tmux").sendCommand("{last}
 keymap("n", "<leader>h9", '<cmd>:lua require("harpoon.tmux").sendCommand("{last}", 9)<cr>', opts)
 
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "_", "<CMD>Oil .<CR>", { desc = "Open parent directory" })
 
 -- Easy align
 keymap("n", "ga", "<cmd>:EasyAlign<cr>", opts)
