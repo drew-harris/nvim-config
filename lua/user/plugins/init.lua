@@ -38,7 +38,6 @@ require("lazy").setup({
 	"lukas-reineke/indent-blankline.nvim",
 	"goolord/alpha-nvim",
 
-	-- require("user.plugins.block"),
 	"folke/which-key.nvim",
 
 	-- Easy align
