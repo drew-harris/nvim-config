@@ -58,6 +58,8 @@ vim.cmd("hi VertSplit guibg=none ctermbg=none")
 vim.cmd("hi SignColumn guibg=none ctermbg=none")
 vim.cmd("hi EndOfBuffer guibg=none ctermbg=none")
 
+vim.g.code_action_menu_show_diff = false
+
 -- Better autoread
 vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
 	command = "if mode() != 'c' | checktime | endif",
