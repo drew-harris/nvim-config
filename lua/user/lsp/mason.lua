@@ -40,22 +40,23 @@ vim.filetype.add({
 	},
 })
 
-require("lspconfig.configs").pest = {
-	default_config = {
-		cmd = { "pest-language-server" },
-		name = "pest",
-		filetypes = { "pest" },
-		root_dir = lspconfig.util.root_pattern("Cargo.toml"),
-		settings = {},
-	},
-}
-
--- Setup pest
-
-lspconfig.pest.setup({
-	on_attach = require("user.lsp.handlers").on_attach,
-	capabilities = require("user.lsp.handlers").capabilities,
-})
+-- EXAMPLE OF CUSTOM LANGUAGE SERVER
+-- require("lspconfig.configs").pest = {
+-- 	default_config = {
+-- 		cmd = { "pest-language-server" },
+-- 		name = "pest",
+-- 		filetypes = { "pest" },
+-- 		root_dir = lspconfig.util.root_pattern("Cargo.toml"),
+-- 		settings = {},
+-- 	},
+-- }
+--
+-- -- Setup pest
+--
+-- lspconfig.pest.setup({
+-- 	on_attach = require("user.lsp.handlers").on_attach,
+-- 	capabilities = require("user.lsp.handlers").capabilities,
+-- })
 
 require("mason-lspconfig").setup_handlers({
 	function(server)
@@ -74,7 +75,7 @@ require("mason-lspconfig").setup_handlers({
 		end
 
 		if server == "lua_ls" then
-			require("neodev").setup({})
+			require("neodev").setup({ pathStrict = true })
 		end
 
 		if server == "denols" then
@@ -152,5 +153,3 @@ require("mason-lspconfig").setup_handlers({
 		end
 	end,
 })
-
--- Add custom pest language server to lspconfig

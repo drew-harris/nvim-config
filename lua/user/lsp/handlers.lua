@@ -80,7 +80,10 @@ local function lsp_keymaps(bufnr)
 	keymap(bufnr, "n", "<leader>lj", "<cmd>lua vim.diagnostic.goto_next({buffer=0})<cr>", opts)
 	keymap(bufnr, "n", "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev({buffer=0})<cr>", opts)
 	keymap(bufnr, "n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
+
 	keymap(bufnr, "n", "<leader>ls", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+	keymap(bufnr, "i", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+
 	keymap(bufnr, "n", "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 	keymap(bufnr, "n", "<leader>lc", "<cmd>Lspsaga peek_definition<CR>", opts)
 end
@@ -111,10 +114,12 @@ ih.setup({
 M.on_attach = function(client, bufnr)
 	if client.name == "tsserver" then
 		client.server_capabilities.documentFormattingProvider = false
+		client.server_capabilities.semanticTokensProvider = false
 	end
 
 	if client.name == "lua_ls" then
 		client.server_capabilities.documentFormattingProvider = false
+		client.server_capabilities.semanticTokensProvider = false
 	end
 
 	if client.name == "rust_analyzer" then
@@ -148,10 +153,10 @@ M.on_attach = function(client, bufnr)
 	-- }, bufnr)
 
 	lsp_keymaps(bufnr)
-	local status_ok, illuminate = pcall(require, "illuminate")
-	if not status_ok then
-		return
-	end
+	-- local status_ok, illuminate = pcall(require, "illuminate")
+	-- if not status_ok then
+	-- 	return
+	-- end
 
 	-- illuminate.on_attach(client)
 end
