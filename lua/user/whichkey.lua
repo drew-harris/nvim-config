@@ -91,29 +91,13 @@ local mappings = {
 		"<cmd>tabn<cr>",
 		"Next Tab",
 	},
-	["t"] = {
-		name = "Leetcode",
-		q = { "<cmd>LBQuestions<cr>", "List Questions" },
-		l = { "<cmd>LBQuestion<cr>", "View Question" },
-		r = { "<cmd>LBReset<cr>", "Reset Code" },
-		t = { "<cmd>LBTest<cr>", "Run Code" },
-		s = { "<cmd>LBSubmit<cr>", "Submit Code" },
-	},
 	["|"] = {
 		"<c-w><S-T>",
 		"Move to new tab",
 	},
 	["e"] = { "<cmd>Neotree toggle reveal<cr>", "Explorer" },
-	["E"] = { "<cmd>Ex<cr>", "Netrw" },
 	["n"] = { "<cmd>Navbuddy<cr>", "Navbuddy" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
-	["o"] = { "<cmd>Oil<cr>", "Oil" },
-	["O"] = {
-		function()
-			require("oil").open(vim.loop.cwd())
-		end,
-		"Oil Root dir",
-	},
 	["x"] = { "<cmd>bw<CR>", "Close Buffer" },
 	["z"] = { "<cmd>set hlsearch!<CR>", "No Highlight" },
 	["p"] = { "<cmd>b#<cr>", "Previous Buffer" },
@@ -131,7 +115,7 @@ local mappings = {
 		function()
 			require("neogit").open()
 		end,
-		"Edit Commands",
+		"Big Git",
 	},
 	["i"] = { "<cmd>IBLToggle<cr>", "Toggle Indent Guide" },
 
@@ -254,7 +238,6 @@ local mappings = {
 		k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 		t = { "<cmd>TodoTelescope<cr>", "Todos" },
 		C = { "<cmd>Telescope commands<cr>", "Commands" },
-		s = { '<cmd>lua require("telescope").extensions.live_grep_args.live_grep_raw()<cr>', "Styles" },
 	},
 
 	["S"] = {
