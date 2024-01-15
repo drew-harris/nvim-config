@@ -62,9 +62,6 @@ require("lazy").setup({
 	"hrsh7th/cmp-nvim-lua",
 
 	-- Snippets
-	-- TODO: Learn LuaSnip
-
-	-- https://www.youtube.com/watch?v=Dn800rlPIho
 	{
 		"L3MON4D3/LuaSnip",
 		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
@@ -162,8 +159,6 @@ require("lazy").setup({
 		},
 		dependencies = { "junegunn/fzf" },
 	},
-
-	"ray-x/lsp_signature.nvim",
 
 	-- Telescope
 	{ "nvim-telescope/telescope.nvim", dependencies = "nvim-telescope/telescope-live-grep-args.nvim" },
