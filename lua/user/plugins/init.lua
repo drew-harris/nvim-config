@@ -214,8 +214,6 @@ require("lazy").setup({
 	-- Todo Highlighting
 	"folke/todo-comments.nvim",
 
-	-- require("user.plugins.leetcode"),
-
 	require("user.plugins.harpoon"),
 
 	-- AI
