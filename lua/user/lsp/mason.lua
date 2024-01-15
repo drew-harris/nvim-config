@@ -124,21 +124,19 @@ require("mason-lspconfig").setup_handlers({
 				"tsx",
 				"templ",
 			}
-			-- opts.settings = {
-			-- 	tailwindCSS = {
-			-- 		classAttributes = { "class", "className", "variants.*" },
-			-- 		experimental = {
-			-- 			classRegex = {
-			-- 				"cva\\(([^)]*)\\)",
-			-- 				"[\"'`]([^\"'`]*).*?[\"'`]",
-			-- 				"cn\\(([^)]*)\\)",
-			-- 				"[\"'`]([^\"'`]*).*?[\"'`]",
-			-- 				"cx\\(([^)]*)\\)",
-			-- 				"[\"'`]([^\"'`]*).*?[\"'`]",
-			-- 			},
-			-- 		},
-			-- 	},
-			-- }
+
+			opts.settings = {
+				tailwindCSS = {
+					classAttributes = { "class", "className", "variants.*" },
+					experimental = {
+						classRegex = {
+							{ "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
+							{ "cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+						},
+					},
+				},
+			}
+
 			opts.init_options = {
 				userLanguages = {
 					templ = "html",

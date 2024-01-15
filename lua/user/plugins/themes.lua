@@ -23,7 +23,10 @@ return {
 			-- },
 		},
 	},
-	{ "metalelf0/jellybeans-nvim", dependencies = "rktjmp/lush.nvim" },
+	{
+		"metalelf0/jellybeans-nvim",
+		dependencies = "rktjmp/lush.nvim",
+	},
 	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
 	{
 		"folke/tokyonight.nvim",

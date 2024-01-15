@@ -231,6 +231,17 @@ require("lazy").setup({
 	-- Fun
 	"eandrju/cellular-automaton.nvim",
 	"wakatime/vim-wakatime",
+	{
+		"j-hui/fidget.nvim",
+		opts = {
+			-- options
+			notification = {
+				window = {
+					winblend = 0,
+				},
+			},
+		},
+	},
 
 	-- { "echasnovski/mini.animate", opts = {} },
 

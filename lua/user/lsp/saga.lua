@@ -21,6 +21,11 @@ return {
 			lightbulb = {
 				enable = false,
 			},
+
+			-- Disable code actions
+			code_action = {
+				enable = false,
+			},
 		})
 	end,
 	dependencies = {
