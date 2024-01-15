@@ -86,6 +86,8 @@ require("lazy").setup({
 		},
 	},
 	require("user.plugins.tstools"),
+	require("user.plugins.signature_help"),
+
 	{
 		"lvimuser/lsp-inlayhints.nvim",
 		config = function()
