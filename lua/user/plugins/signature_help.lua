@@ -4,6 +4,7 @@ return {
 	config = function()
 		require("lsp_signature").setup({
 			close_timeout = 0,
+			doc_lines = 0,
 			toggle_key = "<C-s>",
 			hint_prefix = " ", -- Panda for parameter, NOTE: for the terminal not support emoji, might crash
 			hint_enable = false,
