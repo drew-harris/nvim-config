@@ -111,6 +111,22 @@ require("mason-lspconfig").setup_handlers({
 			}
 		end
 
+		if server == "gopls" then
+			opts.settings = {
+				gopls = {
+					hints = {
+						assignVariableTypes = true,
+						compositeLiteralFields = true,
+						compositeLiteralTypes = true,
+						constantValues = true,
+						functionTypeParameters = true,
+						parameterNames = true,
+						rangeVariableTypes = true,
+					},
+				},
+			}
+		end
+
 		if server == "tailwindcss" then
 			-- Templ support
 			opts.filetypes = {

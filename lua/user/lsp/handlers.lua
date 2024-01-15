@@ -112,6 +112,7 @@ ih.setup({
 })
 
 M.on_attach = function(client, bufnr)
+	require("lsp-inlayhints").on_attach(client, bufnr)
 	if client.name == "tsserver" then
 		client.server_capabilities.documentFormattingProvider = false
 		client.server_capabilities.semanticTokensProvider = false
