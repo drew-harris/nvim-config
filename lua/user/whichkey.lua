@@ -126,19 +126,6 @@ local mappings = {
 	},
 	["i"] = { "<cmd>IBLToggle<cr>", "Toggle Indent Guide" },
 
-	d = {
-		name = "Debug",
-		u = { "<cmd>lua require('dapui').toggle()<cr>", "UI" },
-		c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
-		b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
-		B = { "<cmd>lua require'dap'.list_breakpoints()<cr>", "List Breakpoints" },
-		d = { "<cmd>lua require'dap'.clear_breakpoints()<cr>", "Clear Breakpoints" },
-		r = { "<cmd>lua require'dap'.restart()<cr>", "Restart" },
-		j = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" },
-		l = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" },
-		h = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
-		t = { "<cmd>lua require'dap'.run_to_cursor()<cr>", "Run To Cursor" },
-	},
 	-- TODO: Migrate to auto-which-key
 	h = {
 		name = "Harpoon",
@@ -260,6 +247,7 @@ local mappings = {
 		C = { "<cmd>Telescope commands<cr>", "Commands" },
 	},
 
+	-- HACK: MIGRATE
 	["S"] = {
 		name = "Snippets",
 		e = {

@@ -1,5 +1,3 @@
--- Motion plugin
-
 require("todo-comments").setup({
 	keywords = {
 		FIX = {
@@ -15,7 +13,6 @@ require("todo-comments").setup({
 		NOTE = { icon = " ", color = "hint", alt = { "MEETING" } },
 		TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
 	},
-	-- Configuration here
 })
 
 -- Better quick fix, hide stupid menu
