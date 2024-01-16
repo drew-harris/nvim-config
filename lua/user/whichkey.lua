@@ -299,15 +299,15 @@ local mappings = {
 		c = { "<cmd>CellularAutomaton make_it_rain<cr>", "CA" },
 		n = { "<cmd>Flote<cr>", "Notes" },
 
-		b = {
-			function()
-				vim.api.nvim_set_var(
-					"lspsaga_statusline_enabled",
-					not vim.api.nvim_get_var("lspsaga_statusline_enabled")
-				)
-			end,
-			"Toggle bottom lsp status",
-		},
+		-- b = {
+		-- 	function()
+		-- 		vim.api.nvim_set_var(
+		-- 			"lspsaga_statusline_enabled",
+		-- 			not vim.api.nvim_get_var("lspsaga_statusline_enabled")
+		-- 		)
+		-- 	end,
+		-- 	"Toggle bottom lsp status",
+		-- },
 	},
 
 	k = {

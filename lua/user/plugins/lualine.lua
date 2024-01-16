@@ -1,11 +1,16 @@
 return {
 	"nvim-lualine/lualine.nvim",
 	config = function()
+		local function toggleBottomInfo()
+			vim.api.nvim_set_var("lspsaga_statusline_enabled", not vim.api.nvim_get_var("lspsaga_statusline_enabled"))
+		end
 		-- code
 		-- Make bottom bar transparent in the middle
 		local auto_theme = require("lualine.themes.auto")
 
 		vim.api.nvim_set_var("lspsaga_statusline_enabled", true)
+
+		vim.keymap.set("n", "<leader>mb", toggleBottomInfo, { desc = "Toggle bottom LSP" })
 
 		local function saga()
 			-- Check if enabled
