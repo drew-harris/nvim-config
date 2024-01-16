@@ -18,7 +18,7 @@ require("lazy").setup({
 	"windwp/nvim-autopairs",
 	{ "windwp/nvim-ts-autotag" },
 	{ "JoosepAlviste/nvim-ts-context-commentstring", opts = {} },
-	{ "numToStr/Comment.nvim" },
+	require("user.plugins.comment"),
 	"kyazdani42/nvim-web-devicons",
 
 	require("user.plugins.oil"),
@@ -35,8 +35,8 @@ require("lazy").setup({
 	-- require("user.plugins.bufferline"),
 	"akinsho/toggleterm.nvim",
 	"lewis6991/impatient.nvim",
-	"lukas-reineke/indent-blankline.nvim",
-	"goolord/alpha-nvim",
+
+	require("user.plugins.alpha"),
 
 	"folke/which-key.nvim",
 
@@ -74,8 +74,8 @@ require("lazy").setup({
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
 	"jose-elias-alvarez/null-ls.nvim",
+	"weilbith/nvim-code-action-menu",
 	"jay-babu/mason-null-ls.nvim",
-	{ "RRethy/vim-illuminate", event = "VeryLazy" },
 	"folke/neodev.nvim",
 	{
 		"SmiteshP/nvim-navbuddy",
@@ -139,7 +139,6 @@ require("lazy").setup({
 
 	-- Task Runner
 	-- "jedrzejboczar/toggletasks.nvim",
-	"weilbith/nvim-code-action-menu",
 
 	-- Debugging
 	-- "mfussenegger/nvim-dap",
@@ -208,10 +207,10 @@ require("lazy").setup({
 	},
 
 	-- Drew's Motions
-	-- "ggandor/leap.nvim",
 	"tpope/vim-repeat",
 	"tpope/vim-sleuth",
-	require("user.leap"),
+	"lukas-reineke/indent-blankline.nvim",
+	require("user.plugins.leap"),
 
 	-- Todo Highlighting
 	"folke/todo-comments.nvim",

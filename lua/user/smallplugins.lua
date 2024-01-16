@@ -1,5 +1,4 @@
 -- Motion plugin
-require("leap").add_default_mappings()
 
 require("todo-comments").setup({
 	keywords = {
