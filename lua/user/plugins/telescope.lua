@@ -2,6 +2,8 @@ return {
 	"nvim-telescope/telescope.nvim",
 	dependencies = {
 		"nvim-telescope/telescope-live-grep-args.nvim",
+		"debugloop/telescope-undo.nvim",
+
 		"molecule-man/telescope-menufacture",
 		"ThePrimeagen/harpoon",
 	},
@@ -102,6 +104,8 @@ return {
 		require("telescope").load_extension("live_grep_args")
 		require("telescope").load_extension("menufacture")
 		require("telescope").load_extension("harpoon")
+		require("telescope").load_extension("undo")
+		vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<cr>")
 
 		local dropdown = require("telescope.themes").get_dropdown()
 
