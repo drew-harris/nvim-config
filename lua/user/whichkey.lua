@@ -55,7 +55,7 @@ local setup = {
 		spacing = 3, -- spacing between columns
 		align = "left", -- align columns left, center or right
 	},
-	ignore_missing = true, -- enable this to hide mappings for which you didn't specify a label
+	ignore_missing = false, -- enable this to hide mappings for which you didn't specify a label
 	hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
 	show_help = true, -- show help message on the command line when the popup is visible
 	triggers = "auto", -- automatically setup triggers
@@ -79,6 +79,15 @@ local opts = {
 }
 
 local mappings = {
+	["1"] = "which_key_ignore",
+	["2"] = "which_key_ignore",
+	["3"] = "which_key_ignore",
+	["4"] = "which_key_ignore",
+	["5"] = "which_key_ignore",
+	["6"] = "which_key_ignore",
+	["7"] = "which_key_ignore",
+	["8"] = "which_key_ignore",
+	["9"] = "which_key_ignore",
 	["b"] = {
 		"<cmd>Neotree buffers toggle reveal<cr>",
 		"Buffers",
@@ -95,7 +104,6 @@ local mappings = {
 		"<c-w><S-T>",
 		"Move to new tab",
 	},
-	["e"] = { "<cmd>Neotree toggle reveal<cr>", "Explorer" },
 	["n"] = { "<cmd>Navbuddy<cr>", "Navbuddy" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["x"] = { "<cmd>bw<CR>", "Close Buffer" },

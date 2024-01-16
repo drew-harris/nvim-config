@@ -12,33 +12,31 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Makes things faster apparently?
+vim.loader.enable()
+
 -- Install your plugins here
 require("lazy").setup({
 	"nvim-lua/plenary.nvim",
+	"kyazdani42/nvim-web-devicons",
+	"lukas-reineke/indent-blankline.nvim",
 	"windwp/nvim-autopairs",
 	{ "windwp/nvim-ts-autotag" },
 	{ "JoosepAlviste/nvim-ts-context-commentstring", opts = {} },
 	require("user.plugins.comment"),
-	"kyazdani42/nvim-web-devicons",
+
+	require("user.plugins.undotree"),
 
 	require("user.plugins.oil"),
-	{
-		"nvim-neo-tree/neo-tree.nvim",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"MunifTanjim/nui.nvim",
-		},
-		branch = "v3.x",
-	},
-	require("user.plugins.cybu"),
 
-	-- require("user.plugins.bufferline"),
+	require("user.plugins.neotree"),
+
+	require("user.plugins.cybu"),
+	"folke/which-key.nvim",
+
 	"akinsho/toggleterm.nvim",
-	"lewis6991/impatient.nvim",
 
 	require("user.plugins.alpha"),
-
-	"folke/which-key.nvim",
 
 	-- Easy align
 	"junegunn/vim-easy-align",
@@ -46,8 +44,11 @@ require("lazy").setup({
 	-- Colorschemes
 	require("user.plugins.themes"),
 
+	-- UI Improvements
+	{ "stevearc/dressing.nvim", event = "VeryLazy" },
 	require("user.lsp.saga"),
 	require("user.plugins.lualine"),
+
 	-- Utils
 	{ "norcalli/nvim-colorizer.lua", opts = {} },
 	{ "themaxmarchuk/tailwindcss-colors.nvim", opts = {} },
@@ -107,18 +108,11 @@ require("lazy").setup({
 		end,
 	},
 
-	-- FLUTTER
-	-- {
-	-- 	"akinsho/flutter-tools.nvim",
-	-- 	lazy = false,
-	-- 	dependencies = {
-	-- 		"nvim-lua/plenary.nvim",
-	-- 		"stevearc/dressing.nvim", -- optional for vim.ui.select
-	-- 	},
-	-- },
+	-- Language Specific
+	-- "vrischmann/tree-sitter-templ",
+	-- "joerdav/templ.vim",
 
 	-- Test Runner
-	-- "vrischmann/tree-sitter-templ",
 	{
 		"nvim-neotest/neotest",
 		dependencies = {
@@ -137,10 +131,6 @@ require("lazy").setup({
 			})
 		end,
 	},
-	-- "joerdav/templ.vim",
-
-	-- Task Runner
-	-- "jedrzejboczar/toggletasks.nvim",
 
 	-- Debugging
 	-- "mfussenegger/nvim-dap",
@@ -170,16 +160,6 @@ require("lazy").setup({
 	-- Treesitter
 	"nvim-treesitter/nvim-treesitter",
 	"nvim-treesitter/nvim-treesitter-context",
-
-	-- UI Improvements
-	{ "stevearc/dressing.nvim", event = "VeryLazy" },
-	-- require("user.plugins.block"),
-
-	-- Git
-	"lewis6991/gitsigns.nvim",
-	require("user.plugins.diffs"),
-	require("user.plugins.neogit"),
-
 	{
 		"sustech-data/wildfire.nvim",
 		event = "VeryLazy",
@@ -200,6 +180,11 @@ require("lazy").setup({
 		end,
 	},
 
+	-- Git
+	"lewis6991/gitsigns.nvim",
+	require("user.plugins.diffs"),
+	require("user.plugins.neogit"),
+
 	{
 		"akinsho/git-conflict.nvim",
 		config = function()
@@ -211,7 +196,6 @@ require("lazy").setup({
 	-- Drew's Motions
 	"tpope/vim-repeat",
 	"tpope/vim-sleuth",
-	"lukas-reineke/indent-blankline.nvim",
 	require("user.plugins.leap"),
 
 	-- Todo Highlighting
@@ -257,8 +241,6 @@ require("lazy").setup({
 			},
 		},
 	},
-
-	-- { "echasnovski/mini.animate", opts = {} },
 
 	-- {
 	-- 	"m4xshen/hardtime.nvim",
