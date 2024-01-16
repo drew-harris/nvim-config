@@ -26,7 +26,7 @@ require("lazy").setup({
 
 	require("user.plugins.oil"),
 
-	require("user.plugins.neotree"),
+	-- require("user.plugins.neotree"),
 
 	-- require("user.plugins.cybu"),
 

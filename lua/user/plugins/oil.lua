@@ -10,7 +10,7 @@ return {
 			["<C-t>"] = "actions.select_tab",
 			["<C-p>"] = "actions.preview",
 			["q"] = "actions.close",
-			["<C-l>"] = "actions.refresh",
+			["<C-l>"] = "actions.send_to_qflist",
 			["-"] = "actions.parent",
 			["_"] = "actions.open_cwd",
 			["`"] = "actions.cd",
