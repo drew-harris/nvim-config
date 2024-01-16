@@ -34,7 +34,7 @@ require("lazy").setup({
 	require("user.plugins.cybu"),
 	"folke/which-key.nvim",
 
-	"akinsho/toggleterm.nvim",
+	require("user.plugins.toggleterm"),
 
 	require("user.plugins.alpha"),
 

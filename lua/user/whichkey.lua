@@ -143,7 +143,6 @@ local mappings = {
 	},
 	g = {
 		name = "Git",
-		g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
 		j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
 		k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
 		l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
@@ -256,14 +255,6 @@ local mappings = {
 			end,
 			"addSnippet snippets",
 		},
-	},
-	["T"] = {
-		name = "Terminal",
-		n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-		g = { "<cmd>lua _LAZYGIT_TOGGLE()<cr>", "Lazygit" },
-		p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
-		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
-		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
 	},
 	-- TODO: MIGRATE
 	c = {
