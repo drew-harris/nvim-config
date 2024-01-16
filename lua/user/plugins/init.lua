@@ -30,6 +30,9 @@ require("lazy").setup({
 
 	-- require("user.plugins.cybu"),
 
+	-- MINI
+	require("user.plugins.mini"),
+
 	"folke/which-key.nvim",
 
 	require("user.plugins.toggleterm"),

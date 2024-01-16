@@ -6,6 +6,11 @@ return {
 			disable_background = true,
 		},
 	},
+	{ "EdenEast/nightfox.nvim", opts = {
+		options = {
+			transparent = true,
+		},
+	} },
 	{
 		"loctvl842/monokai-pro.nvim",
 		opts = {

@@ -20,6 +20,8 @@ return {
 			["g."] = "actions.toggle_hidden",
 			["g\\"] = "actions.toggle_trash",
 		},
+		skip_confirm_for_simple_edits = true,
+		lsp_rename_autosave = true,
 		view_options = {
 			-- Show files and directories that start with "."
 			show_hidden = true,
