@@ -156,19 +156,6 @@ require("lazy").setup({
 	-- Fun
 	"eandrju/cellular-automaton.nvim",
 	"wakatime/vim-wakatime",
-	{
-		"j-hui/fidget.nvim",
-		opts = {
-			progress = {
-				ignore_done_already = true,
-				ignore = { "null-ls" },
-			},
-			-- options
-			notification = {
-				window = {
-					winblend = 0,
-				},
-			},
-		},
-	},
+
+	require("user.plugins.fidget"),
 })
