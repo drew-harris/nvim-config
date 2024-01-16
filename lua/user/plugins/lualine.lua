@@ -5,6 +5,23 @@ return {
 		-- Make bottom bar transparent in the middle
 		local auto_theme = require("lualine.themes.auto")
 
+		vim.api.nvim_set_var("lspsaga_statusline_enabled", true)
+
+		local function saga()
+			-- Check if enabled
+			local enabled = vim.api.nvim_get_var("lspsaga_statusline_enabled")
+
+			if enabled == nil or enabled == false then
+				return ""
+			end
+
+			local bar = require("lspsaga.symbol.winbar").get_bar()
+			if bar ~= nil then
+				return bar
+			end
+			return ""
+		end
+
 		local modes = {
 			"normal",
 			"insert",
@@ -24,19 +41,19 @@ return {
 		require("lualine").setup({
 			options = {
 				icons_enabled = true,
-				theme = auto_theme,
-				-- theme = require("user.theme.lualine").theme(),
-				-- component_separators = { left = "", right = "" },
-				-- section_separators = { left = "", right = "" },
-				component_separators = { left = "", right = "" },
-				section_separators = { left = "", right = "" },
+				-- theme = auto_theme,
+				theme = require("user.theme.lualine").theme(),
+				component_separators = { left = " ", right = " " },
+				section_separators = { left = " ", right = "" },
+				-- component_separators = { left = "", right = "" },
+				-- section_separators = { left = "", right = "" },
 				disabled_filetypes = {
 					statusline = {},
 					winbar = {},
 				},
 				ignore_focus = {},
+				globalstatus = true,
 				always_divide_middle = true,
-				globalstatus = false,
 				refresh = {
 					statusline = 1000,
 					tabline = 1000,
@@ -45,9 +62,10 @@ return {
 			},
 			sections = {
 				lualine_a = { "mode" },
-				lualine_b = { "branch", "diff", "diagnostics" },
-				lualine_c = { "filename" },
-				lualine_x = {},
+				lualine_b = { "branch", "diff" },
+				-- lualine_c = { { "filename", path = 1 } },
+				lualine_c = { saga },
+				lualine_x = { { "diagnostics", sources = { "nvim_lsp" } } },
 				lualine_y = { "progress" },
 				lualine_z = { "location" },
 			},
@@ -60,8 +78,16 @@ return {
 				lualine_z = {},
 			},
 			tabline = {},
-			winbar = {},
-			inactive_winbar = {},
+			winbar = {
+				lualine_c = {
+					{ "filename", path = 1 },
+				},
+			},
+			inactive_winbar = {
+				lualine_c = {
+					{ "filename", path = 1 },
+				},
+			},
 			extensions = {},
 		})
 	end,

@@ -26,6 +26,12 @@ return {
 			code_action = {
 				enable = false,
 			},
+
+			symbol_in_winbar = {
+				enable = false,
+				folder_level = 0,
+				show_file = false,
+			},
 		})
 	end,
 	dependencies = {

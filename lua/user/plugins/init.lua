@@ -46,12 +46,13 @@ require("lazy").setup({
 	-- Colorschemes
 	require("user.plugins.themes"),
 
+	require("user.lsp.saga"),
+	require("user.plugins.lualine"),
 	-- Utils
 	{ "norcalli/nvim-colorizer.lua", opts = {} },
 	{ "themaxmarchuk/tailwindcss-colors.nvim", opts = {} },
 	require("user.plugins.tw-values"),
 
-	require("user.lsp.saga"),
 	require("user.plugins.glance"),
 
 	-- Cmp
