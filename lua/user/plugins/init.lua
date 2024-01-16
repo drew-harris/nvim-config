@@ -56,18 +56,23 @@ require("lazy").setup({
 
 	require("user.plugins.glance"),
 
-	-- Cmp
-	{ "hrsh7th/nvim-cmp", event = "InsertEnter", dependencies = "hrsh7th/cmp-buffer" },
-	"hrsh7th/cmp-path",
-	"saadparwaiz1/cmp_luasnip",
-	"hrsh7th/cmp-nvim-lsp",
-	"hrsh7th/cmp-nvim-lua",
+	-- --
+	-- -- Cmp
+	-- { "hrsh7th/nvim-cmp", event = "InsertEnter", dependencies = "hrsh7th/cmp-buffer" },
+	-- "hrsh7th/cmp-path",
+	-- "saadparwaiz1/cmp_luasnip",
+	-- "hrsh7th/cmp-nvim-lsp",
+	--
+	-- -- Snippets
+	-- {
+	-- 	"L3MON4D3/LuaSnip",
+	-- 	version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+	-- },
 
-	-- Snippets
-	{
-		"L3MON4D3/LuaSnip",
-		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-	},
+	require("user.plugins.cmp"),
+
+	--
+	----
 	require("user.plugins.scissors"),
 
 	-- LSP
@@ -134,8 +139,7 @@ require("lazy").setup({
 	require("user.plugins.telescope"),
 
 	-- Treesitter
-	"nvim-treesitter/nvim-treesitter",
-	"nvim-treesitter/nvim-treesitter-context",
+	require("user.plugins.treesitter"),
 	{
 		"sustech-data/wildfire.nvim",
 		event = "VeryLazy",
