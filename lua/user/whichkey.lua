@@ -118,12 +118,6 @@ local mappings = {
 		"Find files",
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
-	G = {
-		function()
-			require("neogit").open()
-		end,
-		"Big Git",
-	},
 	["i"] = { "<cmd>IBLToggle<cr>", "Toggle Indent Guide" },
 
 	-- TODO: Migrate to auto-which-key
