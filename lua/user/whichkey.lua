@@ -215,7 +215,12 @@ local mappings = {
 			"Prev Diagnostic",
 		},
 		l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
-		q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
+		q = {
+			function()
+				require("trouble").toggle("quickfix")
+			end,
+			"Quickfix",
+		},
 		r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
 		s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
 		S = {
@@ -226,6 +231,13 @@ local mappings = {
 		m = { "<cmd>TSToolsAddMissingImports<CR>", "Add Missing Import" },
 		["R"] = { "<cmd>TSToolsRenameFile<CR>", "Rename File" },
 		p = { "<cmd>lua vim.diagnostic.open_float({focusable = true})<cr>", "View Issues" },
+
+		t = {
+			function()
+				require("trouble").toggle("workspace_diagnostics")
+			end,
+			"Trouble",
+		},
 	},
 	s = {
 		name = "Search",

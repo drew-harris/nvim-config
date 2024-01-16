@@ -88,7 +88,16 @@ return {
 					{ "filename", path = 1 },
 				},
 			},
-			extensions = {},
+			extensions = {
+				"lazy",
+				"mason",
+				"neo-tree",
+				"oil",
+				"quickfix",
+				"symbols-outline",
+				"toggleterm",
+				"trouble",
+			},
 		})
 	end,
 }

@@ -71,6 +71,7 @@ local function lsp_keymaps(bufnr)
 	keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 	keymap(bufnr, "n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+	keymap(bufnr, "n", "gR", '<cmd>lua require("trouble").toggle("lsp_references")<CR>', opts)
 	keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float({focusable = false})<CR>", opts)
 	keymap(bufnr, "n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
 	-- TODO: Create command to auto import thing under cursor

@@ -77,6 +77,7 @@ require("lazy").setup({
 	"jose-elias-alvarez/null-ls.nvim",
 	"weilbith/nvim-code-action-menu",
 	"jay-babu/mason-null-ls.nvim",
+	require("user.plugins.trouble"),
 	"folke/neodev.nvim",
 	{
 		"SmiteshP/nvim-navbuddy",
