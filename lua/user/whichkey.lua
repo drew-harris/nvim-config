@@ -125,7 +125,6 @@ local mappings = {
 	},
 	q = {
 		name = "Quickfix",
-		t = { "<cmd>TodoQuickFix<cr>", "Todos" },
 		q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
 		c = { "<cmd>GitConflictListQf<cr>", "Merge Conflicts" },
 	},

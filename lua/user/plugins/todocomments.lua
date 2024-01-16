@@ -16,4 +16,9 @@ return {
 			TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
 		},
 	},
+
+	config = function(opts)
+		require("todo-comments").setup(opts)
+		vim.keymap.set("n", "<leader>qt", "<cmd>TodoQuickFix<cr>", { desc = "Todos" })
+	end,
 }
