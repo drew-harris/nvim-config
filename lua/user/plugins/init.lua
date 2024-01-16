@@ -93,22 +93,13 @@ require("lazy").setup({
 	"simrat39/inlay-hints.nvim",
 	require("user.plugins.crates"),
 
-	{
-		"kevinhwang91/nvim-bqf",
-		ft = "qf",
-		opts = {
-			auto_enable = true,
-			auto_resize_height = true, -- highly recommended enable
-		},
-		dependencies = { "junegunn/fzf" },
-	},
+	require("user.plugins.quickfix"),
 
 	-- Telescope
 	require("user.plugins.telescope"),
 
 	-- Treesitter
 	require("user.plugins.treesitter"),
-
 	{
 		"sustech-data/wildfire.nvim",
 		event = "VeryLazy",
@@ -137,8 +128,7 @@ require("lazy").setup({
 	{
 		"akinsho/git-conflict.nvim",
 		config = function()
-			---@diagnostic disable-next-line: missing-parameter
-			require("git-conflict").setup()
+			require("git-conflict").setup({})
 		end,
 	},
 

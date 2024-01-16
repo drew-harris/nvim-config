@@ -88,14 +88,6 @@ local mappings = {
 	["7"] = "which_key_ignore",
 	["8"] = "which_key_ignore",
 	["9"] = "which_key_ignore",
-	["b"] = {
-		"<cmd>Neotree buffers toggle reveal<cr>",
-		"Buffers",
-	},
-	["B"] = {
-		"<cmd>BufferLinePick<cr>",
-		"Pick Buffer",
-	},
 	["<tab>"] = {
 		"<cmd>tabn<cr>",
 		"Next Tab",
@@ -128,6 +120,7 @@ local mappings = {
 		q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
 		c = { "<cmd>GitConflictListQf<cr>", "Merge Conflicts" },
 	},
+	-- TODO: Migrate gitsigns
 	g = {
 		name = "Git",
 		j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
@@ -175,10 +168,6 @@ local mappings = {
 			"<cmd>TSToolsGoToSourceDefinition<cr>",
 			"Go to Typescript Source",
 		},
-		w = {
-			"<cmd>Telescope diagnostics<cr>",
-			"Workspace Diagnostics",
-		},
 		f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		j = {
@@ -206,13 +195,6 @@ local mappings = {
 		m = { "<cmd>TSToolsAddMissingImports<CR>", "Add Missing Import" },
 		["R"] = { "<cmd>TSToolsRenameFile<CR>", "Rename File" },
 		p = { "<cmd>lua vim.diagnostic.open_float({focusable = true})<cr>", "View Issues" },
-
-		t = {
-			function()
-				require("trouble").toggle("workspace_diagnostics")
-			end,
-			"Trouble",
-		},
 	},
 	s = {
 		name = "Search",

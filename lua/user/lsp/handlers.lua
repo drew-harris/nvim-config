@@ -92,6 +92,10 @@ local function lsp_keymaps(bufnr)
 
 	keymap(bufnr, "n", "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 	keymap(bufnr, "n", "<leader>lc", "<cmd>Lspsaga peek_definition<CR>", opts)
+
+	vim.keymap.set("n", "<leader>lw", function()
+		vim.diagnostic.setqflist()
+	end, { desc = "Workspace Diagnostics" })
 end
 
 local ih = require("inlay-hints")

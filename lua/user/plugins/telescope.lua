@@ -37,14 +37,11 @@ return {
 						["<C-u>"] = actions.preview_scrolling_up,
 						["<C-d>"] = actions.preview_scrolling_down,
 
-						["<PageUp>"] = actions.results_scrolling_up,
-						["<PageDown>"] = actions.results_scrolling_down,
-
 						["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
 						["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
 						["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
 						["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-						["<C-l>"] = actions.complete_tag,
+						["<C-l>"] = actions.send_to_qflist + actions.open_qflist,
 						["<C-_>"] = actions.which_key, -- keys from pressing <C-/>
 					},
 
@@ -58,6 +55,7 @@ return {
 						["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
 						["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
 						["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
+						["<C-l>"] = actions.send_to_qflist + actions.open_qflist,
 						["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 
 						["j"] = actions.move_selection_next,
@@ -105,10 +103,17 @@ return {
 		require("telescope").load_extension("menufacture")
 		require("telescope").load_extension("harpoon")
 
+		local dropdown = require("telescope.themes").get_dropdown()
+
 		-- Keymaps
 		vim.keymap.set("n", "<leader>f", function()
 			require("telescope.builtin").find_files({})
 		end, { desc = "Find Files" })
+
 		vim.keymap.set("n", "<leader>F", "<cmd>Telescope live_grep theme=ivy<cr>", { desc = "Search in files" })
+
+		vim.keymap.set("n", "<leader>b", function()
+			require("telescope.builtin").buffers(dropdown)
+		end, { desc = "Search buffers" })
 	end,
 }
