@@ -33,6 +33,7 @@ local options = {
 	guifont = "Hack Nerd Font Mono:16", -- the font used in graphical neovim applications
 	autoread = true,
 	laststatus = 0, -- Full width single statusline
+	undofile = true,
 	-- foldmethod = "expr",
 	-- foldexpr = "v:lua.vim.treesitter.foldexpr()", -- Very strange
 	-- foldlevel = 20,

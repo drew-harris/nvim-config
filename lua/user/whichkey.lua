@@ -265,7 +265,7 @@ local mappings = {
 		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
 		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
 	},
-	-- TODO: Create a keybind (in insert mode) to reject copilot for that line
+	-- TODO: MIGRATE
 	c = {
 		name = "Copilot",
 		s = { "<cmd>Copilot split<cr>", "Split" },
@@ -277,19 +277,8 @@ local mappings = {
 	m = {
 		name = "More...",
 		d = { "<cmd>DBUIToggle<cr>", "Toggle DBUI" },
-		g = { "<cmd>Glow<cr>", "Glow" },
 		c = { "<cmd>CellularAutomaton make_it_rain<cr>", "CA" },
 		n = { "<cmd>Flote<cr>", "Notes" },
-
-		-- b = {
-		-- 	function()
-		-- 		vim.api.nvim_set_var(
-		-- 			"lspsaga_statusline_enabled",
-		-- 			not vim.api.nvim_get_var("lspsaga_statusline_enabled")
-		-- 		)
-		-- 	end,
-		-- 	"Toggle bottom lsp status",
-		-- },
 	},
 
 	k = {

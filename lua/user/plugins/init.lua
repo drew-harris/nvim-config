@@ -202,17 +202,7 @@ require("lazy").setup({
 	-- require("user.plugins.chatgpt"),
 
 	-- Markdown
-	{
-		"ellisonleao/glow.nvim",
-		config = {
-			function()
-				require("glow").setup({
-					width_ratio = 0.9, -- maximum width of the Glow window compared to the nvim window size (overrides `width`)
-					height_ratio = 0.9,
-				})
-			end,
-		},
-	},
+	require("user.plugins.glow"),
 
 	{ "JellyApple102/flote.nvim", opts = {} },
 
