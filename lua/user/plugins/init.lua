@@ -18,7 +18,7 @@ vim.loader.enable()
 -- Install your plugins here
 require("lazy").setup({
 	"nvim-lua/plenary.nvim",
-	"kyazdani42/nvim-web-devicons",
+	{ "kyazdani42/nvim-web-devicons", lazy = true },
 	"lukas-reineke/indent-blankline.nvim",
 	"windwp/nvim-autopairs",
 	{ "windwp/nvim-ts-autotag" },
@@ -31,7 +31,8 @@ require("lazy").setup({
 
 	require("user.plugins.neotree"),
 
-	require("user.plugins.cybu"),
+	-- require("user.plugins.cybu"),
+
 	"folke/which-key.nvim",
 
 	require("user.plugins.toggleterm"),
@@ -46,6 +47,7 @@ require("lazy").setup({
 
 	-- UI Improvements
 	{ "stevearc/dressing.nvim", event = "VeryLazy" },
+
 	require("user.lsp.saga"),
 	require("user.plugins.lualine"),
 
@@ -55,19 +57,6 @@ require("lazy").setup({
 	require("user.plugins.tw-values"),
 
 	require("user.plugins.glance"),
-
-	-- --
-	-- -- Cmp
-	-- { "hrsh7th/nvim-cmp", event = "InsertEnter", dependencies = "hrsh7th/cmp-buffer" },
-	-- "hrsh7th/cmp-path",
-	-- "saadparwaiz1/cmp_luasnip",
-	-- "hrsh7th/cmp-nvim-lsp",
-	--
-	-- -- Snippets
-	-- {
-	-- 	"L3MON4D3/LuaSnip",
-	-- 	version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-	-- },
 
 	require("user.plugins.cmp"),
 
@@ -186,6 +175,7 @@ require("lazy").setup({
 	-- AI
 	{ "zbirenbaum/copilot.lua", cmd = "Copilot", event = "InsertEnter" },
 	"zbirenbaum/copilot-cmp",
+
 	-- require("user.plugins.chatgpt"),
 
 	-- Markdown
