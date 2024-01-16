@@ -12,9 +12,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Makes things faster apparently?
-vim.loader.enable()
-
 -- Install your plugins here
 require("lazy").setup({
 	"nvim-lua/plenary.nvim",
@@ -111,6 +108,7 @@ require("lazy").setup({
 
 	-- Treesitter
 	require("user.plugins.treesitter"),
+
 	{
 		"sustech-data/wildfire.nvim",
 		event = "VeryLazy",
@@ -132,7 +130,7 @@ require("lazy").setup({
 	},
 
 	-- Git
-	"lewis6991/gitsigns.nvim",
+	require("user.plugins.gitsigns"),
 	require("user.plugins.diffs"),
 	require("user.plugins.neogit"),
 
