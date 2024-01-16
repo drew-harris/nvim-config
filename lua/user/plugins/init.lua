@@ -80,14 +80,7 @@ require("lazy").setup({
 	"jay-babu/mason-null-ls.nvim",
 	require("user.plugins.trouble"),
 	"folke/neodev.nvim",
-	{
-		"SmiteshP/nvim-navbuddy",
-		dependencies = {
-			"neovim/nvim-lspconfig",
-			"SmiteshP/nvim-navic",
-			"MunifTanjim/nui.nvim",
-		},
-	},
+	require("user.plugins.navbuddy"),
 	require("user.plugins.tstools"),
 	require("user.plugins.signature_help"),
 

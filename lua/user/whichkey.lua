@@ -104,7 +104,6 @@ local mappings = {
 		"<c-w><S-T>",
 		"Move to new tab",
 	},
-	["n"] = { "<cmd>Navbuddy<cr>", "Navbuddy" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["x"] = { "<cmd>bw<CR>", "Close Buffer" },
 	["z"] = { "<cmd>set hlsearch!<CR>", "No Highlight" },
@@ -140,6 +139,7 @@ local mappings = {
 		h = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
 		t = { "<cmd>lua require'dap'.run_to_cursor()<cr>", "Run To Cursor" },
 	},
+	-- TODO: Migrate to auto-which-key
 	h = {
 		name = "Harpoon",
 		a = { '<cmd>lua require("harpoon.mark").add_file()<cr>', "Add" },

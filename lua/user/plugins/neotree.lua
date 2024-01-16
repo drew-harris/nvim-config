@@ -57,6 +57,6 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<leader>e", "<Cmd>Neotree<cr>", { desc = "Neotree" })
+		vim.keymap.set("n", "<leader>e", "<Cmd>Neotree toggle reveal<cr>", { desc = "Neotree" })
 	end,
 }
