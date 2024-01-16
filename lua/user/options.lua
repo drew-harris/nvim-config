@@ -39,6 +39,7 @@ local options = {
 	-- foldlevel = 20,
 }
 
+vim.g["code_action_menu_show_details"] = false
 vim.g.skip_ts_context_commentstring_module = true
 vim.opt.shortmess:append("c")
 

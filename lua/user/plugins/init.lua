@@ -179,7 +179,7 @@ require("lazy").setup({
 	require("user.plugins.leap"),
 
 	-- Todo Highlighting
-	"folke/todo-comments.nvim",
+	require("user.plugins.todocomments"),
 
 	require("user.plugins.harpoon"),
 
