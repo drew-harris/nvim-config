@@ -69,7 +69,6 @@ require("lazy").setup({
 		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 	},
 	require("user.plugins.scissors"),
-	-- "rafamadriz/friendly-snippets",
 
 	-- LSP
 	"neovim/nvim-lspconfig",
@@ -84,22 +83,7 @@ require("lazy").setup({
 	require("user.plugins.tstools"),
 	require("user.plugins.signature_help"),
 
-	{
-		"lvimuser/lsp-inlayhints.nvim",
-		config = function()
-			require("lsp-inlayhints").setup({
-				inlay_hints = {
-					highlight = "Comment",
-					parameter_hints = {
-						prefix = "     <- ",
-					},
-					type_hints = {
-						prefix = "     <- ",
-					},
-				},
-			})
-		end,
-	},
+	require("user.plugins.inlayhints"),
 
 	-- Language Specific
 	-- "vrischmann/tree-sitter-templ",
@@ -223,24 +207,4 @@ require("lazy").setup({
 			},
 		},
 	},
-
-	-- {
-	-- 	"m4xshen/hardtime.nvim",
-	-- 	opts = {
-	-- 		disable_mouse = false,
-	-- 		max_count = 4,
-	-- 		disabled_filetypes = {
-	-- 			"qf",
-	-- 			"netrw",
-	-- 			"NvimTree",
-	-- 			"lazy",
-	-- 			"mason",
-	-- 			"dbui",
-	-- 			"code-action-menu-menu",
-	-- 			"flutterToolsOutline",
-	-- 			"neo-tree",
-	-- 			"help",
-	-- 		},
-	-- 	},
-	-- },
 })
