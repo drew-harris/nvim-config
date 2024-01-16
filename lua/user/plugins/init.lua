@@ -147,8 +147,7 @@ require("lazy").setup({
 	},
 
 	-- Telescope
-	{ "nvim-telescope/telescope.nvim", dependencies = "nvim-telescope/telescope-live-grep-args.nvim" },
-	{ "molecule-man/telescope-menufacture" },
+	require("user.plugins.telescope"),
 
 	-- Treesitter
 	"nvim-treesitter/nvim-treesitter",

@@ -108,32 +108,20 @@ local mappings = {
 	["x"] = { "<cmd>bw<CR>", "Close Buffer" },
 	["z"] = { "<cmd>set hlsearch!<CR>", "No Highlight" },
 	["p"] = { "<cmd>b#<cr>", "Previous Buffer" },
-	["f"] = {
-		-- "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{preview = true})<cr>",
-		"<cmd>lua require('telescope.builtin').find_files({})<cr>",
-		-- function()
-		-- 	vim.cmd("Neotree close")
-		-- 	require("telescope").extensions.menufacture.find_files()
-		-- end,
-		"Find files",
-	},
-	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["i"] = { "<cmd>IBLToggle<cr>", "Toggle Indent Guide" },
 
 	-- TODO: Migrate to auto-which-key
 	h = {
 		name = "Harpoon",
-		a = { '<cmd>lua require("harpoon.mark").add_file()<cr>', "Add" },
-		e = { '<cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>', "Edit" },
-		n = { '<cmd>lua require("harpoon.ui").nav_next()<cr>', "Next" },
-		p = { '<cmd>lua require("harpoon.ui").nav_prev()<cr>', "Previous" },
-		s = { "<cmd>Telescope harpoon marks<cr>", "Search Marks" },
-		c = {
-			function()
-				require("harpoon.cmd-ui").toggle_quick_menu()
-			end,
-			"Edit Commands",
-		},
+		["1"] = "which_key_ignore",
+		["2"] = "which_key_ignore",
+		["3"] = "which_key_ignore",
+		["4"] = "which_key_ignore",
+		["5"] = "which_key_ignore",
+		["6"] = "which_key_ignore",
+		["7"] = "which_key_ignore",
+		["8"] = "which_key_ignore",
+		["9"] = "which_key_ignore",
 	},
 	q = {
 		name = "Quickfix",
