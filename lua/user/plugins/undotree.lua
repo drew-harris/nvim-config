@@ -8,5 +8,7 @@ return {
 			"<cmd>UndotreeToggle<CR>",
 			{ noremap = true, silent = true, desc = "Undo Tree" }
 		)
+
+		vim.g["undotree_WindowLayout"] = 2
 	end,
 }
