@@ -11,7 +11,7 @@ end
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 require("mason-null-ls").setup({
-	ensure_installed = { "stylua", "jq" },
+	ensure_installed = { "jq" },
 	handlers = {
 		function(source_name, methods)
 			-- all sources with no handler get passed here
