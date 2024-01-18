@@ -3,14 +3,15 @@ return {
 	dependencies = {
 		"nvim-telescope/telescope-live-grep-args.nvim",
 		"debugloop/telescope-undo.nvim",
-
 		"molecule-man/telescope-menufacture",
 		"ThePrimeagen/harpoon",
+		"nvim-telescope/telescope-file-browser.nvim",
 	},
 
 	config = function()
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")
+		local fb_actions = require("telescope").extensions.file_browser.actions
 		telescope.setup({
 			defaults = {
 				file_ignore_patterns = { "node%_modules/.*" },
@@ -98,6 +99,16 @@ return {
 						main_menu = { [{ "i", "n" }] = "<C-\\>" },
 					},
 				},
+
+				file_browser = {
+					mappings = {
+						["i"] = {
+							["<C-c>"] = fb_actions.create,
+							["<C-b>"] = fb_actions.toggle_browser,
+							["<C-d>"] = fb_actions.remove,
+						},
+					},
+				},
 			},
 		})
 
@@ -105,6 +116,8 @@ return {
 		require("telescope").load_extension("menufacture")
 		require("telescope").load_extension("harpoon")
 		require("telescope").load_extension("undo")
+		require("telescope").load_extension("file_browser")
+
 		vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<cr>")
 
 		local dropdown = require("telescope.themes").get_dropdown()
@@ -116,8 +129,18 @@ return {
 
 		vim.keymap.set("n", "<leader>F", "<cmd>Telescope live_grep theme=ivy<cr>", { desc = "Search in files" })
 
-		vim.keymap.set("n", "<leader>b", function()
+		Keymapper("b", function()
 			require("telescope.builtin").buffers(dropdown)
-		end, { desc = "Search buffers" })
+		end, "Search buffers")
+
+		local fb = telescope.extensions.file_browser
+		local picker = fb.file_browser
+
+		Keymapper("e", function()
+			picker({
+				files = true,
+				grouped = true,
+			})
+		end, "File Explorer")
 	end,
 }
