@@ -12,7 +12,7 @@ local config = {
 
 		-- 💀
 		"-configuration",
-		"$HOME/my_jdtls/config_mac",
+		"/Users/drew/my_jdtls/config_mac",
 		-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        ^^^^^^
 		-- Must point to the                      Change to one of `linux`, `win` or `mac`
 		-- eclipse.jdt.ls installation            Depending on your system.
@@ -20,7 +20,7 @@ local config = {
 		-- 💀
 		-- See `data directory configuration` section in the README
 		"-data",
-		"/Users/drew/programs/minecraft/jdtls",
+		"/Users/drew/programs/jdtls-data-mc/jdtls",
 	},
 
 	-- 💀
