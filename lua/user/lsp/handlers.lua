@@ -98,6 +98,8 @@ local function lsp_keymaps(bufnr)
 	end, { desc = "Workspace Diagnostics" })
 end
 
+M.keymaps = lsp_keymaps
+
 local ih = require("inlay-hints")
 ih.setup({
 	renderer = "inlay-hints/render/eol",

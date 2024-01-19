@@ -82,6 +82,7 @@ require("lazy").setup({
 	-- Language Specific
 	-- "vrischmann/tree-sitter-templ",
 	-- "joerdav/templ.vim",
+	"mfussenegger/nvim-jdtls",
 
 	require("user.plugins.neotest"),
 
