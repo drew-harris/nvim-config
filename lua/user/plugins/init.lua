@@ -26,8 +26,6 @@ require("lazy").setup({
 
 	require("user.plugins.oil"),
 
-	-- require("user.plugins.neotree"),
-
 	-- require("user.plugins.cybu"),
 
 	-- MINI
@@ -128,6 +126,8 @@ require("lazy").setup({
 	require("user.plugins.gitsigns"),
 	require("user.plugins.diffs"),
 	require("user.plugins.neogit"),
+
+	require("user.plugins.neotree"),
 
 	{
 		"akinsho/git-conflict.nvim",
