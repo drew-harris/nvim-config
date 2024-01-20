@@ -136,7 +136,7 @@ return {
 		local fb = telescope.extensions.file_browser
 		local picker = fb.file_browser
 
-		Keymapper("e", function()
+		Keymapper("E", function()
 			picker({
 				files = true,
 				grouped = true,

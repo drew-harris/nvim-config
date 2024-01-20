@@ -46,7 +46,6 @@ require("lazy").setup({
 	-- UI Improvements
 	{ "stevearc/dressing.nvim", event = "VeryLazy" },
 
-	require("user.lsp.saga"),
 	require("user.plugins.lualine"),
 
 	-- Utils
@@ -70,12 +69,13 @@ require("lazy").setup({
 	"weilbith/nvim-code-action-menu",
 	"jay-babu/mason-null-ls.nvim",
 	require("user.plugins.trouble"),
+	require("user.lsp.saga"),
 	"folke/neodev.nvim",
 	require("user.plugins.navbuddy"),
 	require("user.plugins.tstools"),
 	require("user.plugins.signature_help"),
-
 	require("user.plugins.inlayhints"),
+	require("user.plugins.neogen"),
 
 	-- Language Specific
 	-- "vrischmann/tree-sitter-templ",
@@ -99,6 +99,8 @@ require("lazy").setup({
 
 	-- Telescope
 	require("user.plugins.telescope"),
+
+	-- require("user.plugins.neotree"),
 
 	-- Treesitter
 	require("user.plugins.treesitter"),
@@ -126,8 +128,6 @@ require("lazy").setup({
 	require("user.plugins.gitsigns"),
 	require("user.plugins.diffs"),
 	require("user.plugins.neogit"),
-
-	require("user.plugins.neotree"),
 
 	{
 		"akinsho/git-conflict.nvim",
