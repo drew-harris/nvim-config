@@ -248,6 +248,7 @@ local mappings = {
 		p = { "<cmd>e package.json<cr>", "Open package.json" },
 		t = { "<cmd>e cargo.toml<cr>", "Open Cargo toml" },
 		l = { "<cmd>e .eslintrc.cjs<cr>", "Open Eslintrc" },
+		r = { "<cmd>e README.md<cr>", "Open Eslintrc" },
 	},
 	-- TODO: Add Octo
 	-- https://github.com/pwntester/octo.nvim
