@@ -160,6 +160,7 @@ require("lazy").setup({
 	-- Fun
 	"eandrju/cellular-automaton.nvim",
 	"wakatime/vim-wakatime",
+	"ThePrimeagen/vim-be-good",
 
 	require("user.plugins.fidget"),
 })
