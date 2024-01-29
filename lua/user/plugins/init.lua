@@ -58,7 +58,7 @@ require("lazy").setup({
 	require("user.plugins.cmp"),
 
 	--
-	----
+	--
 	require("user.plugins.scissors"),
 
 	-- LSP
@@ -100,7 +100,7 @@ require("lazy").setup({
 	-- Telescope
 	require("user.plugins.telescope"),
 
-	-- require("user.plugins.neotree"),
+	require("user.plugins.neotree"),
 
 	-- Treesitter
 	require("user.plugins.treesitter"),
