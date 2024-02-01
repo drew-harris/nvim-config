@@ -62,6 +62,14 @@ M.setup = function()
 	})
 end
 
+local function formatNoHtml()
+	vim.lsp.buf.format({
+		filter = function(client)
+			return client.name ~= "html"
+		end,
+	})
+end
+
 local function lsp_keymaps(bufnr)
 	local opts = { noremap = true, silent = true }
 	local keymap = vim.api.nvim_buf_set_keymap
@@ -79,7 +87,6 @@ local function lsp_keymaps(bufnr)
 		vim.tbl_extend("force", opts, { desc = "Trouble References" })
 	)
 	keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float({focusable = false})<CR>", opts)
-	keymap(bufnr, "n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
 	-- TODO: Create command to auto import thing under cursor
 	-- keymap(bufnr, "n", "<leader>li", "<cmd>LspInfo<cr>", opts)
 	keymap(bufnr, "n", "<leader>la", "<cmd>CodeActionMenu<cr>", opts)

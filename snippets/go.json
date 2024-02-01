@@ -1,0 +1,1 @@
+{"ifff":{"prefix":"ifff","body":["if err != nil {","\treturn err","}"]}}

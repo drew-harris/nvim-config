@@ -5,10 +5,10 @@ return {
 			inlay_hints = {
 				highlight = "Comment",
 				parameter_hints = {
-					prefix = "     <- ",
+					prefix = "             <- ",
 				},
 				type_hints = {
-					prefix = "     <- ",
+					prefix = "              <- ",
 				},
 			},
 		})

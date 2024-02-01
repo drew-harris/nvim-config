@@ -27,10 +27,18 @@ return {
 			show_hidden = true,
 			-- This function defines what is considered a "hidden" file
 			is_hidden_file = function(name, bufnr)
+				-- Check if it contains _templ.go
+				-- if vim.fn.match(name, "_templ") ~= -1 then
+				-- 	return true
+				-- end
 				return vim.startswith(name, ".")
 			end,
 			-- This function defines what will never be shown, even when `show_hidden` is set
 			is_always_hidden = function(name, bufnr)
+				if vim.fn.match(name, "_templ") ~= -1 then
+					return true
+				end
+
 				return false
 			end,
 			sort = {

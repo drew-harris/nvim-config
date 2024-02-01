@@ -57,8 +57,6 @@ require("lazy").setup({
 
 	require("user.plugins.cmp"),
 
-	--
-	--
 	require("user.plugins.scissors"),
 
 	-- LSP
@@ -150,7 +148,7 @@ require("lazy").setup({
 	{ "zbirenbaum/copilot.lua", cmd = "Copilot", event = "InsertEnter" },
 	"zbirenbaum/copilot-cmp",
 
-	-- require("user.plugins.chatgpt"),
+	require("user.plugins.chatgpt"),
 
 	-- Markdown
 	require("user.plugins.glow"),

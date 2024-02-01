@@ -168,7 +168,16 @@ local mappings = {
 			"<cmd>TSToolsGoToSourceDefinition<cr>",
 			"Go to Typescript Source",
 		},
-		f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
+		f = {
+			function()
+				vim.lsp.buf.format({
+					filter = function(client)
+						return client.name ~= "html"
+					end,
+				})
+			end,
+			"format",
+		},
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		j = {
 			"<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
@@ -244,6 +253,7 @@ local mappings = {
 	k = {
 		name = "Kwik files!!!",
 		e = { "<cmd>e .env<cr>", "Open env file" },
+		a = { "<cmd>e .air.toml<cr>", "Open air config" },
 		i = { "<cmd>e .gitignore<cr>", "Open gitignore" },
 		p = { "<cmd>e package.json<cr>", "Open package.json" },
 		t = { "<cmd>e cargo.toml<cr>", "Open Cargo toml" },

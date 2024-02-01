@@ -162,6 +162,37 @@ require("mason-lspconfig").setup_handlers({
 			}
 		end
 
+		if server == "htmx" then
+			opts.filetypes = {
+				"html",
+				"css",
+				"templ",
+			}
+		end
+
+		if server == "html" then
+			opts.filetypes = {
+				"html",
+				"css",
+				-- "scss",
+				-- "javascript",
+				-- "javascriptreact",
+				-- "typescript",
+				-- "typescriptreact",
+				-- "ts",
+				-- "tsx",
+				"templ",
+			}
+			-- Disable formatting
+			opts.settings = {
+				html = {
+					format = {
+						enable = false,
+					},
+				},
+			}
+		end
+
 		-- Check for typescript
 		if server == "tsserver" then
 			tstools.setup(opts)

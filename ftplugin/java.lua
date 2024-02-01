@@ -20,7 +20,7 @@ local config = {
 		-- 💀
 		-- See `data directory configuration` section in the README
 		"-data",
-		"/Users/drew/programs/minecraft/jdtls",
+		"/Users/drew/programs/jdtls-data-mc",
 	},
 
 	-- 💀
