@@ -195,7 +195,6 @@ local mappings = {
 			"Quickfix",
 		},
 		r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
-		s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
 		S = {
 			"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
 			"Workspace Symbols",
@@ -259,6 +258,7 @@ local mappings = {
 		t = { "<cmd>e cargo.toml<cr>", "Open Cargo toml" },
 		l = { "<cmd>e .eslintrc.cjs<cr>", "Open Eslintrc" },
 		r = { "<cmd>e README.md<cr>", "Open Eslintrc" },
+		d = { "<cmd>e .dockerignore<cr>", "Open dockerignore" },
 	},
 	-- TODO: Add Octo
 	-- https://github.com/pwntester/octo.nvim

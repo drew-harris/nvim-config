@@ -2,6 +2,7 @@ return {
 	"stevearc/oil.nvim",
 	opts = {
 		delete_to_trash = true,
+		default_file_explorer = false,
 		keymaps = {
 			["g?"] = "actions.show_help",
 			["<CR>"] = "actions.select",

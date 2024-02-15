@@ -193,7 +193,7 @@ require("mason-lspconfig").setup_handlers({
 			}
 		end
 
-		-- Check for typescript
+		-- -- Check for typescript
 		if server == "tsserver" then
 			tstools.setup(opts)
 		else

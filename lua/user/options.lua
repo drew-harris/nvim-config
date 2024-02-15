@@ -34,9 +34,9 @@ local options = {
 	autoread = true,
 	laststatus = 0, -- Full width single statusline
 	undofile = true,
-	-- foldmethod = "expr",
-	-- foldexpr = "v:lua.vim.treesitter.foldexpr()", -- Very strange
-	-- foldlevel = 20,
+	foldmethod = "expr",
+	foldexpr = "v:lua.vim.treesitter.foldexpr()", -- Very strange
+	foldlevel = 20,
 }
 
 vim.g["code_action_menu_show_details"] = false
