@@ -69,4 +69,10 @@ return {
 	},
 	-- { "Mofiqul/dracula.nvim" },
 	-- "RRethy/nvim-base16",
+
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000, opts = {
+		transparent_background = false,
+	} },
+
+	{ "kepano/flexoki-neovim", name = "flexoki" },
 }

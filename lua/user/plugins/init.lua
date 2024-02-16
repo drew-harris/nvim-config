@@ -18,7 +18,7 @@ require("lazy").setup({
 	{ "kyazdani42/nvim-web-devicons", lazy = true },
 	"lukas-reineke/indent-blankline.nvim",
 	"windwp/nvim-autopairs",
-	{ "windwp/nvim-ts-autotag" },
+	{ "windwp/nvim-ts-autotag", ft = { "typescript", "typescriptreact" } }, -- TODO: Fix if not working
 	{ "JoosepAlviste/nvim-ts-context-commentstring", opts = {} },
 	require("user.plugins.comment"),
 
