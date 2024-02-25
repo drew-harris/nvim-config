@@ -21,12 +21,8 @@ require("lazy").setup({
 	{ "windwp/nvim-ts-autotag", ft = { "typescript", "typescriptreact" } }, -- TODO: Fix if not working
 	{ "JoosepAlviste/nvim-ts-context-commentstring", opts = {} },
 	require("user.plugins.comment"),
-
 	require("user.plugins.undotree"),
-
 	require("user.plugins.oil"),
-
-	-- require("user.plugins.cybu"),
 
 	-- MINI
 	require("user.plugins.mini"),
@@ -63,9 +59,7 @@ require("lazy").setup({
 	"neovim/nvim-lspconfig",
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
-	"jose-elias-alvarez/null-ls.nvim",
 	"weilbith/nvim-code-action-menu",
-	"jay-babu/mason-null-ls.nvim",
 	require("user.plugins.trouble"),
 	require("user.lsp.saga"),
 	"folke/neodev.nvim",
@@ -74,10 +68,16 @@ require("lazy").setup({
 	require("user.plugins.signature_help"),
 	require("user.plugins.inlayhints"),
 	require("user.plugins.neogen"),
+	require("user.plugins.fidget"),
+
+	-- LSP FORMATTING
+
+	"stevearc/conform.nvim",
+	"zapling/mason-conform.nvim",
 
 	-- Language Specific
-	-- "vrischmann/tree-sitter-templ",
-	-- "joerdav/templ.vim",
+	"vrischmann/tree-sitter-templ",
+	"joerdav/templ.vim",
 	"mfussenegger/nvim-jdtls",
 
 	require("user.plugins.neotest"),
@@ -158,6 +158,4 @@ require("lazy").setup({
 	"eandrju/cellular-automaton.nvim",
 	"wakatime/vim-wakatime",
 	"ThePrimeagen/vim-be-good",
-
-	require("user.plugins.fidget"),
 })

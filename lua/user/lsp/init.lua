@@ -8,5 +8,5 @@ end
 -- require("lspconfig").clangd.setup({ capabilities = capabilities })
 require("user.lsp.mason")
 require("user.lsp.handlers").setup()
-require("user.lsp.null-ls")
+require("user.lsp.formatting")
 -- require("user.lsp.dap")
