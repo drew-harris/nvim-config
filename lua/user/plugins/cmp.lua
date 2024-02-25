@@ -16,7 +16,7 @@ return {
 	config = function()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
-		require("luasnip.loaders.from_vscode").lazy_load({ paths = { vim.fn.stdpath("config") .. "/snippets" } })
+		-- require("luasnip.loaders.from_vscode").lazy_load({ paths = { vim.fn.stdpath("config") .. "/snippets" } })
 
 		require("copilot_cmp").setup({})
 
@@ -116,8 +116,8 @@ return {
 				["<CR>"] = vim.schedule_wrap(function(fallback)
 					if cmp.visible() and has_words_before() and cmp.get_selected_entry() then
 						cmp.confirm({ select = false, behavior = cmp.ConfirmBehavior.Insert })
-					elseif luasnip.expand_or_jumpable() then
-						luasnip.expand_or_jump()
+					-- elseif luasnip.expand_or_jumpable() then -- TODO: WATCH HERE
+					-- 	luasnip.expand_or_jump()
 					else
 						fallback()
 					end

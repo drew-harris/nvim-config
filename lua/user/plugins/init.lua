@@ -135,7 +135,6 @@ require("lazy").setup({
 	},
 
 	-- Drew's Motions
-	"tpope/vim-repeat",
 	"tpope/vim-sleuth",
 	require("user.plugins.leap"),
 
