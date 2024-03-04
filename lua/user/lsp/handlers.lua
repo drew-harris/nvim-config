@@ -60,6 +60,15 @@ M.setup = function()
 		underline = true,
 		update_in_insert = true,
 	})
+
+	-- Define the handler function
+	local function custom_publish_diagnostics(err, result, ctx, config)
+		require("ts-error-translator").translate_diagnostics(err, result, ctx, config)
+		vim.lsp.diagnostic.on_publish_diagnostics(err, result, ctx, config)
+	end
+
+	-- Assign the combined handler function
+	vim.lsp.handlers["textDocument/publishDiagnostics"] = custom_publish_diagnostics
 end
 
 local function formatNoHtml()

@@ -45,5 +45,5 @@ vim.g.indent_blankline_context_patterns = {
 }
 
 require("ibl").setup({
-	whitespace = { highlight = "VertSplit" },
+	-- whitespace = { highlight = "VertSplit" },
 })

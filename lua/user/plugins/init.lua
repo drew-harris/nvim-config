@@ -69,6 +69,10 @@ require("lazy").setup({
 	require("user.plugins.inlayhints"),
 	require("user.plugins.neogen"),
 	require("user.plugins.fidget"),
+	{ "dmmulroy/ts-error-translator.nvim", opts = {
+		auto_override_publish_diagnostics = true,
+	} },
+	{ "dmmulroy/tsc.nvim", opts = {} },
 
 	-- LSP FORMATTING
 
@@ -158,4 +162,9 @@ require("lazy").setup({
 	"eandrju/cellular-automaton.nvim",
 	"wakatime/vim-wakatime",
 	"ThePrimeagen/vim-be-good",
+	-- {
+	-- 	"m4xshen/hardtime.nvim",
+	-- 	dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+	-- 	opts = {},
+	-- },
 })

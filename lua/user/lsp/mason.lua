@@ -30,6 +30,12 @@ local opts = {}
 
 vim.filetype.add({
 	extension = {
+		astro = "astro",
+	},
+})
+
+vim.filetype.add({
+	extension = {
 		pest = "pest",
 	},
 })
@@ -194,10 +200,12 @@ require("mason-lspconfig").setup_handlers({
 		end
 
 		-- -- Check for typescript
-		if server == "tsserver" then
-			tstools.setup(opts)
-		else
-			lspconfig[server].setup(opts)
-		end
+		-- if server == "tsserver" then
+		-- tstools.setup(opts)
+		-- else
+		lspconfig[server].setup(opts)
+		-- end
 	end,
 })
+
+require("lspconfig").astro.setup({})
