@@ -130,6 +130,7 @@ require("lazy").setup({
 	require("user.plugins.gitsigns"),
 	require("user.plugins.diffs"),
 	require("user.plugins.neogit"),
+	"tpope/vim-fugitive",
 
 	{
 		"akinsho/git-conflict.nvim",
