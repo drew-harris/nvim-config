@@ -1,3 +1,15 @@
+local do_autoformat = true
+
+-- Create autoformat toggle
+vim.api.nvim_create_user_command("AutoformatToggle", function()
+	do_autoformat = not do_autoformat
+	if do_autoformat then
+		print("Autoformat enabled")
+	else
+		print("Autoformat disabled")
+	end
+end, { nargs = 0 })
+
 require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
@@ -11,6 +23,9 @@ require("conform").setup({
 		typescriptreact = { { "prettierd" } },
 	},
 	format_on_save = function(bufnr)
+		if not do_autoformat then
+			return
+		end
 		-- These options will be passed to conform.format()
 		local ignore_filetypes = { "java" }
 		if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then
