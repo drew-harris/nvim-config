@@ -1,16 +1,5 @@
 # Drews Vim Config
 
-```dot
-digraph {
-  margin=0.75
-  bgcolor="#ffffff00"
-  color=white
-  fontcolor=white
-  node [color=white, fontcolor=white]
-  edge [color=white]
-}
-```
-
 Based off of
 [Neovim from scratch](https://github.com/LunarVim/Neovim-from-scratch)
 
