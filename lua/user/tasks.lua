@@ -21,10 +21,6 @@ require("toggletasks").setup({
 	},
 	tasks = {}, -- list of global tasks or function(win): tasks
 	-- this is basically the "Config format" defined using Lua tables
-	-- Language server priorities when selecting lsp_root (default is 0)
-	lsp_priorities = {
-		["null-ls"] = -10,
-	},
 	-- Defaults used when opening task's terminal (see Terminal:new() in toggleterm/terminal.lua)
 	toggleterm = {
 		close_on_exit = false,

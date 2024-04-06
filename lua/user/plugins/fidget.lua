@@ -3,7 +3,6 @@ return {
 	opts = {
 		progress = {
 			ignore_done_already = true,
-			ignore = { "null-ls" },
 		},
 		-- options
 		notification = {

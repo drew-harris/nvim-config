@@ -67,25 +67,25 @@ return {
 				end,
 			},
 			formatters = {
-				-- insert_text = require("copilot_cmp.format").remove_existing,
-				-- label = require("copilot_cmp.format").format_label_text,
-				-- preview = require("copilot_cmp.format").deindent,
+				insert_text = require("copilot_cmp.format").remove_existing,
+				label = require("copilot_cmp.format").format_label_text,
+				preview = require("copilot_cmp.format").deindent,
 			},
 
-			-- performance = {
-			-- 	debounce = 0,
-			-- 	throttle = 0,
-			-- },
+			performance = {
+				debounce = 0,
+				throttle = 0,
+			},
 			--
-			-- completion = {
-			-- 	keyword_length = 1,
-			-- },
+			completion = {
+				keyword_length = 1,
+			},
 			--
 			sorting = {
 				priority_weight = 4,
 				comparators = {
-					-- require("copilot_cmp.comparators").prioritize,
-					-- require("copilot_cmp.comparators").score,
+					require("copilot_cmp.comparators").prioritize,
+					require("copilot_cmp.comparators").score,
 
 					-- Below is the default comparitor list and order for nvim-cmp
 					cmp.config.compare.offset,

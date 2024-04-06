@@ -64,6 +64,8 @@ vim.filetype.add({
 -- 	capabilities = require("user.lsp.handlers").capabilities,
 -- })
 
+lspconfig.gleam.setup({})
+
 require("mason-lspconfig").setup_handlers({
 	function(server)
 		opts = {

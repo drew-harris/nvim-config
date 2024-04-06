@@ -5,7 +5,7 @@ return {
 	config = function()
 		require("crates").setup({
 			null_ls = {
-				enabled = true,
+				enabled = false,
 				name = "crates.nvim",
 			},
 		})
