@@ -54,3 +54,15 @@ deps
 CLR
 Interop
 JIT
+PostHog
+Redis
+BullMQ
+Hono
+template
+ElasticSearch
+T3
+HonoX
+HTMX
+drewh
+Todos
+HonoJSX

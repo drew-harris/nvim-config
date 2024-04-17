@@ -168,16 +168,6 @@ local mappings = {
 			"<cmd>TSToolsGoToSourceDefinition<cr>",
 			"Go to Typescript Source",
 		},
-		f = {
-			function()
-				vim.lsp.buf.format({
-					filter = function(client)
-						return client.name ~= "html"
-					end,
-				})
-			end,
-			"format",
-		},
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		j = {
 			"<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
@@ -259,6 +249,7 @@ local mappings = {
 		l = { "<cmd>e .eslintrc.cjs<cr>", "Open Eslintrc" },
 		r = { "<cmd>e README.md<cr>", "Open README.md" },
 		d = { "<cmd>e .dockerignore<cr>", "Open dockerignore" },
+		w = { "<cmd>e wrangler.toml<cr>", "Open Wrangler" },
 	},
 	-- TODO: Add Octo
 	-- https://github.com/pwntester/octo.nvim
