@@ -249,7 +249,8 @@ local mappings = {
 		l = { "<cmd>e .eslintrc.cjs<cr>", "Open Eslintrc" },
 		r = { "<cmd>e README.md<cr>", "Open README.md" },
 		d = { "<cmd>e .dockerignore<cr>", "Open dockerignore" },
-		w = { "<cmd>e wrangler.toml<cr>", "Open Wrangler" },
+		s = { "<cmd>e website/wrangler.toml<cr>", "Open Wrangler (website)" },
+		w = { "<cmd>e worker/wrangler.toml<cr>", "Open Wrangler (worker)" },
 	},
 	-- TODO: Add Octo
 	-- https://github.com/pwntester/octo.nvim
