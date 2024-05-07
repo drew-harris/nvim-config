@@ -158,6 +158,7 @@ require("mason-lspconfig").setup_handlers({
 				"ts",
 				"tsx",
 				"templ",
+				"astro",
 			}
 
 			opts.settings = {

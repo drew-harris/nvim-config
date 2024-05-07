@@ -21,6 +21,7 @@ require("conform").setup({
 		javascriptreact = { { "prettierd" } },
 		typescript = { { "prettierd" } },
 		typescriptreact = { { "prettierd" } },
+		astro = { { "prettierd" } },
 		java = { "google-java-format" },
 	},
 	format_on_save = function(bufnr)
