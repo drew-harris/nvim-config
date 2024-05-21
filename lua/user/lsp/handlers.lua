@@ -103,6 +103,9 @@ local function lsp_keymaps(bufnr)
 	keymap(bufnr, "n", "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev({buffer=0})<cr>", opts)
 	keymap(bufnr, "n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
 
+	vim.keymap.set("n", "<leader>I", function()
+		vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+	end, { desc = "Toggle Inlay Hints" })
 	keymap(bufnr, "n", "<leader>ls", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 
 	keymap(bufnr, "n", "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
@@ -115,28 +118,28 @@ end
 
 M.keymaps = lsp_keymaps
 
-local ih = require("inlay-hints")
-ih.setup({
-	renderer = "inlay-hints/render/eol",
-	eol = {
-		-- whether to align to the extreme right or not
-		right_align = false,
-		-- padding from the right if right_align is true
-		right_align_padding = 7,
-		parameter = {
-			separator = ", ",
-			format = function(hints)
-				return string.format("     (%s)", hints)
-			end,
-		},
-		type = {
-			separator = ", ",
-			format = function(hints)
-				return string.format("     (%s)", hints)
-			end,
-		},
-	},
-})
+-- local ih = require("inlay-hints")
+-- ih.setup({
+-- 	renderer = "inlay-hints/render/eol",
+-- 	eol = {
+-- 		-- whether to align to the extreme right or not
+-- 		right_align = false,
+-- 		-- padding from the right if right_align is true
+-- 		right_align_padding = 7,
+-- 		parameter = {
+-- 			separator = ", ",
+-- 			format = function(hints)
+-- 				return string.format("     (%s)", hints)
+-- 			end,
+-- 		},
+-- 		type = {
+-- 			separator = ", ",
+-- 			format = function(hints)
+-- 				return string.format("     (%s)", hints)
+-- 			end,
+-- 		},
+-- 	},
+-- })
 
 M.on_attach = function(client, bufnr)
 	-- require("lsp-inlayhints").on_attach(client, bufnr)
@@ -150,9 +153,9 @@ M.on_attach = function(client, bufnr)
 		client.server_capabilities.semanticTokensProvider = false
 	end
 
-	if client.name == "rust_analyzer" then
-		ih.on_attach(client, bufnr)
-	end
+	-- if client.name == "rust_analyzer" then
+	-- 	ih.on_attach(client, bufnr)
+	-- end
 
 	if client.name == "clangd" then
 		vim.api.nvim_command("set shiftwidth=4")

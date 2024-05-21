@@ -6,7 +6,7 @@ return {
 		end
 		-- code
 		-- Make bottom bar transparent in the middle
-		local auto_theme = require("lualine.themes.auto")
+		local auto_theme = require("lualine.themes.seoul256")
 
 		vim.api.nvim_set_var("lspsaga_statusline_enabled", true)
 

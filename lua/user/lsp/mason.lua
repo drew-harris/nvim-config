@@ -102,6 +102,18 @@ require("mason-lspconfig").setup_handlers({
 
 		if server == "tsserver" then
 			opts.root_dir = lspconfig.util.root_pattern("package.json")
+			opts.init_options = {
+				preferences = {
+					includeInlayParameterNameHints = "all",
+					includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+					includeInlayFunctionParameterTypeHints = true,
+					includeInlayVariableTypeHints = true,
+					includeInlayPropertyDeclarationTypeHints = true,
+					includeInlayFunctionLikeReturnTypeHints = true,
+					includeInlayEnumMemberValueHints = true,
+					importModuleSpecifierPreference = "non-relative",
+				},
+			}
 			-- Setup eslint_d
 		end
 
@@ -163,12 +175,10 @@ require("mason-lspconfig").setup_handlers({
 
 			opts.settings = {
 				tailwindCSS = {
-					classAttributes = { "class", "className", "variants.*" },
 					experimental = {
 						classRegex = {
 							{ "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
 							{ "cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
-							{ "cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
 						},
 					},
 				},
@@ -214,7 +224,7 @@ require("mason-lspconfig").setup_handlers({
 
 		-- -- Check for typescript
 		-- if server == "tsserver" then
-		-- tstools.setup(opts)
+		-- 	tstools.setup(opts)
 		-- else
 		lspconfig[server].setup(opts)
 		-- end

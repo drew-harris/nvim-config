@@ -65,6 +65,22 @@ return {
 	},
 
 	{
+		"rebelot/kanagawa.nvim",
+		opts = {
+			transparent = true, -- do not set background color
+			colors = {
+				theme = {
+					all = {
+						ui = {
+							bg_gutter = "none",
+						},
+					},
+				},
+			},
+		},
+	},
+
+	{
 		"briones-gabriel/darcula-solid.nvim",
 	},
 	-- { "Mofiqul/dracula.nvim" },
