@@ -1,7 +1,6 @@
 return {
 	"NeogitOrg/neogit",
 	dependencies = "nvim-lua/plenary.nvim",
-	branch = "nightly",
 	config = function()
 		local opts = {
 			disable_commit_confirmation = true,

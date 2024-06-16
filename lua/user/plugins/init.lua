@@ -18,7 +18,10 @@ require("lazy").setup({
 	{ "kyazdani42/nvim-web-devicons", lazy = true },
 	"lukas-reineke/indent-blankline.nvim",
 	"windwp/nvim-autopairs",
-	{ "windwp/nvim-ts-autotag", ft = { "typescript", "typescriptreact" } }, -- TODO: Fix if not working
+	{ "windwp/nvim-ts-autotag", config = function() 
+		require('nvim-ts-autotag').setup()
+	end
+	},
 	{ "JoosepAlviste/nvim-ts-context-commentstring", opts = {} },
 	require("user.plugins.comment"),
 	require("user.plugins.undotree"),
@@ -125,6 +128,7 @@ require("lazy").setup({
 			})
 		end,
 	},
+	require("user.plugins.jumptag"),
 
 	-- Git
 	require("user.plugins.gitsigns"),
@@ -152,7 +156,7 @@ require("lazy").setup({
 	{ "zbirenbaum/copilot.lua", cmd = "Copilot", event = "InsertEnter" },
 	"zbirenbaum/copilot-cmp",
 
-	require("user.plugins.chatgpt"),
+	-- require("user.plugins.chatgpt"),
 
 	-- Markdown
 	require("user.plugins.glow"),
