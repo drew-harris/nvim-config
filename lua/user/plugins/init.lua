@@ -18,9 +18,11 @@ require("lazy").setup({
 	{ "kyazdani42/nvim-web-devicons", lazy = true },
 	"lukas-reineke/indent-blankline.nvim",
 	"windwp/nvim-autopairs",
-	{ "windwp/nvim-ts-autotag", config = function() 
-		require('nvim-ts-autotag').setup()
-	end
+	{
+		"windwp/nvim-ts-autotag",
+		config = function()
+			require("nvim-ts-autotag").setup()
+		end,
 	},
 	{ "JoosepAlviste/nvim-ts-context-commentstring", opts = {} },
 	require("user.plugins.comment"),
@@ -155,6 +157,7 @@ require("lazy").setup({
 	-- AI
 	{ "zbirenbaum/copilot.lua", cmd = "Copilot", event = "InsertEnter" },
 	"zbirenbaum/copilot-cmp",
+	require("user.plugins.llm"),
 
 	-- require("user.plugins.chatgpt"),
 
