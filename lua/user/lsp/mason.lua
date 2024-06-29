@@ -117,15 +117,15 @@ require("mason-lspconfig").setup_handlers({
 			-- Setup eslint_d
 		end
 
-		if server == "eslint" then
-			opts.settings.options = {
-				overrideConfig = {
-					parserOptions = {
-						project = { "./tsconfig.json" },
-					},
-				},
-			}
-		end
+		-- if server == "eslint" then
+		-- 	opts.settings.options = {
+		-- 		overrideConfig = {
+		-- 			parserOptions = {
+		-- 				project = { "./tsconfig.json" },
+		-- 			},
+		-- 		},
+		-- 	}
+		-- end
 
 		if server == "clangd" then
 			-- Add clang-tidy

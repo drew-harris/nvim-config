@@ -87,7 +87,7 @@ return {
 	-- "RRethy/nvim-base16",
 
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000, opts = {
-		transparent_background = false,
+		transparent_background = true,
 	} },
 
 	{ "kepano/flexoki-neovim", name = "flexoki" },
