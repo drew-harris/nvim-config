@@ -25,7 +25,7 @@ return {
 				model = "anthropic/claude-3.5-sonnet",
 				api_key_name = "OPENROUTER_API_KEY",
 				system_prompt = system_prompt,
-				replace = false,
+				replace = true,
 			}, dingllm.make_openai_spec_curl_args, dingllm.handle_openai_spec_data)
 		end
 

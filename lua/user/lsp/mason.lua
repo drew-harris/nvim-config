@@ -232,3 +232,49 @@ require("mason-lspconfig").setup_handlers({
 })
 
 require("lspconfig").astro.setup({})
+
+require("lspconfig").rust_analyzer.setup({
+	on_attach = function(client, bufnr)
+		vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+	end,
+
+	capabilities = require("user.lsp.handlers").capabilities,
+
+	settings = {
+		["rust-analyzer"] = {
+			lens = {
+				enable = false,
+			},
+			cargo = {
+				allTargets = false,
+				buildScripts = {
+					rebuildOnSave = false,
+				},
+			},
+			cache = {
+				warmup = true,
+			},
+			semanticHighlighting = {
+				enable = false,
+				nonStandardTokens = false,
+				operator = {
+					enable = false,
+				},
+				punctuation = {
+					enable = false,
+				},
+				strings = {
+					enable = false,
+				},
+			},
+			hover = {
+				memoryLayout = {
+					enable = false,
+				},
+			},
+			procMacro = {
+				enable = true,
+			},
+		},
+	},
+})
