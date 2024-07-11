@@ -71,7 +71,7 @@ require("lazy").setup({
 	require("user.plugins.navbuddy"),
 	require("user.plugins.tstools"),
 	require("user.plugins.signature_help"),
-	require("user.plugins.inlayhints"),
+	-- require("user.plugins.inlayhints"),
 	require("user.plugins.neogen"),
 	require("user.plugins.fidget"),
 	{ "dmmulroy/ts-error-translator.nvim", opts = {
@@ -97,10 +97,12 @@ require("lazy").setup({
 	-- { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
 	-- "jayp0521/mason-nvim-dap.nvim",
 
+	require("user.plugins.db"),
+
 	-- Rust
-	"simrat39/rust-tools.nvim",
-	"simrat39/inlay-hints.nvim",
+	require("user.plugins.rust"),
 	require("user.plugins.crates"),
+	require("user.plugins.bacon"),
 
 	require("user.plugins.quickfix"),
 

@@ -139,7 +139,7 @@ return {
 		local picker = fb.file_browser
 
 		Keymapper("sf", function()
-			require("telescope.builtin").find_files({ cwd = "~/programs/trieve/analytics-site/" })
+			require("telescope.builtin").find_files({ cwd = "~/programs/trieve/frontends/analytics" })
 		end, "Search analytics files")
 
 		Keymapper("gf", function()
