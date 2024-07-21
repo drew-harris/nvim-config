@@ -160,6 +160,7 @@ require("lazy").setup({
 	{ "zbirenbaum/copilot.lua", cmd = "Copilot", event = "InsertEnter" },
 	"zbirenbaum/copilot-cmp",
 	require("user.plugins.llm"),
+	require("user.plugins.supermaven"),
 
 	-- require("user.plugins.chatgpt"),
 
