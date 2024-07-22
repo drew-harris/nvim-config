@@ -91,12 +91,4 @@ return {
 	} },
 
 	{ "kepano/flexoki-neovim", name = "flexoki" },
-
-	{
-		"sainnhe/sonokai",
-		config = function()
-			vim.g.sonokai_style = "default"
-			vim.g.sonokai_transparent_background = 1
-		end,
-	},
 }
