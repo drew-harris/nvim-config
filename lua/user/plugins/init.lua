@@ -162,7 +162,7 @@ require("lazy").setup({
 	require("user.plugins.llm"),
 	require("user.plugins.supermaven"),
 
-	-- require("user.plugins.chatgpt"),
+	-- require("user.plugins.incline"),
 
 	-- Markdown
 	require("user.plugins.glow"),
