@@ -30,12 +30,26 @@ return {
 		end
 
 		vim.keymap.set("v", "<leader>.", openai_help, { desc = "anthropic_replace" })
+
+		function create_llm_md()
+			local cwd = vim.fn.getcwd()
+			local cur_buf = vim.api.nvim_get_current_buf()
+			local cur_buf_name = vim.api.nvim_buf_get_name(cur_buf)
+			local llm_md_path = cwd .. "/llm.md"
+			if cur_buf_name ~= llm_md_path then
+				vim.api.nvim_command("edit " .. llm_md_path)
+				local buf = vim.api.nvim_get_current_buf()
+				vim.api.nvim_buf_set_option(buf, "filetype", "markdown")
+				vim.api.nvim_win_set_buf(0, buf)
+			end
+		end
+
+		vim.keymap.set("n", "<leader>m", function()
+			create_llm_md()
+		end)
 	end,
 }
 
--- vim.keymap.set("n", "<leader>m", function()
--- 	require("llm").create_llm_md()
--- end)
 --
 -- -- keybinds for prompting with groq
 -- vim.keymap.set("n", "<leader>,", function()

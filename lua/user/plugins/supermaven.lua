@@ -16,7 +16,6 @@ local function show_or_accept_completion()
 	local binary = require("supermaven-nvim.binary.binary_handler")
 	local preview = require("supermaven-nvim.completion_preview")
 	local message = "Inline AI autocompletion "
-
 	if (not pending_oneshot) and suggestion.disable_inline_completion then
 		suggestion.disable_inline_completion = false
 		local buffer = vim.api.nvim_get_current_buf()
@@ -37,6 +36,7 @@ return {
 		require("supermaven-nvim").setup({
 			disable_inline_completion = true, -- disables inline completion for use with cmp
 			disable_keymaps = true, -- disables built in keymaps for more manual control
+			log_level = "off",
 		})
 
 		-- Get the Supermaven autocmd group
