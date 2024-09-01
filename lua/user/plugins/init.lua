@@ -32,7 +32,7 @@ require("lazy").setup({
 	-- MINI
 	require("user.plugins.mini"),
 
-	"folke/which-key.nvim",
+	{"folke/which-key.nvim", commit = "0099511"},
 
 	require("user.plugins.toggleterm"),
 
