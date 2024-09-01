@@ -8,7 +8,7 @@ require("user.autopairs")
 require("user.indentline")
 require("user.whichkey")
 require("user.autocommands")
-require("user.copilot")
+-- require("user.copilot")
 -- vim.api.nvim_set_hl(0, "NeoTreeFloatBorder", { link = "Substitute" })
 
 vim.cmd("highlight! HarpoonInactive guibg=NONE guifg=#63698c")
