@@ -260,14 +260,14 @@ which_key.setup(setup)
 which_key.register(mappings, opts)
 
 local visual_mappings = {
-	a = {
-		name = "AI",
-		e = { "<cmd>ChatGPTRun explain_code<cr>", "Explain Code" },
-		f = { "<cmd>ChatGPTRun fix_bugs<cr>", "Fix Bugs" },
-		o = { "<cmd>ChatGPTRun optimize_code<cr>", "Optimize Code" },
-		m = { "<cmd>ChatGPTEditWithInstructions<cr>", "Modify Code" },
-		d = { "<cmd>ChatGPTRun dockstring<cr>", "Document Code" },
-	},
+	-- a = {
+	-- 	name = "AI",
+	-- 	e = { "<cmd>ChatGPTRun explain_code<cr>", "Explain Code" },
+	-- 	f = { "<cmd>ChatGPTRun fix_bugs<cr>", "Fix Bugs" },
+	-- 	o = { "<cmd>ChatGPTRun optimize_code<cr>", "Optimize Code" },
+	-- 	m = { "<cmd>ChatGPTEditWithInstructions<cr>", "Modify Code" },
+	-- 	d = { "<cmd>ChatGPTRun dockstring<cr>", "Document Code" },
+	-- },
 
 	["S"] = {
 		name = "Snippets",
