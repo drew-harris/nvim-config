@@ -1,6 +1,7 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	-- dependencies = { "nvim-treesitter/nvim-treesitter-context" },
+	dependencies = { "nushell/tree-sitter-nu" },
+
 	config = function()
 		local configs = require("nvim-treesitter.configs")
 		---@diagnostic disable-next-line: missing-fields

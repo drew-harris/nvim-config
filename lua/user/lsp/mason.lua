@@ -141,6 +141,18 @@ require("mason-lspconfig").setup_handlers({
 			}
 		end
 
+		if server == "kotlin_language_server" then
+			opts.settings = {
+				kotlin = {
+					compiler = {
+						jvm = {
+							target = "21",
+						},
+					},
+				},
+			}
+		end
+
 		if server == "gopls" then
 			opts.settings = {
 				gopls = {

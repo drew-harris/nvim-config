@@ -9,4 +9,5 @@ end
 require("user.lsp.mason")
 require("user.lsp.handlers").setup()
 require("user.lsp.formatting")
+require("user.lsp.rust").setup()
 -- require("user.lsp.dap")

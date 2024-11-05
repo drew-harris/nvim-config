@@ -32,7 +32,7 @@ require("lazy").setup({
 	-- MINI
 	require("user.plugins.mini"),
 
-	{"folke/which-key.nvim", commit = "0099511"},
+	{ "folke/which-key.nvim", commit = "0099511" },
 
 	require("user.plugins.toggleterm"),
 
@@ -48,6 +48,7 @@ require("lazy").setup({
 	{ "stevearc/dressing.nvim", event = "VeryLazy" },
 
 	require("user.plugins.lualine"),
+	-- require("user.plugins.satellite"),
 
 	-- Utils
 	{ "norcalli/nvim-colorizer.lua", opts = {} },
@@ -174,9 +175,13 @@ require("lazy").setup({
 	"eandrju/cellular-automaton.nvim",
 	"wakatime/vim-wakatime",
 	"ThePrimeagen/vim-be-good",
-	-- {
-	-- 	"m4xshen/hardtime.nvim",
-	-- 	dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-	-- 	opts = {},
-	-- },
+	{
+		"m4xshen/hardtime.nvim",
+		dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+		opts = {
+			disabled_filetypes = { "qf", "netrw", "NvimTree", "lazy", "mason", "oil" },
+			enabled = false,
+			max_count = 5,
+		},
+	},
 })
