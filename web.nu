@@ -28,7 +28,7 @@ $collections  | to json
 
 
 # get specific collection
-http get $"https://typesense.drewh.net/collections/($collection_name)" --headers $headers | print
+http get $"https://typesense.drewh.net/collections/($collection_name)" --headers $headers | table -e
 
 # Delete created collection
 http delete $"https://typesense.drewh.net/collections/stufflol" --headers $headers | print
@@ -44,6 +44,7 @@ let params = {
   query_by: "content"
 }
 let url = $"https://typesense.drewh.net/collections/($collection_name)/documents/search?($params | url build-query)"
-http get $url --headers $headers | get hits.document | to json
+http get $url --headers $headers | get hits.document  | reject "content";
 
 zsh -c "curl -s 'https://jsonplaceholder.typicode.com/posts/1' | jq" | from json | table
+
