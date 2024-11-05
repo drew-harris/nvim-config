@@ -61,7 +61,7 @@ local function execute_nu(command)
 	f:close()
 
 	-- Execute the file with nushell
-	local output = vim.fn.system("export COLUMNS=888; nu " .. tmp_file)
+	local output = vim.fn.system("nu " .. tmp_file)
 
 	os.remove(tmp_file)
 	local lines = vim.split(output, "\n")
@@ -82,6 +82,9 @@ local function get_frontmatter()
 
 	table.insert(frontmatter, "source $nu.config-path")
 	table.insert(frontmatter, 'if ($"($env.PWD)/.env" | path exists) { open .env | load-env }')
+	-- Set max width for nushell tables
+	table.insert(frontmatter, "alias core-table = table")
+	table.insert(frontmatter, "alias table = table -w 150")
 
 	for i, line in ipairs(lines) do
 		if line:match("^###%s*$") then

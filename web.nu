@@ -24,7 +24,7 @@ let collections = http get https://typesense.drewh.net/collections --headers $he
 ###
 
 # Get Collections
-$collections | get fields | first
+$collections  | to json
 
 
 # get specific collection
