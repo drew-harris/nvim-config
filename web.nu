@@ -43,6 +43,7 @@ let params = {
   q: "test"
   query_by: "content"
 }
+
 let url = $"https://typesense.drewh.net/collections/($collection_name)/documents/search?($params | url build-query)"
 http get $url --headers $headers | get hits.document  | reject "content";
 

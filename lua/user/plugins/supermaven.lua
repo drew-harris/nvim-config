@@ -62,6 +62,6 @@ return {
 		end, {})
 		local opts = { noremap = true, silent = true }
 		local keymap = vim.api.nvim_set_keymap
-		keymap("i", "<c-c>", "<cmd>CopilotMagic<cr>", opts)
+		keymap("i", "<c-l>", "<cmd>CopilotMagic<cr>", opts)
 	end,
 }
