@@ -1,5 +1,6 @@
 -- local colorscheme = "catppuccin-mocha"
-local colorscheme = "sonokai"
+-- local colorscheme = "sonokai"
+local colorscheme = "night-owl"
 -- local colorscheme = "kanagawa-dragon"
 -- local colorscheme = "tokyonight"
 -- local colorscheme = "github_dark"
