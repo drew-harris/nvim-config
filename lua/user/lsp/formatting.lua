@@ -23,13 +23,14 @@ require("conform").setup({
 		typescriptreact = { "prettierd" },
 		astro = { "prettierd" },
 		java = { "google-java-format" },
+		css = { "" },
 	},
 	format_on_save = function(bufnr)
 		if not do_autoformat then
 			return
 		end
 		-- These options will be passed to conform.format()
-		local ignore_filetypes = { "java" }
+		local ignore_filetypes = { "java", "css", "html" }
 		if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then
 			return
 		end
