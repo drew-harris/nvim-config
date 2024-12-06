@@ -1,0 +1,1 @@
+{"defdb":{"body":["let db = \\$env.LOCAL_DB_URL","def sql [query: string] {","    psql \\$db --csv -c \\$query | from csv","}"],"prefix":"defdb"}}

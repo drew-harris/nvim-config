@@ -249,6 +249,8 @@ local mappings = {
 		l = { "<cmd>e .eslintrc.cjs<cr>", "Open Eslintrc" },
 		r = { "<cmd>e README.md<cr>", "Open README.md" },
 		d = { "<cmd>e .dockerignore<cr>", "Open dockerignore" },
+		j = { "<cmd>e .justfile<cr>", "Open justfile" },
+		n = { "<cmd>e pad.nu<cr>", "Open pad" },
 		s = { "<cmd>e website/.env<cr>", "Open Website env" },
 		w = { "<cmd>e worker/.env<cr>", "Open Worker env" },
 	},
