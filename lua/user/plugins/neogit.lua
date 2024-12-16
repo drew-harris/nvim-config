@@ -11,7 +11,7 @@ return {
 		require("neogit").setup(opts)
 
 		vim.keymap.set("n", "<leader>G", function()
-			require("neogit").open()
+			require("neogit").open({ kind = "floating" })
 		end, { desc = "Big Git" })
 	end,
 }
