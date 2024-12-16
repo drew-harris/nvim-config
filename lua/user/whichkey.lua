@@ -88,15 +88,6 @@ local mappings = {
 	["7"] = "which_key_ignore",
 	["8"] = "which_key_ignore",
 	["9"] = "which_key_ignore",
-	["<tab>"] = {
-		"<cmd>tabn<cr>",
-		"Next Tab",
-	},
-	["|"] = {
-		"<c-w><S-T>",
-		"Move to new tab",
-	},
-	["w"] = { "<cmd>w!<CR>", "Save" },
 	["x"] = { "<cmd>bw<CR>", "Close Buffer" },
 	["z"] = { "<cmd>set hlsearch!<CR>", "No Highlight" },
 	["p"] = { "<cmd>b#<cr>", "Previous Buffer" },
@@ -151,11 +142,6 @@ local mappings = {
 		},
 		t = { "<cmd>Gitsigns toggle_signs<cr>", "Toggle Git Signs" },
 		C = { "<cmd>GitConflictListQf<cr>", "Merge Conflicts" },
-	},
-	r = {
-		a = { "<cmd>lua require('neotest').run.run()<cr>", "Run Tests" },
-		o = { "<cmd>lua require('neotest').output.toggle()<cr>", "Toggle Output" },
-		s = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Toggle Output" },
 	},
 	l = {
 		name = "LSP",
