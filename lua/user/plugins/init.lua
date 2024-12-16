@@ -33,6 +33,7 @@ require("lazy").setup({
 	require("user.plugins.mini"),
 
 	{ "folke/which-key.nvim", commit = "0099511" },
+	{ "meznaric/key-analyzer.nvim", opts = {} },
 
 	require("user.plugins.toggleterm"),
 

@@ -7,6 +7,7 @@ return {
 		default_args = {
 			DiffviewOpen = { "--imply-local" },
 		},
+		enhanced_diff_hl = true, -- See |diffview-config-enhanced_diff_hl|
 	},
 
 	config = function()
