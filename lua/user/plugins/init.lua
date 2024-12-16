@@ -35,6 +35,7 @@ require("lazy").setup({
 	{ "folke/which-key.nvim", commit = "0099511" },
 
 	require("user.plugins.toggleterm"),
+	-- require("user.plugins.neaterm"),
 
 	require("user.plugins.alpha"),
 
