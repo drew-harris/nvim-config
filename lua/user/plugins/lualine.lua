@@ -12,21 +12,6 @@ return {
 
 		vim.keymap.set("n", "<leader>mb", toggleBottomInfo, { desc = "Toggle bottom LSP" })
 
-		local function saga()
-			-- Check if enabled
-			local enabled = vim.api.nvim_get_var("lspsaga_statusline_enabled")
-
-			if enabled == nil or enabled == false then
-				return ""
-			end
-
-			local bar = require("lspsaga.symbol.winbar").get_bar()
-			if bar ~= nil then
-				return bar
-			end
-			return ""
-		end
-
 		local modes = {
 			"normal",
 			"insert",

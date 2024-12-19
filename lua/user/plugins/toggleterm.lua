@@ -44,6 +44,10 @@ return {
 		end
 
 		vim.keymap.set("n", "<C-w>;", "<cmd>tabnext<cr>", { desc = "Go to next tab" })
+		vim.keymap.set("n", "<leader>ts", function()
+			vim.cmd("vsp | term")
+			vim.cmd("startinsert")
+		end, { desc = "New terminal pane" })
 		vim.keymap.set("n", "<leader>tt", function()
 			vim.cmd("tab term")
 			vim.cmd("startinsert")

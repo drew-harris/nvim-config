@@ -58,7 +58,8 @@ require("lazy").setup({
 
 	require("user.plugins.glance"),
 
-	require("user.plugins.cmp"),
+	-- require("user.plugins.cmp"),
+	require("user.plugins.blink"),
 
 	require("user.plugins.scissors"),
 

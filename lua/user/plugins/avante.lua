@@ -12,6 +12,7 @@ return {
 			max_tokens = 4096,
 		},
 	},
+	hints = { enabled = false },
 	keys = {
 		{
 			"<leader>aa",
