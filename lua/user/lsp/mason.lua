@@ -84,10 +84,6 @@ require("mason-lspconfig").setup_handlers({
 			opts = vim.tbl_deep_extend("force", conf_opts, opts)
 		end
 
-		if server == "lua_ls" then
-			require("neodev").setup({ pathStrict = true })
-		end
-
 		if server == "denols" then
 			opts.root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc")
 		end

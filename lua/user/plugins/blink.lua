@@ -1,7 +1,7 @@
 return {
 	"saghen/blink.cmp",
 	-- optional: provides snippets for the snippet source
-	dependencies = "rafamadriz/friendly-snippets",
+	dependencies = { "rafamadriz/friendly-snippets", "folke/lazydev.nvim" },
 
 	version = "v0.*",
 
@@ -31,12 +31,19 @@ return {
 		-- elsewhere in your config, without redefining it, via `opts_extend`
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },
+			completion = {
+				enabled_providers = { "lsp", "path", "snippets", "buffer", "lazydev" },
+			},
 			providers = {
 				snippets = {
 					opts = {
 						search_paths = { "/Users/drew/.config/nvim/snippets" },
 					},
 				},
+
+				-- dont show LuaLS require statements when lazydev has items
+				lsp = { fallback_for = { "lazydev" } },
+				lazydev = { name = "LazyDev", module = "lazydev.integrations.blink" },
 			},
 			-- optionally disable cmdline completions
 			-- cmdline = {},
