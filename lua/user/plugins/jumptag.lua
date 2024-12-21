@@ -1,5 +1,6 @@
 return {
 	"harrisoncramer/jump-tag",
+	ft = "typescriptreact",
 	config = function()
 		local jumptag = require("jump-tag")
 

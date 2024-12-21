@@ -1,6 +1,7 @@
 return {
 	"NeogitOrg/neogit",
 	dependencies = "nvim-lua/plenary.nvim",
+	keys = { "<leader>G" },
 	config = function()
 		local opts = {
 			disable_commit_confirmation = true,

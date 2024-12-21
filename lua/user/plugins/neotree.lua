@@ -4,6 +4,7 @@ return {
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
 	},
+	keys = { "<leader>e" },
 	branch = "v3.x",
 	config = function()
 		require("neo-tree").setup({
