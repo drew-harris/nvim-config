@@ -123,11 +123,11 @@ return {
 		local dropdown = require("telescope.themes").get_dropdown()
 
 		-- Keymaps
-		vim.keymap.set("n", "<leader>f", function()
-			require("telescope.builtin").find_files({
-				find_command = { "rg", "--files", "--hidden", "--ignore", "-g", "!.git" },
-			})
-		end, { desc = "Find Files" })
+		-- vim.keymap.set("n", "<leader>f", function()
+		-- 	require("telescope.builtin").find_files({
+		-- 		find_command = { "rg", "--files", "--hidden", "--ignore", "-g", "!.git" },
+		-- 	})
+		-- end, { desc = "Find Files" })
 
 		vim.keymap.set("n", "<leader>F", "<cmd>Telescope live_grep theme=ivy<cr>", { desc = "Search in files" })
 

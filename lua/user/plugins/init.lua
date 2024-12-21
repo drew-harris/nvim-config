@@ -111,6 +111,7 @@ require("lazy").setup({
 
 	-- Telescope
 	require("user.plugins.telescope"),
+	require("user.plugins.fzf"),
 
 	require("user.plugins.neotree"),
 

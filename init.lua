@@ -1,3 +1,10 @@
+local notify = vim.notify
+vim.notify = function(msg, ...)
+	if msg:match("nvim%-cmp is not available") then
+		return
+	end
+	notify(msg, ...)
+end
 require("user.utils.logging")
 require("user.keymapper")
 require("user.options")

@@ -18,6 +18,7 @@
   "flexoki": { "branch": "main", "commit": "975654bce67514114db89373539621cff42befb5" },
   "flote.nvim": { "branch": "main", "commit": "0baa72f59c249b28cd33f07db862bed3192c03f9" },
   "fzf": { "branch": "master", "commit": "b2c3e567dadd35253bbccaf4e69c9dc352d36304" },
+  "fzf-lua": { "branch": "main", "commit": "34d5e4053a3825ef16a04aa3664dc856c6a13e64" },
   "git-conflict.nvim": { "branch": "main", "commit": "4dc906855751096aaeba2edde7c2cdc7bb881c98" },
   "github-nvim-theme": { "branch": "main", "commit": "0e4636f556880d13c00d8a8f686fae8df7c9845f" },
   "gitsigns.nvim": { "branch": "main", "commit": "5f808b5e4fef30bd8aca1b803b4e555da07fc412" },
