@@ -32,7 +32,9 @@ return {
 		"metalelf0/jellybeans-nvim",
 		dependencies = "rktjmp/lush.nvim",
 	},
-	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
+	{ "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = {
+		transparent_mode = true,
+	} },
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,
