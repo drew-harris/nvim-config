@@ -4,7 +4,6 @@ return {
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
 	},
-	keys = { "<leader>e" },
 	branch = "v3.x",
 	config = function()
 		require("neo-tree").setup({
@@ -17,7 +16,7 @@ return {
 			},
 
 			window = {
-				position = "float",
+				position = "right",
 				mappings = {
 					["<esc>"] = "close_window",
 				},

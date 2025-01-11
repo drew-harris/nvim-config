@@ -245,6 +245,30 @@ function M.setup()
 	vim.keymap.set("n", "<Leader>;r", M.run_with_nu, { silent = true, desc = "Run with nushell" })
 	vim.keymap.set("n", "<Leader>;z", M.run_with_zsh, { silent = true, desc = "Run with zsh" })
 	vim.keymap.set("n", "<Leader>;a", M.rerun_last_command, { silent = true, desc = "Rerun last command" })
+
+	-- Define the pattern and create a new highlight group
+	vim.api.nvim_command("highlight CustomTitle guifg=#88c0d0 gui=bold")
+
+	-- Function to add the highlighting
+	local function highlight_hash_at_lines()
+		-- Get the current buffer
+		local bufnr = vim.api.nvim_get_current_buf()
+
+		-- Clear existing matches
+		vim.fn.clearmatches()
+
+		-- Add highlight to lines starting with #@
+		-- vim.fn.matchadd("FloatTitle", "^#@.*$")
+		vim.fn.matchadd("MiniTablineModifiedVisible", "^#@.*$")
+	end
+
+	-- Create an autocommand to apply highlighting when buffer is read or written
+	vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile", "BufWrite" }, {
+		pattern = "*.nu",
+		callback = function()
+			highlight_hash_at_lines()
+		end,
+	})
 end
 
 return M

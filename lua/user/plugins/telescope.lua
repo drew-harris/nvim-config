@@ -145,5 +145,42 @@ return {
 		Keymapper("gf", function()
 			require("telescope.builtin").git_status()
 		end, "Search changed files")
+
+		vim.keymap.set("v", "<leader>fs", function()
+			-- Yank the selected text into register v
+			vim.cmd('normal! "vy')
+			-- Get the content of register v
+			local selected_text = vim.fn.getreg("v")
+			-- Clean up the text (remove newlines and extra spaces)
+			selected_text = selected_text:gsub("\n", "")
+
+			-- Create a new vertical split
+			vim.cmd("vsplit")
+
+			-- Use Telescope with ripgrep to search for the selected text in .tsx files
+			require("telescope.builtin").grep_string({
+				search = selected_text,
+				glob_pattern = "*.tsx",
+			})
+		end, { noremap = true, silent = true })
+
+		--
+		-- vim.keymap.set("v", "<leader>fs", function()
+		-- 	-- Yank the selected text into register v
+		-- 	vim.cmd('normal! "vy')
+		-- 	-- Get the content of register v
+		-- 	local selected_text = vim.fn.getreg("v")
+		-- 	-- Clean up the text (remove newlines and extra spaces)
+		-- 	selected_text = selected_text:gsub("\n", "")
+		--
+		-- 	-- Create a new vertical split
+		-- 	vim.cmd("vsplit")
+		--
+		-- 	-- Use Telescope with ripgrep to search for the selected text in .tsx files
+		-- 	require("telescope.builtin").grep_string({
+		-- 		search = selected_text,
+		-- 		type_filter = "ts",
+		-- 	})
+		-- end, { noremap = true, silent = true })
 	end,
 }

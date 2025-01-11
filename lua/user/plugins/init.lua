@@ -28,6 +28,7 @@ require("lazy").setup({
 	require("user.plugins.comment"),
 	require("user.plugins.undotree"),
 	require("user.plugins.oil"),
+	require("user.plugins.snacks"),
 
 	-- MINI
 	require("user.plugins.mini"),
@@ -166,6 +167,8 @@ require("lazy").setup({
 	require("user.plugins.llm"),
 	require("user.plugins.supermaven"),
 	require("user.plugins.avante"),
+
+	require("user.plugins.leetcode"),
 
 	-- require("user.plugins.incline"),
 

@@ -1,9 +1,9 @@
 -- local colorscheme = "catppuccin-mocha"
--- local colorscheme = "sonokai"
+local colorscheme = "sonokai"
 -- local colorscheme = "kanagawa-dragon"
 -- local colorscheme = "tokyonight"
 -- local colorscheme = "github_dark"
-local colorscheme = "gruvbox"
+-- local colorscheme = "gruvbox"
 -- local colorscheme = "darcula-solid"
 
 -- vim.api.nvim_create_autocmd("ColorScheme", {

@@ -175,7 +175,6 @@ local mappings = {
 			"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
 			"Workspace Symbols",
 		},
-		o = { "<cmd>TSToolsOrganizeImports<CR>", "Organize Imports" },
 		m = { "<cmd>TSToolsAddMissingImports<CR>", "Add Missing Import" },
 		["R"] = { "<cmd>TSToolsRenameFile<CR>", "Rename File" },
 		p = { "<cmd>lua vim.diagnostic.open_float({focusable = true})<cr>", "View Issues" },

@@ -30,7 +30,7 @@ require("conform").setup({
 			return
 		end
 		-- These options will be passed to conform.format()
-		local ignore_filetypes = { "java", "css", "html" }
+		local ignore_filetypes = { "java", "css" }
 		if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then
 			return
 		end

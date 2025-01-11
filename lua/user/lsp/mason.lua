@@ -233,13 +233,25 @@ require("mason-lspconfig").setup_handlers({
 		end
 
 		-- -- Check for typescript
-		-- if server == "tsserver" then
-		-- 	tstools.setup(opts)
-		-- else
-		lspconfig[server].setup(opts)
-		-- end
+		if server == "tsserver" then
+			tstools.setup(opts)
+		else
+			lspconfig[server].setup(opts)
+		end
 	end,
 })
+
+vim.keymap.set("n", "<leader>lo", function()
+	local bufnr = vim.api.nvim_get_current_buf()
+	local clients = vim.lsp.get_active_clients({ bufnr = bufnr })
+	for _, client in ipairs(clients) do
+		if client.name == "typescript-tools" then
+			require("typescript-tools.api").organize_imports()
+			return
+		end
+	end
+	vim.notify("TypeScript Tools not found", vim.log.levels.WARN)
+end, { desc = "Organize Imports" })
 
 require("lspconfig").astro.setup({})
 

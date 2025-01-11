@@ -29,7 +29,7 @@ local function setup_lsp_progress()
 						if value.kind == "begin" then
 							if value.title and value.title:match("cargo check") then
 								M.is_checking = true
-								vim.cmd("hi Normal guibg=#3c1c1c")
+								vim.cmd("hi Normal guibg=#2c1c1c")
 							end
 						elseif value.kind == "end" then
 							if value.title and value.title:match("cargo check") then
