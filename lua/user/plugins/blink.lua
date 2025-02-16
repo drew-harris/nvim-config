@@ -52,14 +52,14 @@ return {
 		-- default list of enabled providers defined so that you can extend it
 		-- elsewhere in your config, without redefining it, via `opts_extend`
 		sources = {
-			cmdline = function()
-				local type = vim.fn.getcmdtype()
-				local cmd = vim.fn.getcmdline()
-				if type == ":" and cmd ~= "w" then
-					return { "cmdline" }
-				end
-				return {}
-			end,
+			-- cmdline = function()
+			-- 	local type = vim.fn.getcmdtype()
+			-- 	local cmd = vim.fn.getcmdline()
+			-- 	if type == ":" and cmd ~= "w" then
+			-- 		return { "cmdline" }
+			-- 	end
+			-- 	return {}
+			-- end,
 
 			default = { "lsp", "path", "snippets", "buffer", "lazydev" },
 			providers = {

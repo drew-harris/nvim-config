@@ -153,6 +153,11 @@ M.on_attach = function(client, bufnr)
 		client.server_capabilities.semanticTokensProvider = false
 	end
 
+	if client.name == "tinymist" then
+		client.server_capabilities.documentFormattingProvider = false
+		client.server_capabilities.semanticTokensProvider = false
+	end
+
 	-- if client.name == "rust_analyzer" then
 	-- 	ih.on_attach(client, bufnr)
 	-- end
