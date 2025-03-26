@@ -1,7 +1,5 @@
 local opts = { noremap = true, silent = true }
 
-
-
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
@@ -62,3 +60,5 @@ vim.keymap.set("n", "_", "<CMD>Oil .<CR>", { desc = "Open parent directory" })
 -- Easy align
 keymap("n", "ga", "<cmd>:EasyAlign<cr>", opts)
 keymap("v", "ga", "<cmd>:EasyAlign<cr>", opts)
+
+keymap("i", "<C-f>", "@file<C-y>", opts)

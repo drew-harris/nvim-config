@@ -222,6 +222,7 @@ local mappings = {
 		d = { "<cmd>DBUIToggle<cr>", "Toggle DBUI" },
 		c = { "<cmd>CellularAutomaton make_it_rain<cr>", "CA" },
 		n = { "<cmd>Flote<cr>", "Notes" },
+		s = { "<cmd>cd clients/trieve-shopify-extension<cr>", "Notes" },
 	},
 
 	k = {

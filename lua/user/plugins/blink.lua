@@ -2,7 +2,7 @@ return {
 	"saghen/blink.cmp",
 	-- optional: provides snippets for the snippet source
 	-- dependencies = { "rafamadriz/friendly-snippets", "folke/lazydev.nvim" },
-	dependencies = { "folke/lazydev.nvim" },
+	dependencies = { "folke/lazydev.nvim", "Kaiser-Yang/blink-cmp-avante" },
 
 	version = "v0.*",
 
@@ -61,11 +61,18 @@ return {
 			-- 	return {}
 			-- end,
 
-			default = { "lsp", "path", "snippets", "buffer", "lazydev" },
+			default = { "avante", "lsp", "path", "snippets", "buffer", "lazydev" },
 			providers = {
 				snippets = {
 					opts = {
 						search_paths = { "/Users/drew/.config/nvim/snippets" },
+					},
+				},
+				avante = {
+					module = "blink-cmp-avante",
+					name = "Avante",
+					opts = {
+						-- options for blink-cmp-avante
 					},
 				},
 

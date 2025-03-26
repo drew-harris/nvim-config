@@ -200,6 +200,58 @@ function M.run_with_zsh()
 	vim.bo[buf].filetype = "sh"
 end
 
+-- Add this function to your module
+function M.replace_with_output()
+	local command = get_current_command()
+	if command == "" then
+		return
+	end
+
+	local frontmatter = get_frontmatter()
+	local fullCommand = frontmatter .. "\n\n" .. command
+	local output = execute_nu(fullCommand)
+
+	-- Get the current line and find the command block boundaries
+	local current_line = vim.api.nvim_win_get_cursor(0)[1]
+	local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+	local start_line = current_line
+	local end_line = current_line
+
+	-- Search backwards for the start of the command block
+	for i = current_line - 1, 1, -1 do
+		local line = lines[i]
+		if line:match("^%s*$") then
+			break
+		end
+		start_line = i
+	end
+
+	-- Search forwards for the end of the command block
+	for i = current_line, #lines do
+		local line = lines[i]
+		if line:match("^%s*$") then
+			break
+		end
+		end_line = i
+	end
+
+	-- Format the output with a comment marker
+	local formatted_output = {}
+	for _, line in ipairs(output) do
+		table.insert(formatted_output, line)
+	end
+
+	-- Add an empty line at the end
+	table.insert(formatted_output, "")
+
+	-- Replace the command block with the output
+	vim.api.nvim_buf_set_lines(0, start_line - 1, end_line, false, formatted_output)
+
+	-- Store the command for potential reuse
+	last_command_run.shell = "nushell"
+	last_command_run.cmd = fullCommand
+end
+
 function M.rerun_last_command()
 	local buf, _ = create_float()
 	local output = {}
@@ -245,6 +297,7 @@ function M.setup()
 	vim.keymap.set("n", "<Leader>;r", M.run_with_nu, { silent = true, desc = "Run with nushell" })
 	vim.keymap.set("n", "<Leader>;z", M.run_with_zsh, { silent = true, desc = "Run with zsh" })
 	vim.keymap.set("n", "<Leader>;a", M.rerun_last_command, { silent = true, desc = "Rerun last command" })
+	vim.keymap.set("n", "<Leader>;R", M.replace_with_output, { silent = true, desc = "Replace with nushell output" })
 
 	-- Define the pattern and create a new highlight group
 	vim.api.nvim_command("highlight CustomTitle guifg=#88c0d0 gui=bold")
