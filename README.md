@@ -58,3 +58,5 @@ recommend a node manager like [fnm](https://github.com/Schniz/fnm).
 `defaults write -g KeyRepeat -int 1.6`
 
 - Default is 2
+
+addming more
