@@ -152,6 +152,14 @@ require("lazy").setup({
 		end,
 	},
 
+	{
+		"julienvincent/hunk.nvim",
+		cmd = { "DiffEditor" },
+		config = function()
+			require("hunk").setup()
+		end,
+	},
+
 	-- Drew's Motions
 	"tpope/vim-sleuth",
 	require("user.plugins.leap"),
