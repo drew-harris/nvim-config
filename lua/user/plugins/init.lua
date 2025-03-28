@@ -198,7 +198,7 @@ require("lazy").setup({
 			max_count = 5,
 		},
 	},
-	{ "andweeb/presence.nvim", opts = {} },
+	-- { "andweeb/presence.nvim", opts = {} },
 	-- {
 	-- 	"vyfor/cord.nvim",
 	-- 	build = ":Cord update",
