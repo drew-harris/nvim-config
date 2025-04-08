@@ -1,5 +1,10 @@
 # Drews Vim Config
 
+UPdate to the readme
+another update
+more stuff lol
+
+
 Based off of
 [Neovim from scratch](https://github.com/LunarVim/Neovim-from-scratch)
 
