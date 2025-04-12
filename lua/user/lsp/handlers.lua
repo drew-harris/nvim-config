@@ -10,18 +10,6 @@ M.capabilities.textDocument.completion.completionItem.snippetSupport = true
 M.capabilities = require("blink.cmp").get_lsp_capabilities()
 
 M.setup = function()
-	local signs = {
-
-		{ name = "DiagnosticSignError", text = "" },
-		{ name = "DiagnosticSignWarn", text = "" },
-		{ name = "DiagnosticSignHint", text = "" },
-		{ name = "DiagnosticSignInfo", text = "" },
-	}
-
-	for _, sign in ipairs(signs) do
-		vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
-	end
-
 	local config = {
 		underline = {
 			severity = { min = vim.diagnostic.severity.HINT },
@@ -30,7 +18,13 @@ M.setup = function()
 			severity = { min = vim.diagnostic.severity.WARN },
 		},
 		signs = {
-			active = signs, -- show signs
+			active = true, -- Ensure signs are active
+			text = {
+				[vim.diagnostic.severity.ERROR] = "", -- Icon for errors
+				[vim.diagnostic.severity.WARN] = "", -- Icon for warnings
+				[vim.diagnostic.severity.HINT] = "", -- Icon for hints
+				[vim.diagnostic.severity.INFO] = "", -- Icon for info
+			},
 		},
 		update_in_insert = true,
 		severity_sort = true,

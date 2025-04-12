@@ -16,7 +16,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	"nvim-lua/plenary.nvim",
 	{ "kyazdani42/nvim-web-devicons", lazy = true },
-	"lukas-reineke/indent-blankline.nvim",
 	"windwp/nvim-autopairs",
 	{
 		"windwp/nvim-ts-autotag",
@@ -26,7 +25,7 @@ require("lazy").setup({
 	},
 	{ "JoosepAlviste/nvim-ts-context-commentstring", opts = {} },
 	require("user.plugins.comment"),
-	require("user.plugins.undotree"),
+	-- require("user.plugins.undotree"),
 	require("user.plugins.oil"),
 	require("user.plugins.snacks"),
 
@@ -35,13 +34,7 @@ require("lazy").setup({
 
 	{ "folke/which-key.nvim", commit = "0099511" },
 
-	require("user.plugins.toggleterm"),
-	-- require("user.plugins.neaterm"),
-
-	require("user.plugins.alpha"),
-
-	-- Easy align
-	"junegunn/vim-easy-align",
+	-- require("user.plugins.alpha"),
 
 	-- Colorschemes
 	require("user.plugins.themes"),
@@ -68,11 +61,14 @@ require("lazy").setup({
 	"neovim/nvim-lspconfig",
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
-	"weilbith/nvim-code-action-menu",
+
+	-- replace with: https://github.com/aznhe21/actions-preview.nvim
+	-- "weilbith/nvim-code-action-menu",
+
 	require("user.plugins.trouble"),
-	require("user.lsp.saga"),
+	-- require("user.lsp.saga"),
 	require("user.plugins.navbuddy"),
-	require("user.plugins.tstools"),
+	-- require("user.plugins.tstools"),
 	require("user.plugins.signature_help"),
 	require("user.plugins.lazydev"),
 	-- require("user.plugins.inlayhints"),
@@ -93,15 +89,13 @@ require("lazy").setup({
 	"joerdav/templ.vim",
 	"mfussenegger/nvim-jdtls",
 
-	require("user.plugins.neotest"),
+	-- require("user.plugins.neotest"),
 
 	-- Debugging
 	-- "mfussenegger/nvim-dap",
 	-- "leoluz/nvim-dap-go",
 	-- { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
 	-- "jayp0521/mason-nvim-dap.nvim",
-
-	require("user.plugins.db"),
 
 	-- Rust
 	require("user.plugins.rust"),
@@ -113,8 +107,6 @@ require("lazy").setup({
 	-- Telescope
 	require("user.plugins.telescope"),
 	require("user.plugins.fzf"),
-
-	require("user.plugins.neotree"),
 
 	-- Treesitter
 	require("user.plugins.treesitter"),
@@ -142,7 +134,6 @@ require("lazy").setup({
 	-- Git
 	require("user.plugins.gitsigns"),
 	require("user.plugins.diffs"),
-	require("user.plugins.neogit"),
 	"tpope/vim-fugitive",
 
 	{
@@ -162,7 +153,7 @@ require("lazy").setup({
 
 	-- Drew's Motions
 	"tpope/vim-sleuth",
-	require("user.plugins.leap"),
+	require("user.plugins.flash"),
 
 	-- Todo Highlighting
 	require("user.plugins.todocomments"),
@@ -172,7 +163,6 @@ require("lazy").setup({
 	-- AI
 	{ "zbirenbaum/copilot.lua", cmd = "Copilot", event = "InsertEnter" },
 	"zbirenbaum/copilot-cmp",
-	require("user.plugins.llm"),
 	require("user.plugins.supermaven"),
 	require("user.plugins.avante"),
 
@@ -188,7 +178,6 @@ require("lazy").setup({
 	-- Fun
 	"eandrju/cellular-automaton.nvim",
 	"wakatime/vim-wakatime",
-	"ThePrimeagen/vim-be-good",
 	{
 		"m4xshen/hardtime.nvim",
 		dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
@@ -198,14 +187,4 @@ require("lazy").setup({
 			max_count = 5,
 		},
 	},
-	-- { "andweeb/presence.nvim", opts = {} },
-	-- {
-	-- 	"vyfor/cord.nvim",
-	-- 	build = ":Cord update",
-	-- 	opts = {
-	-- 		idle = {
-	-- 			show_status = false,
-	-- 		},
-	-- 	},
-	-- },
 })
