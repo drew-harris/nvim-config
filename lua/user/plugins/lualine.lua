@@ -1,16 +1,7 @@
 return {
 	"nvim-lualine/lualine.nvim",
 	config = function()
-		local function toggleBottomInfo()
-			vim.api.nvim_set_var("lspsaga_statusline_enabled", not vim.api.nvim_get_var("lspsaga_statusline_enabled"))
-		end
-		-- code
-		-- Make bottom bar transparent in the middle
 		local auto_theme = require("lualine.themes.seoul256")
-
-		vim.api.nvim_set_var("lspsaga_statusline_enabled", true)
-
-		vim.keymap.set("n", "<leader>mb", toggleBottomInfo, { desc = "Toggle bottom LSP" })
 
 		local modes = {
 			"normal",
@@ -33,10 +24,10 @@ return {
 				icons_enabled = true,
 				-- theme = auto_theme,
 				theme = require("user.theme.lualine").theme(),
-				component_separators = { left = "| ", right = " |" },
-				section_separators = { left = " ", right = "" },
-				-- component_separators = { left = "", right = "" },
-				-- section_separators = { left = "", right = "" },
+				-- component_separators = { left = "| ", right = " |" },
+				-- section_separators = { left = " ", right = "" },
+				component_separators = { left = "", right = "" },
+				section_separators = { left = "", right = "" },
 				disabled_filetypes = {
 					statusline = {},
 					winbar = {
@@ -47,14 +38,14 @@ return {
 				globalstatus = true,
 				always_divide_middle = true,
 				refresh = {
-					statusline = 1000,
-					tabline = 1000,
-					winbar = 1000,
+					statusline = 100,
+					tabline = 100,
+					winbar = 100,
 				},
 			},
 			sections = {
-				lualine_a = { "mode", "tabs" },
-				lualine_b = { "branch", "diff" },
+				lualine_a = { "tabs" },
+				lualine_b = { "diff" },
 				-- lualine_c = { { "filename", path = 1 } },
 				-- lualine_c = { saga },
 				lualine_x = { { "diagnostics", sources = { "nvim_lsp" } } },
@@ -64,7 +55,7 @@ return {
 			inactive_sections = {
 				lualine_a = {},
 				lualine_b = {},
-				lualine_c = { "filename" },
+				-- lualine_c = { "filename" },
 				lualine_x = { "location" },
 				lualine_y = {},
 				lualine_z = {},
@@ -81,14 +72,9 @@ return {
 				},
 			},
 			extensions = {
-				"lazy",
-				"mason",
-				"neo-tree",
-				"oil",
-				"quickfix",
-				"symbols-outline",
-				"toggleterm",
-				"trouble",
+				-- "quickfix",
+				-- "symbols-outline",
+				-- "trouble",
 			},
 		})
 	end,

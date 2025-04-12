@@ -125,6 +125,7 @@ require("lazy").setup({
 				keymaps = {
 					init_selection = ",",
 					node_incremental = ",",
+					node_decremental = "<BS>",
 				},
 			})
 		end,

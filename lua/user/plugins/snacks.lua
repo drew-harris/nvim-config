@@ -11,6 +11,9 @@ return {
 			animate = {
 				enabled = false,
 			},
+			scope = {
+				enabled = false,
+			},
 		},
 	},
 }
