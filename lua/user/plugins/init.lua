@@ -19,9 +19,7 @@ require("lazy").setup({
 	"windwp/nvim-autopairs",
 	{
 		"windwp/nvim-ts-autotag",
-		config = function()
-			require("nvim-ts-autotag").setup()
-		end,
+		opts = {},
 	},
 	{ "JoosepAlviste/nvim-ts-context-commentstring", opts = {} },
 	require("user.plugins.comment"),
@@ -50,8 +48,6 @@ require("lazy").setup({
 	{ "themaxmarchuk/tailwindcss-colors.nvim", opts = {} },
 	require("user.plugins.tw-values"),
 
-	require("user.plugins.glance"),
-
 	-- require("user.plugins.cmp"),
 	require("user.plugins.blink"),
 
@@ -66,11 +62,13 @@ require("lazy").setup({
 	-- "weilbith/nvim-code-action-menu",
 
 	require("user.plugins.trouble"),
-	-- require("user.lsp.saga"),
+
+	-- Used for peek
+	require("user.lsp.saga"),
+
 	require("user.plugins.navbuddy"),
 	-- require("user.plugins.tstools"),
 	require("user.plugins.signature_help"),
-	require("user.plugins.lazydev"),
 	-- require("user.plugins.inlayhints"),
 	require("user.plugins.neogen"),
 	require("user.plugins.fidget"),

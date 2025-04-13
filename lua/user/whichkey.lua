@@ -27,27 +27,7 @@ local setup = {
 	-- to enable all native operators, set the preset / operators plugin above
 	-- operators = { gc = "Comments" },
 	key_labels = {
-		-- override the label used to display some keys. It doesn't effect WK in any other way.
-		-- For example:
-		-- ["<space>"] = "SPC",
-		-- ["<cr>"] = "RET",
 		["<tab>"] = "TAB",
-	},
-	icons = {
-		breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
-		separator = "➜", -- symbol used between a key and it's label
-		group = "+", -- symbol prepended to a group
-	},
-	popup_mappings = {
-		scroll_down = "<c-d>", -- binding to scroll down inside the popup
-		scroll_up = "<c-u>", -- binding to scroll up inside the popup
-	},
-	window = {
-		border = "rounded", -- none, single, double, shadow
-		position = "bottom", -- bottom, top
-		margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
-		padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
-		winblend = 0,
 	},
 	layout = {
 		height = { min = 4, max = 25 }, -- min and max height of the columns
@@ -91,7 +71,6 @@ local mappings = {
 	["x"] = { "<cmd>bw<CR>", "Close Buffer" },
 	["z"] = { "<cmd>set hlsearch!<CR>", "No Highlight" },
 	["p"] = { "<cmd>b#<cr>", "Previous Buffer" },
-	["i"] = { "<cmd>IBLToggle<cr>", "Toggle Indent Guide" },
 
 	-- TODO: Migrate to auto-which-key
 	h = {
@@ -117,10 +96,8 @@ local mappings = {
 		j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
 		k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
 		l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
-		p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
 		r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
 		R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
-		s = { "<cmd>Neotree git_status toggle reveal<cr>", "Status In Tree" },
 		u = {
 			"<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
 			"Undo Stage Hunk",
@@ -140,8 +117,6 @@ local mappings = {
 			"<cmd>Gitsigns preview_hunk_inline<cr>",
 			"Inline Diff",
 		},
-		t = { "<cmd>Gitsigns toggle_signs<cr>", "Toggle Git Signs" },
-		C = { "<cmd>GitConflictListQf<cr>", "Merge Conflicts" },
 	},
 	l = {
 		name = "LSP",
@@ -150,19 +125,7 @@ local mappings = {
 			"<cmd>Telescope diagnostics bufnr=0<cr>",
 			"Document Diagnostics",
 		},
-		["D"] = {
-			"<cmd>TSToolsGoToSourceDefinition<cr>",
-			"Go to Typescript Source",
-		},
 		i = { "<cmd>LspInfo<cr>", "Info" },
-		j = {
-			"<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
-			"Next Diagnostic",
-		},
-		k = {
-			"<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
-			"Prev Diagnostic",
-		},
 		l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
 		q = {
 			function()
@@ -176,8 +139,6 @@ local mappings = {
 			"Workspace Symbols",
 		},
 		m = { "<cmd>TSToolsAddMissingImports<CR>", "Add Missing Import" },
-		["R"] = { "<cmd>TSToolsRenameFile<CR>", "Rename File" },
-		p = { "<cmd>lua vim.diagnostic.open_float({focusable = true})<cr>", "View Issues" },
 	},
 	s = {
 		name = "Search",
@@ -209,17 +170,8 @@ local mappings = {
 		},
 	},
 	-- TODO: MIGRATE
-	c = {
-		name = "Copilot",
-		s = { "<cmd>Copilot split<cr>", "Split" },
-		d = { "<cmd>Copilot disable<cr>", "Disable" },
-		e = { "<cmd>Copilot enable<cr>", "Enable" },
-		w = { "<cmd>Copilot<cr>", "Window" },
-	},
-
 	m = {
 		name = "More...",
-		d = { "<cmd>DBUIToggle<cr>", "Toggle DBUI" },
 		c = { "<cmd>CellularAutomaton make_it_rain<cr>", "CA" },
 		n = { "<cmd>Flote<cr>", "Notes" },
 		s = { "<cmd>cd clients/trieve-shopify-extension<cr>", "Notes" },
@@ -240,23 +192,12 @@ local mappings = {
 		s = { "<cmd>e website/.env<cr>", "Open Website env" },
 		w = { "<cmd>e worker/.env<cr>", "Open Worker env" },
 	},
-	-- TODO: Add Octo
-	-- https://github.com/pwntester/octo.nvim
 }
 
 which_key.setup(setup)
 which_key.register(mappings, opts)
 
 local visual_mappings = {
-	-- a = {
-	-- 	name = "AI",
-	-- 	e = { "<cmd>ChatGPTRun explain_code<cr>", "Explain Code" },
-	-- 	f = { "<cmd>ChatGPTRun fix_bugs<cr>", "Fix Bugs" },
-	-- 	o = { "<cmd>ChatGPTRun optimize_code<cr>", "Optimize Code" },
-	-- 	m = { "<cmd>ChatGPTEditWithInstructions<cr>", "Modify Code" },
-	-- 	d = { "<cmd>ChatGPTRun dockstring<cr>", "Document Code" },
-	-- },
-
 	["S"] = {
 		name = "Snippets",
 		e = {

@@ -3,9 +3,9 @@ return {
 	event = "LspAttach",
 	config = function()
 		require("lspsaga").setup({
-			beacon = {
-				enable = true,
-			},
+			-- beacon = {
+			-- 	enable = true,
+			-- },
 			outline = {
 				win_position = "left",
 				preview_width = 0.4,
