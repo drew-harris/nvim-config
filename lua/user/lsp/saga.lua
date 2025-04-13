@@ -3,9 +3,6 @@ return {
 	event = "LspAttach",
 	config = function()
 		require("lspsaga").setup({
-			-- beacon = {
-			-- 	enable = true,
-			-- },
 			outline = {
 				win_position = "left",
 				preview_width = 0.4,
@@ -21,7 +18,6 @@ return {
 			lightbulb = {
 				enable = false,
 			},
-
 			-- Disable code actions
 			code_action = {
 				enable = false,

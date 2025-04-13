@@ -102,17 +102,9 @@ require("mason-lspconfig").setup_handlers({
 			opts.root_dir = lspconfig.util.root_pattern("package.json")
 			opts.init_options = {
 				preferences = {
-					includeInlayParameterNameHints = "all",
-					includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-					includeInlayFunctionParameterTypeHints = true,
-					includeInlayVariableTypeHints = true,
-					includeInlayPropertyDeclarationTypeHints = true,
-					includeInlayFunctionLikeReturnTypeHints = true,
-					includeInlayEnumMemberValueHints = true,
 					importModuleSpecifierPreference = "non-relative",
 				},
 			}
-			-- Setup eslint_d
 		end
 
 		-- if server == "eslint" then
@@ -136,18 +128,6 @@ require("mason-lspconfig").setup_handlers({
 				"--clang-tidy",
 				"--compile_args_from=filesystem",
 				"-j=4", -- number of workers
-			}
-		end
-
-		if server == "kotlin_language_server" then
-			opts.settings = {
-				kotlin = {
-					compiler = {
-						jvm = {
-							target = "21",
-						},
-					},
-				},
 			}
 		end
 
@@ -254,55 +234,3 @@ require("mason-lspconfig").setup_handlers({
 -- end, { desc = "Organize Imports" })
 
 require("lspconfig").astro.setup({})
-
--- require("lspconfig").rust_analyzer.setup({
--- 	on_attach = function(client, bufnr)
--- 		vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
---
--- 		vim.keymap.set("n", "<leader>I", function()
--- 			vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
--- 		end, { desc = "Toggle inlay hints" })
---
--- 		require("user.lsp.handlers").on_attach(client, bufnr)
--- 	end,
---
--- 	capabilities = require("user.lsp.handlers").capabilities,
---
--- 	-- settings = {
--- 	-- 	["rust-analyzer"] = {
--- 	-- 		lens = {
--- 	-- 			enable = false,
--- 	-- 		},
--- 	-- 		cargo = {
--- 	-- 			allTargets = false,
--- 	-- 			buildScripts = {
--- 	-- 				rebuildOnSave = false,
--- 	-- 			},
--- 	-- 		},
--- 	-- 		cache = {
--- 	-- 			warmup = true,
--- 	-- 		},
--- 	-- 		semanticHighlighting = {
--- 	-- 			enable = false,
--- 	-- 			nonStandardTokens = false,
--- 	-- 			operator = {
--- 	-- 				enable = false,
--- 	-- 			},
--- 	-- 			punctuation = {
--- 	-- 				enable = false,
--- 	-- 			},
--- 	-- 			strings = {
--- 	-- 				enable = false,
--- 	-- 			},
--- 	-- 		},
--- 	-- 		hover = {
--- 	-- 			memoryLayout = {
--- 	-- 				enable = false,
--- 	-- 			},
--- 	-- 		},
--- 	-- 		procMacro = {
--- 	-- 			enable = true,
--- 	-- 		},
--- 	-- 	},
--- 	-- },
--- })

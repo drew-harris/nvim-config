@@ -27,6 +27,8 @@ require("lazy").setup({
 	require("user.plugins.oil"),
 	require("user.plugins.snacks"),
 
+	require("user.plugins.yazi"),
+
 	-- MINI
 	require("user.plugins.mini"),
 
@@ -59,7 +61,7 @@ require("lazy").setup({
 	"williamboman/mason-lspconfig.nvim",
 
 	-- replace with: https://github.com/aznhe21/actions-preview.nvim
-	-- "weilbith/nvim-code-action-menu",
+	"weilbith/nvim-code-action-menu",
 
 	require("user.plugins.trouble"),
 
@@ -158,12 +160,14 @@ require("lazy").setup({
 	require("user.plugins.todocomments"),
 
 	require("user.plugins.harpoon"),
+	-- require("user.plugins.grapple"),
 
 	-- AI
 	{ "zbirenbaum/copilot.lua", cmd = "Copilot", event = "InsertEnter" },
 	"zbirenbaum/copilot-cmp",
 	require("user.plugins.supermaven"),
 	require("user.plugins.avante"),
+	require("user.plugins.cursor"),
 
 	require("user.plugins.leetcode"),
 

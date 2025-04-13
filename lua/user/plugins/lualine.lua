@@ -65,6 +65,7 @@ return {
 				lualine_c = {
 					{ "filename", path = 1 },
 				},
+				lualine_b = { "grapple" },
 			},
 			inactive_winbar = {
 				lualine_c = {
