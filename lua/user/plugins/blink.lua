@@ -4,7 +4,7 @@ return {
 	-- dependencies = { "rafamadriz/friendly-snippets", "folke/lazydev.nvim" },
 	dependencies = { "folke/lazydev.nvim", "Kaiser-Yang/blink-cmp-avante" },
 
-	version = "v0.*",
+	version = "1.*",
 
 	---@module 'blink.cmp'
 	opts = {

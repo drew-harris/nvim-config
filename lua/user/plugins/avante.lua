@@ -11,18 +11,42 @@ return {
 			temperature = 0,
 			max_tokens = 4096,
 		},
+		provider = "openrouter",
+		-- cursor_applying_provider = "groq", -- In this example, use Groq for applying, but you can also use any provider you want.
+		behaviour = {
+			--- ... existing behaviours
+			enable_cursor_planning_mode = false, -- enable cursor planning mode!
+			enable_claude_text_editor_tool_mode = false,
+		},
+		vendors = {
+			groq = { -- define groq provider
+				__inherited_from = "openai",
+				api_key_name = "GROQ_API_KEY",
+				endpoint = "https://api.groq.com/openai/v1/",
+				model = "llama-3.3-70b-versatile",
+				max_completion_tokens = 32768, -- remember to increase this value, otherwise it will stop generating halfway
+				disable_tools = true, -- Open-source models often do not support tools.
+			},
+			openrouter = {
+				__inherited_from = "openai",
+				endpoint = "https://openrouter.ai/api/v1",
+				api_key_name = "OPENROUTER_API_KEY",
+				model = "google/gemini-2.0-flash-001",
+				-- disable_tools = true, -- Open-source models often do not support tools.
+			},
+		},
 	},
-	behaviour = {
-		auto_suggestions = true, -- Experimental stage
-		auto_set_highlight_group = true,
-		auto_set_keymaps = true,
-		auto_apply_diff_after_generation = false,
-		support_paste_from_clipboard = false,
-		minimize_diff = true, -- Whether to remove unchanged lines when applying a code block
-		enable_token_counting = true, -- Whether to enable token counting. Default to true.
-		enable_cursor_planning_mode = false, -- Whether to enable Cursor Planning Mode. Default to false.
-	},
-	hints = { enabled = false },
+	-- behaviour = {
+	-- 	auto_suggestions = true, -- Experimental stage
+	-- 	auto_set_highlight_group = true,
+	-- 	auto_set_keymaps = true,
+	-- 	auto_apply_diff_after_generation = false,
+	-- 	support_paste_from_clipboard = false,
+	-- 	minimize_diff = true, -- Whether to remove unchanged lines when applying a code block
+	-- 	enable_token_counting = true, -- Whether to enable token counting. Default to true.
+	-- 	enable_cursor_planning_mode = false, -- Whether to enable Cursor Planning Mode. Default to false.
+	-- },
+	-- hints = { enabled = false },
 	keys = {
 		{
 			"<leader>aa",

@@ -1,5 +1,5 @@
 -- local colorscheme = "catppuccin-mocha"
-local colorscheme = "sonokai"
+-- local colorscheme = "sonokai"
 -- local colorscheme = "kanagawa-dragon"
 -- local colorscheme = "tokyonight"
 -- local colorscheme = "github_dark"
@@ -32,8 +32,8 @@ local colorscheme = "sonokai"
 
 vim.cmd("highlight! link LspSignatureActiveParameter MatchParen")
 
----@diagnostic disable-next-line: param-type-mismatch
-local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
-if not status_ok then
-	return
-end
+-- ---@diagnostic disable-next-line: param-type-mismatch
+-- local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+-- if not status_ok then
+-- 	return
+-- end
