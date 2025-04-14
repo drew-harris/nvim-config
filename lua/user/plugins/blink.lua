@@ -21,7 +21,7 @@ return {
 					else
 					end
 				end,
-				"snippet_forward",
+				-- "snippet_forward",
 				"fallback",
 			},
 		},
@@ -49,18 +49,25 @@ return {
 			},
 		},
 
+		cmdline = {
+			enabled = true,
+			completion = {
+				menu = { auto_show = true },
+			},
+			-- Dont show autocomplete for :w
+			sources = function()
+				local type = vim.fn.getcmdtype()
+				local cmd = vim.fn.getcmdline()
+				if type == ":" and cmd ~= "w" then
+					return { "cmdline" }
+				end
+				return {}
+			end,
+		},
+
 		-- default list of enabled providers defined so that you can extend it
 		-- elsewhere in your config, without redefining it, via `opts_extend`
 		sources = {
-			-- cmdline = function()
-			-- 	local type = vim.fn.getcmdtype()
-			-- 	local cmd = vim.fn.getcmdline()
-			-- 	if type == ":" and cmd ~= "w" then
-			-- 		return { "cmdline" }
-			-- 	end
-			-- 	return {}
-			-- end,
-
 			default = { "avante", "lsp", "path", "snippets", "buffer", "lazydev" },
 			providers = {
 				snippets = {
