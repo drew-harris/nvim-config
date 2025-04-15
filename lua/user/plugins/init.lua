@@ -26,6 +26,7 @@ require("lazy").setup({
 	-- require("user.plugins.undotree"),
 	require("user.plugins.oil"),
 	require("user.plugins.snacks"),
+	require("user.plugins.yanky"),
 
 	require("user.plugins.yazi"),
 
@@ -189,5 +190,9 @@ require("lazy").setup({
 			enabled = false,
 			max_count = 5,
 		},
+	},
+	{
+		"folke/twilight.nvim",
+		opts = {},
 	},
 })

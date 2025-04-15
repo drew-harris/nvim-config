@@ -105,4 +105,5 @@ return {
 			]])
 		end,
 	},
+	"nyoom-engineering/oxocarbon.nvim",
 }
