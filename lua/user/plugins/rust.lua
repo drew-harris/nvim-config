@@ -1,7 +1,8 @@
 return {
 	"mrcjkb/rustaceanvim",
 	-- TODO: Update to latest version
-	version = "^4", -- Recommended
+	version = "^6", -- Recommended
+	enabled = false,
 	lazy = false, -- This plugin is already lazy
 	config = function()
 		vim.g.rustaceanvim = {

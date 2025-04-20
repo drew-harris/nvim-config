@@ -139,6 +139,7 @@ local mappings = {
 			"Workspace Symbols",
 		},
 		m = { "<cmd>TSToolsAddMissingImports<CR>", "Add Missing Import" },
+		p = { "<cmd>lua vim.diagnostic.open_float({focusable = true})<cr>", "View Issues" },
 	},
 	s = {
 		name = "Search",
@@ -174,7 +175,7 @@ local mappings = {
 		name = "More...",
 		c = { "<cmd>CellularAutomaton make_it_rain<cr>", "CA" },
 		n = { "<cmd>Flote<cr>", "Notes" },
-		s = { "<cmd>cd clients/trieve-shopify-extension<cr>", "Notes" },
+		s = { "<cmd>cd clients/trieve-shopify-extension<cr>", "Shopify" },
 	},
 
 	k = {

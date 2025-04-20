@@ -66,6 +66,11 @@ vim.filetype.add({
 
 lspconfig.gleam.setup({})
 
+lspconfig.gleam.setup({})
+lspconfig.rust_analyzer.setup({
+	on_attach = require("user.lsp.handlers").on_attach,
+})
+
 lspconfig.nushell.setup({})
 
 require("mason-lspconfig").setup_handlers({
