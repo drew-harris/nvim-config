@@ -169,6 +169,7 @@ require("lazy").setup({
 	require("user.plugins.supermaven"),
 	require("user.plugins.avante"),
 	require("user.plugins.cursor"),
+	require("user.plugins.copilot"),
 
 	require("user.plugins.leetcode"),
 
