@@ -100,9 +100,9 @@ return {
 			vim.g.sonokai_style = "andromeda"
 			vim.g.sonokai_transparent_background = 2
 
-			vim.cmd([[
-				colorscheme sonokai
-			]])
+			-- vim.cmd([[
+			-- 	colorscheme sonokai
+			-- ]])
 		end,
 	},
 	"nyoom-engineering/oxocarbon.nvim",

@@ -5,6 +5,7 @@
 -- local colorscheme = "github_dark"
 -- local colorscheme = "gruvbox"
 -- local colorscheme = "darcula-solid"
+local colorscheme = "onedark"
 
 -- vim.api.nvim_create_autocmd("ColorScheme", {
 -- 	callback = function()
@@ -32,8 +33,8 @@
 
 vim.cmd("highlight! link LspSignatureActiveParameter MatchParen")
 
--- ---@diagnostic disable-next-line: param-type-mismatch
--- local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
--- if not status_ok then
--- 	return
--- end
+---@diagnostic disable-next-line: param-type-mismatch
+local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+if not status_ok then
+	return
+end
