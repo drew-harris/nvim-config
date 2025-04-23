@@ -66,7 +66,7 @@ local function lsp_keymaps(bufnr)
 	keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 	keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 	keymap(bufnr, "n", "gT", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
-	keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	keymap(bufnr, "n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
 	keymap(bufnr, "n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 	keymap(
@@ -128,7 +128,7 @@ M.on_attach = function(client, bufnr)
 	-- require("lsp-inlayhints").on_attach(client, bufnr)
 	if client.name == "tsserver" then
 		client.server_capabilities.documentFormattingProvider = false
-		client.server_capabilities.semanticTokensProvider = false
+		client.server_capabilities.semanticTokensProvider = true
 	end
 
 	if client.name == "lua_ls" then
@@ -161,15 +161,6 @@ M.on_attach = function(client, bufnr)
 	if client.name == "graphql" then
 		client.server_capabilities.semanticTokensProvider = nil
 	end
-
-	-- require("lsp_signature").on_attach({
-	-- 	handler_opts = {
-	-- 		border = "rounded",
-	-- 	},
-	-- 	close_timeout = 2000,
-	-- 	hint_prefix = " ",
-	-- 	toggle_key = "<C-s>",
-	-- }, bufnr)
 
 	lsp_keymaps(bufnr)
 	-- local status_ok, illuminate = pcall(require, "illuminate")

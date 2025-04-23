@@ -22,8 +22,8 @@ require("user.nushell").setup()
 -- require("user.copilot")
 
 vim.cmd("highlight! HarpoonInactive guibg=NONE guifg=#63698c")
-vim.cmd("highlight! HarpoonActive guibg=NONE guifg=white")
-vim.cmd("highlight! HarpoonNumberActive guibg=NONE guifg=#7aa2f7")
+vim.cmd("highlight! link HarpoonActive IncSearch")
+vim.cmd("highlight! link HarpoonNumberActive IncSearch")
 vim.cmd("highlight! HarpoonNumberInactive guibg=NONE guifg=#7aa2f7")
 
 vim.cmd("autocmd TermOpen * setlocal nonumber norelativenumber")
