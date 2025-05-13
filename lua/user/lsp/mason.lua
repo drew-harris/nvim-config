@@ -21,11 +21,6 @@ if not lspconfig_status_ok then
 	return
 end
 
--- local lspconfig_status_ok, tstools = pcall(require, "typescript-tools")
--- if not lspconfig_status_ok then
--- 	return
--- end
-
 local opts = {}
 
 vim.filetype.add({
@@ -46,27 +41,8 @@ vim.filetype.add({
 	},
 })
 
--- EXAMPLE OF CUSTOM LANGUAGE SERVER
--- require("lspconfig.configs").pest = {
--- 	default_config = {
--- 		cmd = { "pest-language-server" },
--- 		name = "pest",
--- 		filetypes = { "pest" },
--- 		root_dir = lspconfig.util.root_pattern("Cargo.toml"),
--- 		settings = {},
--- 	},
--- }
---
--- -- Setup pest
---
--- lspconfig.pest.setup({
--- 	on_attach = require("user.lsp.handlers").on_attach,
--- 	capabilities = require("user.lsp.handlers").capabilities,
--- })
-
 lspconfig.gleam.setup({})
 
-lspconfig.gleam.setup({})
 lspconfig.rust_analyzer.setup({
 	on_attach = require("user.lsp.handlers").on_attach,
 })
