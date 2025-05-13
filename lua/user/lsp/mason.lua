@@ -72,11 +72,6 @@ require("mason-lspconfig").setup_handlers({
 		if server == "jdtls" then
 			opts.root_dir = lspconfig.util.root_pattern("pom.xml", "gradle.build", ".git")
 
-			-- opts.settings.java.project.source_paths = {
-			-- 	"/Users/drew/programs/minecraft/libraries/api/target/generated-sources/apollo/service/",
-			-- 	"/Users/drew/programs/minecraft/libraries/api/target/generated-sources/apollo/",
-			-- 	"/Users/drew/programs/minecraft/libraries/api/target/generated-sources",
-			-- }
 		end
 
 		if server == "tsserver" then
@@ -193,12 +188,7 @@ require("mason-lspconfig").setup_handlers({
 			}
 		end
 
-		-- -- Check for typescript
-		-- if server == "tsserver" then
-		-- 	tstools.setup(opts)
-		-- else
 		lspconfig[server].setup(opts)
-		-- end
 	end,
 })
 

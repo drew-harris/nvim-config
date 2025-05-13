@@ -1,7 +1,5 @@
 return {
 	"saghen/blink.cmp",
-	-- optional: provides snippets for the snippet source
-	-- dependencies = { "rafamadriz/friendly-snippets", "folke/lazydev.nvim" },
 	dependencies = { "folke/lazydev.nvim", "Kaiser-Yang/blink-cmp-avante" },
 
 	version = "1.*",

@@ -57,8 +57,8 @@ require("lazy").setup({
 
 	-- LSP
 	"neovim/nvim-lspconfig",
-	"williamboman/mason.nvim",
-	"williamboman/mason-lspconfig.nvim",
+	{"williamboman/mason.nvim", version = "1.*"},
+	{"williamboman/mason-lspconfig.nvim", version = "1.*"},
 
 	-- replace with: https://github.com/aznhe21/actions-preview.nvim
 	"weilbith/nvim-code-action-menu",

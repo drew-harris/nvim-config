@@ -46,6 +46,7 @@ return {
 		keymaps = {
 			show_help = "<f1>",
 		},
+		yazi_floating_window_border = "none",
 	},
 	-- 👇 if you use `open_for_directories=true`, this is recommended
 	init = function()
