@@ -100,7 +100,9 @@
     "${3rd}/luv/library",
     "${3rd}/luv/library"
   ],
-  "diagnostics.disable": ["assign-type-mismatch",
-        "param-type-mismatch"],
+  "diagnostics.disable": [
+    "assign-type-mismatch",
+    "param-type-mismatch"
+  ],
   "completion.autoRequire": false
 }

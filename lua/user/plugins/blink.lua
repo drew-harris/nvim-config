@@ -10,20 +10,20 @@ return {
 	opts = {
 		keymap = {
 			preset = "default",
-			["<cr>"] = {
-				function(cmp)
-					if vim.api.nvim_get_mode().mode == "i" and vim.bo.buftype == "" then
-						if cmp.snippet_active() then
-							return cmp.accept()
-						else
-							return cmp.select_and_accept()
-						end
-					else
-					end
-				end,
-				-- "snippet_forward",
-				"fallback",
-			},
+			-- ["<cr>"] = {
+			-- 	function(cmp)
+			-- 		if vim.api.nvim_get_mode().mode == "i" and vim.bo.buftype == "" then
+			-- 			if cmp.snippet_active() then
+			-- 				return cmp.accept()
+			-- 			else
+			-- 				return cmp.select_and_accept()
+			-- 			end
+			-- 		else
+			-- 		end
+			-- 	end,
+			-- 	-- "snippet_forward",
+			-- 	"fallback",
+			-- },
 		},
 
 		appearance = {
@@ -47,12 +47,17 @@ return {
 					},
 				},
 			},
+			-- menu = {
+			-- 	auto_show = false,
+			-- },
 		},
+
+		signature = { enabled = true },
 
 		cmdline = {
 			enabled = true,
 			completion = {
-				menu = { auto_show = true },
+				menu = { auto_show = false },
 			},
 			-- Dont show autocomplete for :w
 			sources = function()

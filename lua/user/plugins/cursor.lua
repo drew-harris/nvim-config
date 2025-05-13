@@ -1,1 +1,1 @@
-return { "reachingforthejack/cursortab.nvim" }
+return { "reachingforthejack/cursortab.nvim", enabled = false }

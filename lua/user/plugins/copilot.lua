@@ -1,6 +1,7 @@
 return {
 	{
 		"copilotlsp-nvim/copilot-lsp",
+		enabled = false,
 		config = function()
 			local function get_copilot_client()
 				local clients = vim.lsp.get_clients()

@@ -6,6 +6,19 @@ vim.notify = function(msg, ...)
 	notify(msg, ...)
 end
 
+vim.cmd([[
+  augroup diffcolors
+    autocmd!
+    autocmd Colorscheme * call s:SetDiffHighlights()
+  augroup END
+  function! s:SetDiffHighlights()
+    highlight DiffAdd gui=bold guifg=none guibg=#2e4b2e
+    highlight DiffDelete gui=bold guifg=none guibg=#4c1e15
+    highlight DiffChange gui=bold guifg=none guibg=#45565c
+    highlight DiffText gui=bold guifg=none guibg=#996d74
+  endfunction
+]])
+
 require("user.utils.logging")
 require("user.keymapper")
 require("user.options")
